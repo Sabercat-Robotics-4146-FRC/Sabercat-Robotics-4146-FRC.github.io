@@ -2,14 +2,14 @@
   padding: 30px;
   height: 250;
   width: 500px;
-  background: url(img/stop-build-blur-black.png) no-repeat center center fixed;
+  background: url(img/stop-build-blur-black.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
 .logo:hover {
-  background: url(img/stop-build-blur-black-2.png) no-repeat center center fixed;
+  background: url(img/stop-build-blur-black-2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -25,7 +25,7 @@ h2 {
 }
 .cont {
   display:inline-block;
-  background: url(img/stop-build-blur-black.png) no-repeat center center fixed;
+  background: url(img/stop-build-blur-black.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -44,7 +44,7 @@ h2 {
   padding: 12px;
 }
 .cont:hover {
-  background: url(img/stop-build-blur-black-2.png) no-repeat center center fixed;
+  background: url(img/stop-build-blur-black-2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -70,7 +70,7 @@ html {
   opacity: 1.0;
 }
 .card {
-    background: url(img/stop-build-blur-black.png) no-repeat center center fixed;
+    background: url(img/stop-build-blur-black.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -83,7 +83,7 @@ html {
     color: white;
 }
 .card:hover {
-  background: url(img/stop-build-blur-black-2.png) no-repeat center center fixed;
+  background: url(img/stop-build-blur-black-2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
