@@ -59,7 +59,13 @@ html {
     background-size: cover;
     -o-background-size: cover;
 }
-
+.container-fluid {
+  background: url(img/stop-build.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
 .sized {
   width: 350px;
   height: 350px;
