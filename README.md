@@ -1,3 +1,3 @@
 # Docs website
 
-Used to store team documentation.
+General robotics website. Used to inform people and pick up sponsors.
