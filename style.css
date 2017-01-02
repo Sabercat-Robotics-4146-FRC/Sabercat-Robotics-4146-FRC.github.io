@@ -1,126 +1,112 @@
-.logo {
-  padding: 30px;
-  height: 250;
-  width: 500px;
-  background: url(img/stop-build-blur-black.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-.logo:hover {
-  background: url(img/stop-build-blur-black-2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-.col-lg-6 {
-  padding: 10px;
-}
-h2 {
-  color: rgba(215, 237, 33, 0.9);
-  font-size: 12px;
-  letter-spacing: 4px;
-}
-.cont {
-  display:inline-block;
-  background: url(img/stop-build-blur-black.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  word-wrap: break-word;
-  width: 350px;
-  color: white;
-  /*position: absolute;*/
-  background-color: rgba(0, 0, 0, 0.85);
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.body {
-  padding: 12px;
-}
-.cont:hover {
-  background: url(img/stop-build-blur-black-2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-color: black;
-}
-
-html {
-    background: url(img/stop-build.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-.container-fluid {
-  background: url(img/stop-build.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-.sized {
-  width: 350px;
-  height: 350px;
-  overflow: hidden;
-  opacity: 1.0;
-}
-.sized:hover {
-  opacity: 1.0;
-}
-.card {
-    background: url(img/stop-build-blur-black.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    word-wrap: break-word;
-    width: 350px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    background-color: rgba( 0, 0, 0, 0.85 );
-    color: white;
-}
-.card:hover {
-  background: url(img/stop-build-blur-black-2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+.carousel-inner span {
+  background-color: rgba(58,58,58,0.8);
+  color: #E6DB74;
 }
 .navbar {
-    margin-bottom: 0;
-    border: 0;
-    font-size: 12px;
-    letter-spacing: 4px;
-    border-radius: 0;
+  background-color: #212121;
+  margin: 10px;
 }
-.container {
-  background-color: transparent;
+.navbar-brand {
+  color: #E6DB74;
 }
-.navbar li a, .navbar:before .navbar-brand {
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
+.nav-item {
+  color: #E6DB74;
+}
+.nav-item:hover {
+  color: gray;
+}
+.nav-link {
+  color: #E6DB74;
+}
+body {
+  background-color: #333333 !important;
+}
+.carousel-caption {
+  margin: 100px;
+}
+.featurette-divider {
+  background-color: white;
+}
+.row {
+  background-color: #212121;
+  /*border-radius: 32px;*/
+  padding: 16px;
+  color: #E6DB74;
+  box-shadow: 8px 8px 4px black;
+}
+.row h2 {
+  color: #e0d252 !important;
+}
+.card-title {
+  color: #e0d252 !important;
+}
+.card span {
+  background-color: rgba(58,58,58,0.8);
+  color: #E6DB74;
 }
 
-.navbar li a, .navbar .navbar-brand {
-  background-color: rgba(0, 0, 0, .85);
-    color: #fff;
-}
+/*
+Banner -- Thanks to ErikBoesen -- https://github.com/ErikBoesen/banners.css/tree/master
+*/
 
-.navbar-nav li a:hover, .navbar-nav li.active a {
-    background-color: #fff;
-    color: black;
+@font-face {
+    font-family: 'Adam';
+    src: url('adam.otf') format('opentype');
+    unicode-range: U+0000-00FF;
 }
-
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff;
+/* To be standard-compliant, this rule should be applied to *, but for compat it's restricted here. */
+.banners,
+.banners *,
+.banner {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner-parent {
+    width: 100%;
+    overflow: scroll;
+}
+.banner-parent .banners {
+    width: auto;
+    white-space: nowrap;
+}
+.banners li,
+.banner {
+    line-height: 1.2;
+    font-family: 'Adam', sans-serif;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    margin: 0 3px 30px;
+    width: 120px;
+    position: relative;
+    background: #0f4bcb;
+    color: white;
+    padding: 10px;
+    white-space: normal
+}
+.banners img,
+.banner img {
+    width: 75px;
+    margin-bottom: 5px;
+}
+.banners li:after,
+.banner:after {
+    content: '';
+    position: absolute;
+    display: block;
+    border: 60px solid #0f4bcb;
+    border-top-width: 5px;
+    border-bottom: 20px transparent solid;
+    top: 100%;
+    left: 0;
+}
+.banners li,
+.banners li:after,
+.banner,
+.banner:after {
+    -webkit-filter: drop-shadow(0 10px 5px rgba(0, 0, 0, .1));
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="5" /><feOffset dx="1" dy="11" result="offsetblur" /><feFlood flood-color="rgba(0,0,0,0.1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+    -webkit-filter: drop-shadow(0 10px 5px rgba(0, 0, 0, .1));
+            filter: drop-shadow(0 10px 5px rgba(0, 0, 0, .1));
 }
