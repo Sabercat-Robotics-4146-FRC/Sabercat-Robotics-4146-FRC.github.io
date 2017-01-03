@@ -12,6 +12,15 @@
 .nav-item {
   color: #E6DB74;
 }
+.carousel-item img {
+  min-height: 100% !important;
+  width: auto !important;
+  overflow: hidden !important;
+  object-fit: cover !important;
+}
+.carousel-item {
+  overflow: hidden !important;
+}
 .nav-item:hover {
   color: gray;
 }
