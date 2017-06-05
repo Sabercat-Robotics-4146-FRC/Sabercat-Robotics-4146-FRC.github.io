@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  background-color: #23272A !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+h1 {
+  font-family: 'Arvo', serif !important;
+}
+p {
+  text-indent: 50px;
+  font-size: 16pt;
+  padding-left:  2%;
+  padding-right: 2%;
+}
+/*Card stuff */
+.card {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #2C2F33 !important;
+  padding: 16px;
+  color: rgb(169, 169, 169);
+  margin: 2%;
+}
+.card h1 {
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #ffe082;
+  font-family: 'Arvo', serif !important;
+}
+.card h2 {
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #ffe082;
+  font-family: 'Arvo', serif !important;
+}
+.card h4 {
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #ffe082;
+  font-family: 'Arvo', serif !important;
+}
+.card-title {
+  color: #e0d252 !important;
+}
+.card span {
+  background-color: rgba(58,58,58,0.8);
+  color: #E6DB74;
+}
+.norm-list {
+  text-indent: 0px;
+}
+
+/*Cover Image*/
+.image {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  background: #23272A;
+  background-image: url('./img/2017-team.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  height: 100px;
+}
+
+
+/*Marketing content specs*/
+
+.row {
+  background-color: #2C2F33;
+  border-radius: 8px;
+  padding: 16px;
+  color: rgb(169, 169, 169);
+  /*box-shadow: 8px 8px 4px black;*/
+}
+
+.row h2 {
+  color: #ffe082;
+  font-family: 'Arvo', serif !important;
+  /*color: #e0d252 !important;*/
+}
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing h2 {
+  font-weight: normal;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+.bouncer {
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
