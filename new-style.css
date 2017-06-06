@@ -13,6 +13,19 @@ p {
   padding-left:  2%;
   padding-right: 2%;
 }
+
+/*Buttons*/
+.btn btn-outline-secondary{
+  font-size: 24pt !important;
+}
+
+/*Navbar*/
+.navbar {
+  font-family: 'Arvo', serif !important;
+  background-color: #2C2F33 !important;
+
+
+}
 /*Card stuff */
 .card {
   font-family: 'Open Sans', sans-serif;
