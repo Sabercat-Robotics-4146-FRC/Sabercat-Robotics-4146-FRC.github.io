@@ -78,6 +78,10 @@ p {
   background-position: center center;
 }
 
+
+/*Growing logo*/
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
 .content {
   position: absolute;
   width: 100%;
