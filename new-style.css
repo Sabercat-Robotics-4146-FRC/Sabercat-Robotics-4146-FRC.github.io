@@ -78,6 +78,22 @@ p {
   background-position: center center;
 }
 
+.image-test {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  background: #23272A;
+  background-image: url('./img/test.jpg');
+  /*-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}
+
 
 /*Growing logo*/
 .grow { transition: all .2s ease-in-out; }
