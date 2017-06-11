@@ -7,6 +7,6 @@ window.mobilecheck = function() {
 //This function changes logo size to mobile size
 console.log(window.mobilecheck());
 if(window.mobilecheck()){
-  	console.log("mobile device = trues");
+  	console.log("mobile device = true");
     window.location = "mobile.html";
   }
