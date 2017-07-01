@@ -91,8 +91,17 @@ p {
   background-repeat: no-repeat;
 
 }
+/*Generic Tool Tip*/
 
 
+
+/* Tooltip container */
+.glyphicon-envelope {
+  color: white !important;
+}
+.glyphicon-envelope:hover {
+  color: #bdbdbd !important;
+}
 /*Growing logo*/
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
