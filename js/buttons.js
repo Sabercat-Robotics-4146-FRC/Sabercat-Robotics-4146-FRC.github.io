@@ -29,6 +29,13 @@ $(document).ready(function(){
     $("#csponsorships").hide();
     $("#cfirst").show();
   });
+
+  // Scroll effects
+  //Click event to scroll to top
+	$('.scroll-to').click(function(){
+		$('html, body').animate({scrollTop : $("#start").offset().top}, 500);
+		return false;
+	});
 });
 // $("#hide").click(function(){
 //     $("p").hide();

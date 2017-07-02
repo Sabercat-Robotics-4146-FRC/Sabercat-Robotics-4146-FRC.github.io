@@ -27,6 +27,28 @@ p {
 
 
 }
+
+blockquote {
+
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  color: rgb(169, 169, 169);
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
 /*Card stuff */
 .card {
   font-family: 'Open Sans', sans-serif;
@@ -60,7 +82,28 @@ p {
 .norm-list {
   text-indent: 0px;
 }
+.logo-image {
+  max-width: 550px;
+  min-width: 100px;
+  width: 100%;
+  padding-left: 8%;
+  padding-right: 8%;
 
+}
+.cover-logo {
+  z-index: 2;
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-height: 480px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+ 	margin-right: auto;
+	max-width: 740px;
+}
 /*Cover Image*/
 .image {
   position: absolute;
@@ -94,11 +137,28 @@ p {
 
 
 /*Form Styles*/
+.btn3 {
+  background-color: rgba(0,0,0,0);
+  border: 3px solid rgb(169, 169, 169);
+  color: rgb(169, 169, 169);
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px;
+}
+.btn3:hover {
+  box-shadow: 0px 8px #424242;
 
-.btn {
-  background-color: white;
-  border: 3px solid black;
-  color: black;
+}
+.btn3:active {
+
+}
+.btn2 {
+  background-color: rgba(169, 169, 169, 0);
+  border: 3px solid rgb(169, 169, 169);
+  color: rgb(169, 169, 169);
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
@@ -108,17 +168,17 @@ p {
 }
 textarea {
   background-color: rgba(0, 0, 0, 0);
-  width: 600px;
-	height: 120px;
-	border: 4px solid white;
-	padding: 8px;
+  width: 100%;
+	height: 30%;
+	border: 4px solid rgb(169, 169, 169);
+	padding: 8px 16px;
   margin: 8px;
 }
 .input-container {
   margin: 8px;
   background-color: rgba(0,0,0,0); /* Green */
-  border: 3px solid white;
-  color: white;
+  border: 3px solid rgb(169, 169, 169);
+  color: rgb(169, 169, 169);
   padding: 8px 16px;
   text-decoration: none;
   display: inline-block;
@@ -200,17 +260,25 @@ textarea {
 }
 .fa {
   padding: 20px;
-  font-size: 30px;
-  width: 70px;
-  height: 70px;
+  font-size: 24pt;
+  max-width: 70px;
+  max-height: 70px;
+  min-width: 40px;
+  min-height: 40px;
+  height: 100%;
+  width: 100%;
+  margin: auto;
   border-radius: 150px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
+  /*margin: 5px 2px;*/
 }
 
 .fa:hover {
-    opacity: 0.7;
+    animation: bounce 0.25s infinite alternate;
+    -webkit-animation: bounce 0.25s infinite alternate;
+    text-decoration: none;
+    color: white !important;
 }
 
 .fa-facebook {
