@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chapter 1 - robot-guide</title>
+        <title>Forward - Sabercat Robotics Hardware Guide</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +32,10 @@
     </head>
     <body class="light">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "";</script>
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -54,7 +57,7 @@
         <script type="text/javascript">
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -72,7 +75,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
+            <ol class="chapter"><li class="affix"><a href="forward.html">Forward</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,7 +92,7 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -102,12 +105,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">robot-guide</h1> 
+                        <h1 class="menu-title">Sabercat Robotics Hardware Guide</h1> 
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,8 +140,15 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#chapter-1" id="chapter-1"><h1>Chapter 1</h1></a>
-<p>This is a test example</p>
+                        <p><img src="./img/head-raw-vector.svg" alt="sabercat logo" /></p>
+<a class="header" href="#forward" id="forward"><h2>Forward</h2></a>
+<p>Welcome to the Sabercat's 4146 hardware guide. This book is not the be all end all for our hardware curriculum. The goal of this book is to serve as a primer to learning the hardware portion of robotics. This book is a resource for our students to be able to learn robotics at their own pace so that we can support and accommodate more students than out mentors are equipped to handle by themselves. As mentors and teachers, we will assist and help the students when they get stuck or have questions. At the same time, it is expected for the students to have the agency to be responsible for their own learning to a degree. The information in this book is fully accessible at all times so that the students can always be progressing through the curriculum at their own pace. Let it be known that this is a work in progress and will likely always be experiencing updates and improvements.</p>
+<p>If you have any questions about the content in the book, please email the creator of the hardware book, G Micheal Rowland. <a href="mailto:g@gmichaelrowland.com">g@gmichaelrowland.com</a></p>
+<a class="header" href="#important-links" id="important-links"><h3>Important Links</h3></a>
+<p><a href="http://sabercatrobotics.com/">Sabercat Website</a></p>
+<p><a href="https://github.com/Sabercat-Robotics-4146-FRC">Sabercat GitHub</a></p>
+<p><a href="http://sabercatrobotics.com/student-help">Team Information</a></p>
+<hr />
 
                     </main>
 
