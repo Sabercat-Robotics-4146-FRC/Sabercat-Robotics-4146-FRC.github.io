@@ -24,7 +24,7 @@ Although traditional drafting and drawing is on the decline because of the event
 
 Technical drawings, or drafting, in our circle of use is being able to draw parts and assemblies for any given robotics system. Drawings are broken down into views. As a mental model for drawing views, imagine a part in space. Now imaging the part is fixed in space and you put a glass box around the part. Each face of the box is a view. So only looking at the part through the top pane of the box would be the top view of the box. The back pane of the box would become the back view and so on. These views are only 2D though and require a 3D projection for the engineers to get a full idea of what the part looks like in three dimensional space and not just the 2D projections.
 
-![projected view example](./img/Various_projections_of_cube_above_plane.svg)
+![projected view example](./img/Various_projections_of_cube_above_plane.svg.png)
 
 
 *Watch this 15 minute video on mechanical engineering drawings.*
