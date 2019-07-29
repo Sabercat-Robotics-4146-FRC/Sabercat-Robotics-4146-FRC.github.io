@@ -8,6 +8,7 @@
 
 - [Applied Physics: Mechanics](./chapter_2.md)
     - [Motion](./chapter_2_1.md)
+    - [Mass, Volume, and Density](./chapter_2_1_1.md)
     - [Force & Torque](./chapter_2_2.md)
     - [Power & Work](./chapter_2_3.md)
     - [Leverage & Gearing](./chapter_2_4.md)
