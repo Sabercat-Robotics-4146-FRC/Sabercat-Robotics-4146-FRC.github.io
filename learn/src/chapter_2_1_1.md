@@ -45,3 +45,18 @@ Density is a measure of mass per unit of volume. An example unit for density in 
 <a href="https://www.youtube.com/watch?v=C6-uNJLO0DY" rel="" target="_blank">![Example | Mass of a Fillet](./img/video-thumbnails/mass-fillet-thumbnail.png)</a>
 
 <a href="https://www.youtube.com/watch?v=2Zg6XdDTt-s" rel="" target="_blank">![Example | Mass of a Tube](./img/video-thumbnails/mass-tube-thumbnail.png)</a>
+
+----
+
+## Practice Problems
+[Practice problems](./pdf/2.2-practice.pdf) will be very similar to the problems seen on tests.
+
+---- 
+
+## Extra Resources
+
+- [Mass vs Weight | Khan Academy](https://www.khanacademy.org/science/physics/centripetal-force-and-gravitation/gravity-newtonian/v/mass-and-weight-clarification)
+- [Density = Mass/Volume](https://www.youtube.com/watch?v=blUe0xV5sJA)
+- [Density](https://www.wikiwand.com/en/Density)
+- [Volume](https://www.wikiwand.com/en/Volume)
+- [Mass](https://www.wikiwand.com/en/Mass)
