@@ -49,7 +49,7 @@ Density is a measure of mass per unit of volume. An example unit for density in 
 ----
 
 ## Practice Problems
-[Practice problems](./pdf/2.2-practice.pdf) will be very similar to the problems seen on tests.
+<a href="./pdf/2.2-practice.pdf" rel="" target="_blank"><img src=https://image.flaticon.com/icons/svg/80/80942.svg width="50px"></a>
 
 ---- 
 

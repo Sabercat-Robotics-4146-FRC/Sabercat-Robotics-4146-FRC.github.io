@@ -6,6 +6,20 @@ Welcome to the Sabercat's 4146 hardware guide. This book is not the be all end a
 
 If you have any questions about the content in the book, please email the creator of the hardware book, G Micheal Rowland. [g@gmichaelrowland.com](mailto:g@gmichaelrowland.com)
 
+## Fall 2019 Information
+
+The following calendar is the fall 2019 calendar that dictates the pace of tests for the hardware students. There is a lot of material to cover with a limited amount of time. That said, it's very much worth learning this early so we can have as many students able to contribute when build season comes. We need to move through the math and conceptual stuff as quickly as possible so that we can move into modeling practice with Solidworks.
+
+<iframe src="https://calendar.google.com/calendar/embed?src=g8gmkev31lp59av5s8t8iems64%40group.calendar.google.com&ctz=America%2FPhoenix" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+
+
+
+#### 2019 Semester Start Letter to Students
+
+<a href="./pdf/fall-2019-open-letter-hardware.pdf" rel="" target="_blank"><img src=https://image.flaticon.com/icons/svg/80/80942.svg width="50px"></a>
+
+
 ### Important Links
 
 [Sabercat Website](http://sabercatrobotics.com/)
