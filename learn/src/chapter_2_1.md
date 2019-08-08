@@ -11,7 +11,10 @@ Position most notably expressed in cartesian coordinates which are the standard 
 
 <a href="https://www.youtube.com/watch?v=Zbx2_x0NVJg" rel="" target="_blank">![Introduction to Position](./img/video-thumbnails/position-intro-thumbnail.png)</a>
 
-### Vectors
+
+----
+
+## Vectors
 Vectors are quantities that have both a magnitude and direction. Visually, vectors are represented by arrows with the direction of the arrow being the vector's direction and the length of the arrow tip to tail is the magnitude of the vector. Examples of vectors and their applications in robotics include: velocity, force, acceleration, or even relative distances. You will be using vectors the most in hardware when analyzing multiple forces acting on an object. They'll become extremely useful when making system force and load diagrams and they'll create a good foundation for understanding things like projectile motion when it comes to designing shooter assemblies. Overall, vectors may seem like a very disconnected abstract concept now, but in later sections, you'll see how utilized they are.
 
 Before beginning learning about vectors, I recommend you make sure you're familiar with trig functions (sine, cosine, tangent) as well as the [Pythagorean theorem](https://www.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/geo-pythagorean-theorem/v/the-pythagorean-theorem).
@@ -75,6 +78,7 @@ Another use case for angular velocity of the drive train wheel would be to compu
 
 <a href="https://www.youtube.com/watch?v=MWCk_umEnHY" rel="" target="_blank">![Angular Velocity of a Drive Train | Example Problem](./img/video-thumbnails/angular-velocity-drivetrain-example-thumbnail.png)</a>
 
+----
 
 ## Acceleration
 
@@ -87,6 +91,7 @@ This example covers using the known acceleration of a chassis to calculate the a
 
 <a href="https://www.youtube.com/watch?v=8Jb71SJjSiU" rel="" target="_blank">![Acceleration and Angular Velocity | Example Problem](./img/video-thumbnails/acceleration-angular-velocity-example-thumbnail.png)</a>
 
+----
 
 ## Frequency
 
@@ -94,7 +99,10 @@ Frequency is a very important concept to grasp in robotics. It'll be used in a v
 
 <a href="https://www.youtube.com/watch?v=4ddqRB-wQ7w" rel="" target="_blank">![Introduction to Frequency](./img/video-thumbnails/frequency-intro-thumbnail.png)</a>
 
+----
 
 ## Practice Problems
 
 <a href="./pdf/2.1-practice-problems.pdf" rel="" target="_blank"><img src=https://image.flaticon.com/icons/svg/80/80942.svg width="50px"></a>
+
+----
