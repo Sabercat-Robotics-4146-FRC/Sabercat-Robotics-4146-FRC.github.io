@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "Incline",
+  "name": "incline",
   "version": "1.0.8",
   "description": "Landing page set",
   "main": "gulpfile.js",
