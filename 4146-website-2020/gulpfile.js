@@ -4,7 +4,7 @@
 
 // Load dependencies
 const autoprefixer = require('gulp-autoprefixer');
-const browsersync = require('browser-sync').create();
+const browsersync = require('browser-sync');
 const cached = require('gulp-cached');
 const cssnano = require('gulp-cssnano');
 const del = require('del');
@@ -13,7 +13,7 @@ const gulp = require('gulp');
 const gulpif = require('gulp-if');
 const npmdist = require('gulp-npm-dist');
 const replace = require('gulp-replace');
-const sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
 const useref = require('gulp-useref-plus');
 
@@ -108,7 +108,7 @@ gulp.task('scss', function() {
       browsers: ['> 1%']
     }))
     .pipe(gulp.dest(paths.src.css.dir))
-    .pipe(browsersync.stream());
+    .pipe(browsersync.reload({ stream: true }));
 });
 
 gulp.task('fileinclude', function(callback) {
