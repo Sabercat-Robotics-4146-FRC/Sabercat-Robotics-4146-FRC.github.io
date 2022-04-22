@@ -13,7 +13,7 @@
         "color": "^4.2.3",
         "flickity": "^2.1.2",
         "flickity-fade": "^1.0.0",
-        "fullpage.js": "^3.0.4",
+        "fullpage.js": "^4.0.5",
         "g": "^2.0.1",
         "highlightjs": "^9.12.0",
         "jquery": "^3.3.1",
@@ -2957,9 +2957,9 @@
       }
     },
     "node_modules/fullpage.js": {
-      "version": "3.1.2",
-      "resolved": "https://registry.npmjs.org/fullpage.js/-/fullpage.js-3.1.2.tgz",
-      "integrity": "sha512-hv7z6xhbg2StTp1UDq2hi+0oHjhT7cW3zCL3qCIJ3ood5pN0FRBQ2YKIOUobhsp4ATSQlr6sZ2TOcS+Ha+T7Cg=="
+      "version": "4.0.5",
+      "resolved": "https://registry.npmjs.org/fullpage.js/-/fullpage.js-4.0.5.tgz",
+      "integrity": "sha512-4OWRP08ogL35LwnNyDa8LNqRD0003HdolcVflfUyhMwAHVrpBNY9u1WYdAfnFEX7bd4vsermL7z22nmNqPWZvw=="
     },
     "node_modules/function-bind": {
       "version": "1.1.1",
@@ -13161,9 +13161,9 @@
       }
     },
     "fullpage.js": {
-      "version": "3.1.2",
-      "resolved": "https://registry.npmjs.org/fullpage.js/-/fullpage.js-3.1.2.tgz",
-      "integrity": "sha512-hv7z6xhbg2StTp1UDq2hi+0oHjhT7cW3zCL3qCIJ3ood5pN0FRBQ2YKIOUobhsp4ATSQlr6sZ2TOcS+Ha+T7Cg=="
+      "version": "4.0.5",
+      "resolved": "https://registry.npmjs.org/fullpage.js/-/fullpage.js-4.0.5.tgz",
+      "integrity": "sha512-4OWRP08ogL35LwnNyDa8LNqRD0003HdolcVflfUyhMwAHVrpBNY9u1WYdAfnFEX7bd4vsermL7z22nmNqPWZvw=="
     },
     "function-bind": {
       "version": "1.1.1",
