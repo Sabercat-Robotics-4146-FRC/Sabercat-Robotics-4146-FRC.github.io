@@ -4152,7 +4152,6 @@ input[type=button].btn-block {
   display: flex;
   flex-wrap: wrap;
   padding: 1.5rem 0;
-  margin-top: 0;
   margin-bottom: 0;
   list-style: none;
   background-color: #343a40;
@@ -11974,7 +11973,7 @@ label {
   color: #212529;
 }
 .navbar-light:before {
-  opacity: 0;
+  opacity: 1;
 }
 .navbar-light .navbar-brand-svg-i {
   color: #f5ba4b;

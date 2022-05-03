@@ -3674,8 +3674,6 @@ input[type=button].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 1rem;
-  overflow: hidden;
-  overflow-x: hidden;
 }
 .navbar > .container,
 .navbar > .container-fluid {
