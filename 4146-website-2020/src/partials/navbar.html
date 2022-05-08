@@ -56,23 +56,18 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Welcome
+            Pages
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarWelcome">
             <a class="dropdown-item @@if ( page == 'index.html' ) { active }" href="index.html">
-              Header: Image
+              Home
             </a>
-            <a class="dropdown-item @@if ( page == 'index-header-carousel.html' ) { active }" href="index-header-carousel.html">
-              Header: Carousel
-            </a>
-            <a class="dropdown-item @@if ( page == 'index-header-parallax.html' ) { active }" href="index-header-parallax.html">
-              Header: Parallax
-            </a>
-            <a class="dropdown-item @@if ( page == 'index-header-video.html' ) { active }" href="index-header-video.html">
-              Header: Video
+            <a class="dropdown-item @@if ( page == 'index.html' ) { active }" href="template.html">
+              Template
             </a>
           </div>
         </li>
+        <!--
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarLandings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Landings
@@ -193,15 +188,11 @@
             Documentation
           </a>
         </li>
+      -->
         <li class="nav-item-divider">
           <span class="nav-link">
             <span></span>
           </span>
-        </li>
-        <li class="nav-item">
-          <a href="@@button.url" target="_blank" class="nav-link">
-            @@button.text
-          </a>
         </li>
       </ul>
 
