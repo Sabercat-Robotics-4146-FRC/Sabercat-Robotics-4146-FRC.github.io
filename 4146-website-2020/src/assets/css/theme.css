@@ -13092,8 +13092,9 @@ h1, .h1,
 }
 .banner {
   width: 150px;
-  height: 200px;
+  height: auto;
   padding: 10px;
+  padding-bottom: 5px;
   color: white;
   font-family: 'Adam', sans-serif;
   border: 5px solid #0F4BCB;
