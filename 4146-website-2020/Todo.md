@@ -5,8 +5,7 @@
 
 ### Images
 ---
-* Banner for Awards.html
-* Image for Sponsers and Partners
+
 
 ### Descriptions
 ---
@@ -17,4 +16,3 @@
 
 ### Known Bugs
 ---
-* Cant see page explorer on desktop
