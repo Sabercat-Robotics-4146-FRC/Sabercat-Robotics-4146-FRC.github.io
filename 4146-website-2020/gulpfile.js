@@ -16,6 +16,15 @@ const replace = require('gulp-replace');
 var sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
 const useref = require('gulp-useref-plus');
+var deploy      = require('gulp-gh-pages');
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
 
 // Define paths
 const paths = {
