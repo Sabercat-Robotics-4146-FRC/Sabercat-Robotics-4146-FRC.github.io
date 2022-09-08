@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Sabercat Robotics Hardware Guide</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="forward.html">Forward</a></li><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Design Process &amp; Iteration</a></li><li><ol class="section"><li><a href="chapter_1_1.html"><strong aria-hidden="true">1.1.</strong> Engineering Drawings</a></li><li><a href="chapter_1_2.html"><strong aria-hidden="true">1.2.</strong> Game Strategy</a></li><li><a href="chapter_1_3.html"><strong aria-hidden="true">1.3.</strong> Design Process</a></li></ol></li><li><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Applied Physics: Mechanics</a></li><li><ol class="section"><li><a href="chapter_2_1.html"><strong aria-hidden="true">2.1.</strong> Motion</a></li><li><a href="chapter_2_1_1.html"><strong aria-hidden="true">2.2.</strong> Mass, Volume, and Density</a></li><li><a href="chapter_2_2.html"><strong aria-hidden="true">2.3.</strong> Force &amp; Torque</a></li><li><a href="chapter_2_3.html"><strong aria-hidden="true">2.4.</strong> Power &amp; Work</a></li><li><a href="chapter_2_4.html"><strong aria-hidden="true">2.5.</strong> Leverage &amp; Gearing</a></li></ol></li><li><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Mechanical Design Components</a></li><li><ol class="section"><li><a href="chapter_3_1.html"><strong aria-hidden="true">3.1.</strong> Fasteners</a></li><li><a href="chapter_3_2.html"><strong aria-hidden="true">3.2.</strong> Springs</a></li><li><a href="chapter_3_3.html"><strong aria-hidden="true">3.3.</strong> Bearings</a></li><li><a href="chapter_3_4.html"><strong aria-hidden="true">3.4.</strong> Shafts</a></li><li><a href="chapter_3_5.html"><strong aria-hidden="true">3.5.</strong> Belts &amp; Pulleys</a></li><li><a href="chapter_3_6.html"><strong aria-hidden="true">3.6.</strong> Sprockets &amp; Chain</a></li><li><a href="chapter_3_7.html"><strong aria-hidden="true">3.7.</strong> Gears</a></li><li><a href="chapter_3_8.html"><strong aria-hidden="true">3.8.</strong> VersaPlanetaries &amp; AM-Sport</a></li></ol></li><li><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Electrical Components</a></li><li><ol class="section"><li><a href="chapter_4_1.html"><strong aria-hidden="true">4.1.</strong> Applied Physics: Electricity</a></li><li><a href="chapter_4_2.html"><strong aria-hidden="true">4.2.</strong> Motors</a></li><li><a href="chapter_4_3.html"><strong aria-hidden="true">4.3.</strong> Motors With Reductions</a></li><li><a href="chapter_4_4.html"><strong aria-hidden="true">4.4.</strong> Connectors &amp; Crimps</a></li><li><a href="chapter_4_5.html"><strong aria-hidden="true">4.5.</strong> Roborio</a></li><li><a href="chapter_4_6.html"><strong aria-hidden="true">4.6.</strong> PDB, VRM, PCM</a></li><li><a href="chapter_4_7.html"><strong aria-hidden="true">4.7.</strong> CAN &amp; PWM</a></li><li><a href="chapter_4_8.html"><strong aria-hidden="true">4.8.</strong> Motor Controllers</a></li><li><a href="chapter_4_9.html"><strong aria-hidden="true">4.9.</strong> Example System</a></li></ol></li><li><a href="chapter_5.html"><strong aria-hidden="true">5.</strong> Control Systems For Hardware</a></li><li><ol class="section"><li><a href="chapter_5_1.html"><strong aria-hidden="true">5.1.</strong> Sensors</a></li><li><a href="chapter_5_2.html"><strong aria-hidden="true">5.2.</strong> Feedback Controllers</a></li><li><a href="chapter_5_3.html"><strong aria-hidden="true">5.3.</strong> Control Systems By Example</a></li></ol></li><li><a href="chapter_6.html"><strong aria-hidden="true">6.</strong> Pneumatics</a></li><li><a href="chapter_7.html"><strong aria-hidden="true">7.</strong> Manufacturing Methods</a></li><li><ol class="section"><li><a href="chapter_7_1.html"><strong aria-hidden="true">7.1.</strong> Manufacturing Basics</a></li><li><a href="chapter_7_2.html"><strong aria-hidden="true">7.2.</strong> Hand Manufacturing</a></li><li><a href="chapter_7_3.html"><strong aria-hidden="true">7.3.</strong> Milling &amp; CNC</a></li><li><a href="chapter_7_4.html"><strong aria-hidden="true">7.4.</strong> Laser Cutting &amp; Water Jet</a></li><li><a href="chapter_7_5.html"><strong aria-hidden="true">7.5.</strong> Turning With Lathes</a></li><li><a href="chapter_7_6.html"><strong aria-hidden="true">7.6.</strong> Welding &amp; Plasma Cutting</a></li></ol></li><li><a href="chapter_8.html"><strong aria-hidden="true">8.</strong> 3D Printing</a></li><li><a href="chapter_9.html"><strong aria-hidden="true">9.</strong> Common Subsystems</a></li><li><a href="chapter_10.html"><strong aria-hidden="true">10.</strong> Solidworks</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Sabercat Robotics Hardware Guide</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><img src="./img/head-raw-vector.svg" alt="sabercat logo" /></p>
+<a class="header" href="#forward" id="forward"><h2>Forward</h2></a>
+<p>Welcome to the Sabercat's 4146 hardware guide. This book is not the be all end all for our hardware curriculum. The goal of this book is to serve as a primer to learning the hardware portion of robotics. This book is a resource for our students to be able to learn robotics at their own pace so that we can support and accommodate more students than out mentors are equipped to handle by themselves. As mentors and teachers, we will assist and help the students when they get stuck or have questions. At the same time, it is expected for the students to have the agency to be responsible for their own learning to a degree. The information in this book is fully accessible at all times so that the students can always be progressing through the curriculum at their own pace. Let it be known that this is a work in progress and will likely always be experiencing updates and improvements.</p>
+<p>If you have any questions about the content in the book, please email the creator of the hardware book, G Micheal Rowland. <a href="mailto:g@gmichaelrowland.com">g@gmichaelrowland.com</a></p>
+<a class="header" href="#fall-2019-information" id="fall-2019-information"><h2>Fall 2019 Information</h2></a>
+<p>The following calendar is the fall 2019 calendar that dictates the pace of tests for the hardware students. There is a lot of material to cover with a limited amount of time. That said, it's very much worth learning this early so we can have as many students able to contribute when build season comes. We need to move through the math and conceptual stuff as quickly as possible so that we can move into modeling practice with Solidworks.</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=g8gmkev31lp59av5s8t8iems64%40group.calendar.google.com&ctz=America%2FPhoenix" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<a class="header" href="#2019-semester-start-letter-to-students" id="2019-semester-start-letter-to-students"><h4>2019 Semester Start Letter to Students</h4></a>
+<p><a href="./pdf/fall-2019-open-letter-hardware.pdf" rel="" target="_blank"><img src=https://image.flaticon.com/icons/svg/80/80942.svg width="50px"></a></p>
+<a class="header" href="#important-links" id="important-links"><h3>Important Links</h3></a>
+<p><a href="http://sabercatrobotics.com/">Sabercat Website</a></p>
+<p><a href="https://github.com/Sabercat-Robotics-4146-FRC">Sabercat GitHub</a></p>
+<p><a href="http://sabercatrobotics.com/student-help">Team Information</a></p>
+<hr />
+<a class="header" href="#chapter-1" id="chapter-1"><h1>Chapter 1</h1></a>
+<p>Chapter 1 covers the principles of design process and iteration. This chapter covers an overview of game strategy analysis. It covers how we have traditionally gone through the prototyping process for the team. How to rapidly prototype leveraging 3D printing and laser cutting technologies. This chapter covers classic engineering drawings and how to effectively communicate ideas visually and verbally.</p>
+<a class="header" href="#what-is-hardware" id="what-is-hardware"><h2>What is Hardware?</h2></a>
+<p>Hardware encompasses all of the physical aspects of robotics. This word is used to refer to the team that deals with everything from Solidworks, manufacturing, electrical, all the way down to the literal nuts and bolts. The hardware team is responsible for learning all of the physical aspects of robotics as well as communicating effectively with the software team. Hardware encompasses all of the technician roles as well as design roles on the team. We encourage all of the hardware students to learn as much as they can in the hardware curriculum as well as learn the software portions are they are so closely tied for optimal performance and education.</p>
+<a class="header" href="#keep-an-engineering-notebook" id="keep-an-engineering-notebook"><h2>Keep an engineering Notebook.</h2></a>
+<p>I highly recommend everyone keeps an engineering notebook both on a project level and a personal level. Sabercat Robotics has upheld a tradition of keeping a well maintained and documented Engineering Notebook for each season since 2018. A personal engineering notebook is a good place for you, as a student, to take notes about different physics principles, example walkthroughs, and mechanical design components and assemblies. Really anything that you want to learn and remember should find its way into your notebook one way or another. Engineering notebooks is a form of documentation and all documentation is an <strong>investment</strong>. When you spend your time documenting design decisions, considerations, constraints, and outcomes, you will save orders of magnitude more time and energy in the future. Your personal engineering notebook and an investment for yourself where the dividends are a consistent reference that you will be able to use throughout your career on the team. The seasonal engineering notebook is an investment for yourself, your teammates, and every team member in future years. The engineering notebooks are one of the many ways we try to fight student graduation turnover. Keep an engineering notebook. Document your decisions; it will force you to think through things more.</p>
+<a class="header" href="#mindset" id="mindset"><h2>Mindset.</h2></a>
+<p>Engineering is not easy, especially when starting out. Having a positive attitude and outlook is the most important part of learning. Your character will be tested whenever you work in a team towards a difficult goal. This is your chance to show your yourself and your team that you will circum the adversity of learning and developing an understanding of the world around you. Take pride in your work. Take pride in your learning. Take pride in yourself. Never become complacent. And have fun.</p>
+<p>I highly recommend watching the following video's for some good information. The better you understand yourself and how you learn, the more successful you'll be able to learn.</p>
+<ul>
+<li><a href="https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve?language=en">TEDX | Growth Mindset</a></li>
+<li><a href="https://www.youtube.com/watch?v=O96fE1E-rf8">TEDX | How To Learn</a></li>
+<li><a href="https://www.youtube.com/watch?v=23Xqu0jXlfs">Thomas Frank | Study Less Study Smart</a></li>
+<li><a href="https://www.youtube.com/watch?v=1-SvuFIQjK8">Smart Goals</a></li>
+</ul>
+<hr />
+<a class="header" href="#engineering-drawings" id="engineering-drawings"><h2>Engineering Drawings</h2></a>
+<p>One of the most important aspects of being an engineer, entrepreneur, or student is effective communication. Most roles that you play in your life will require effective communication on some level. The two forms of communication that we focus on in this program is verbal communication and visual communication.</p>
+<a class="header" href="#verbal-communication" id="verbal-communication"><h3>Verbal Communication</h3></a>
+<p>Verbal communication takes place in the form of speaking and writing. This form of communication is extremely important on all levels, high and low. In the low levels of effective verbal communication, the communicator knows what the correct words to use when referring to different systems and components. Grammar is also an extremely important part of effective verbal communication - if you don't have mastered correct English grammar, it's worth the investment.</p>
+<p>On the technical design side of effective verbal communication, one of the important components is being able to identify the engineering jargon that will be used for efficiency. For example, being able to identify what someone is referring to when they use words like, &quot;bearing&quot;, &quot;manipulator&quot;, &quot;reduction&quot;, &quot;constant&quot;, &quot;instantiate&quot;, and other words that you may have never heard been used in the context that they will be used by the students and mentors around you. You will naturally be exposed to the key words and concepts that have their own jargon throughout the book.</p>
+<p><em>TLDR: Focus on learning the words people use to describe things in engineering and make an effort to have proper grammar. It goes a long way.</em></p>
+<a class="header" href="#visual-communication" id="visual-communication"><h3>Visual Communication</h3></a>
+<p>Visual communication is what people typically think of when seeing the title <code>Engineering Drawings</code>. Visual communication includes all communication that can be seen. This includes but is not limited to engineering drawings, 'napkin' sketches, and even <em>Computer Aided Design</em> (CAD) softwares like Solidworks or Fusion 360.</p>
+<p>Beginning with the basics of visual communication, the most important fundamentals are being able to draw precisely and effectively so that others can understand the spacial idea you have. A lot of ideas you have surrounding the mechanisms of the robot, algorithms, and even system diagrams will be more effectively communicated with a drawing than verbal communication. Sometimes its easier for people to see your ideas than hear them.</p>
+<p>Although traditional drafting and drawing is on the decline because of the event of CAD softwares, it's still extremely important for engineers to be able to communicate their ideas with engineering drawings. Learning how to draw will also help you learn CAD software and help with spacial reasoning.</p>
+<a class="header" href="#technical-drawings" id="technical-drawings"><h2>Technical Drawings</h2></a>
+<p>Technical drawings, or drafting, in our circle of use is being able to draw parts and assemblies for any given robotics system. Drawings are broken down into views. As a mental model for drawing views, imagine a part in space. Now imaging the part is fixed in space and you put a glass box around the part. Each face of the box is a view. So only looking at the part through the top pane of the box would be the top view of the box. The back pane of the box would become the back view and so on. These views are only 2D though and require a 3D projection for the engineers to get a full idea of what the part looks like in three dimensional space and not just the 2D projections.</p>
+<p><img src="./img/Various_projections_of_cube_above_plane.svg.png" alt="projected view example" /></p>
+<p><em>Watch this 15 minute video on mechanical engineering drawings.</em></p>
+<p><a href="https://www.youtube.com/watch?v=1Hm5Zyjmjac">VIDEO: Intro to Mechanical Engineering Drawing by Normal Universe</a></p>
+<a class="header" href="#outside-resources--suggested-content" id="outside-resources--suggested-content"><h3>Outside Resources &amp; Suggested Content</h3></a>
+<p><em>You should seriously consider going through these if you have time, it will make you a better engineer.</em></p>
+<ul>
+<li>
+<p><a href="https://ocw.mit.edu/courses/mechanical-engineering/2-007-design-and-manufacturing-i-spring-2009/related-resources/drawing_and_sketching/">Engineering drawings by MIT</a></p>
+</li>
+<li>
+<p><a href="https://www.wikiwand.com/en/Engineering_drawing">Engineering Drawings - Wikipedia</a></p>
+</li>
+</ul>
+<a class="header" href="#game-strategy" id="game-strategy"><h2>Game Strategy</h2></a>
+<a class="header" href="#design-process--iteration" id="design-process--iteration"><h2>Design Process &amp; Iteration</h2></a>
+<a class="header" href="#applied-physics-mechanics" id="applied-physics-mechanics"><h1>Applied Physics: Mechanics</h1></a>
+<a class="header" href="#why-does-this-matter" id="why-does-this-matter"><h2>Why does this matter?</h2></a>
+<p>Understanding the physics behind what allows your machine to operate is important. It's important to build a mental model of how the world works so that it becomes easier to design within the parameters set for us by physics. This section focuses on simple Newtonian Physics required to grasp how robotic assemblies function from a first principles perspective. This perspective is useful when taking risks and being creative in your designs. This chapter may feel like a physics or math class, but the content is boiled down to what's directly applicable to robotics. Remember that <em>math</em> is one of the most important pillars of all engineering.</p>
+<a class="header" href="#motion" id="motion"><h1>Motion</h1></a>
+<p>Motion is one of the fundamental concept that must be understood well in order to have a better grasp of more complex processes and concepts. In this chapter we cover one of the fundamental mathematical structures we use to express most forms of motion, the <em>vector</em>. We'll also cover position, velocity, and acceleration which are all the forms of motion you're likely most familiar with. Finally, we will briefly cover frequency and all of it's interpretations that we'll have in robotics.</p>
+<a class="header" href="#position" id="position"><h2>Position</h2></a>
+<a class="header" href="#coordinates-system" id="coordinates-system"><h4>Coordinates System</h4></a>
+<p>Position most notably expressed in cartesian coordinates which are the standard x-y graphs you use in algebra and other math classes. The position of a point is expressed by what we refer to as an <em>ordered pair</em> which looks like this: <code>(x, y)</code>. It's called an ordered pair because it has a pair (two) of numbers and the order of these numbers is what designates what the number represents. In traditional cartesian coordinates, we put the <code>x</code> before the <code>y</code> which means when we see an ordered pair like this, <code>(5, 23)</code> we know that the number 5 expresses where the number lies on the <code>x</code> axis and 23 represents where the point is in relation to the <code>y</code> axis.</p>
+<p><a href="https://www.youtube.com/watch?v=Zbx2_x0NVJg" rel="" target="_blank"><img src="./img/video-thumbnails/position-intro-thumbnail.png" alt="Introduction to Position" /></a></p>
+<hr />
+<a class="header" href="#vectors" id="vectors"><h2>Vectors</h2></a>
+<p>Vectors are quantities that have both a magnitude and direction. Visually, vectors are represented by arrows with the direction of the arrow being the vector's direction and the length of the arrow tip to tail is the magnitude of the vector. Examples of vectors and their applications in robotics include: velocity, force, acceleration, or even relative distances. You will be using vectors the most in hardware when analyzing multiple forces acting on an object. They'll become extremely useful when making system force and load diagrams and they'll create a good foundation for understanding things like projectile motion when it comes to designing shooter assemblies. Overall, vectors may seem like a very disconnected abstract concept now, but in later sections, you'll see how utilized they are.</p>
+<p>Before beginning learning about vectors, I recommend you make sure you're familiar with trig functions (sine, cosine, tangent) as well as the <a href="https://www.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/geo-pythagorean-theorem/v/the-pythagorean-theorem">Pythagorean theorem</a>.</p>
+<p><a href="https://www.youtube.com/watch?v=zb1KHxpoDPQ" rel="" target="_blank"><img src="./img/video-thumbnails/vector-intro-thumbnail.png" alt="Introduction to Vectors" /></a></p>
+<p>Learning how to compute the product of a vector and scalar will become useful when trying to account for things like friction. Friction will be covered more in a later section but the quantitative measurement of static, kinetic, and rolling friction is a coefficient based on forces acting on a material. So in cases where we account for friction in a calculation, we will be finding the product of a scalar quantity (the coefficient of friction) and a vector quantity (the normal force vector).</p>
+<p><a href="https://www.youtube.com/watch?v=RsUWAMeT6zQ" rel="" target="_blank"><img src="./img/video-thumbnails/vector-scalar-product-thumbnail.png" alt="Product of a Vector and Scalar" /></a></p>
+<p>Especially in force diagrams, vector addition is crucial. It's the most straightforward way of computing how an assembly, part, or object, will react to multiple forces exerted on the object. It will help when computing the tension applied to cables at angles as well. So using vector addition, we would have the power to compute the total estimated tension on a cable to make sure the speced cable will not break. Vector addition is extremely useful to learn early. And it's also very simple. Just add each respective component of the vector.</p>
+<p><a href="https://www.youtube.com/watch?v=qGZsCMY8rZU" rel="" target="_blank"><img src="./img/video-thumbnails/vector-add-thumbnail.png" alt="Vector Addition 1 | Example Problem" /></a></p>
+<p><a href="https://www.youtube.com/watch?v=G7qeyvbHeSc" rel="" target="_blank"><img src="./img/video-thumbnails/vector-add-2-thumbnail.png" alt="Vector Addition 2 | Example Problem" /></a></p>
+<p>A <strong>Unit Vector</strong> is a vector that can be computed for every vector. It has the same direction as it's parent vector, but will always have a magnitude of one. This makes it in a lot of ways similar to the unit circle which is a circle of radius 1. Unit vectors can be used to see if two vectors have the same direction. If two vectors have the same direction, they will have the exact same unit vector.</p>
+<p><a href="https://www.youtube.com/watch?v=Sg2dvbBs9YM" rel="" target="_blank"><img src="./img/video-thumbnails/unit-vector-thumbnail.png" alt="Introduction to Unit Vectors" /></a></p>
+<p>Even though 2D vectors will be sufficient for most of what we'll cover, it's important to understand that vectors can be any any number of dimensions and that when designing robots, we're designing in a 3D spacial domain. Thinking about things in 3D is really important for developing a good mental model of the world.</p>
+<p><a href="https://www.youtube.com/watch?v=2TO1CQpMOKA" rel="" target="_blank"><img src="./img/video-thumbnails/3d-vector-thumbnail.png" alt="Working with 3D Vectors" /></a></p>
+<p>On a final note, I highly recommend you watch the entire <a href="https://www.3blue1brown.com/essence-of-linear-algebra-page">&quot;Essence of Linear Algebra&quot;</a> series by 3Blue1Brown. If you do this, you'll earn a very fundamental understanding of vectors and it'll change your life.</p>
+<a class="header" href="#additional-resources" id="additional-resources"><h4>Additional Resources:</h4></a>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=fNk_zzaMoSs">Vectors, what even are they? | Essence of linear algebra, chapter 1</a></li>
+<li><a href="https://www.physicsclassroom.com/class/vectors/Lesson-1/Vectors-and-Direction">Vectors and Direction</a></li>
+<li><a href="https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/vectors/v/vector-introduction-linear-algebra">Vector intro for linear algebra</a></li>
+<li><a href="https://www.wikiwand.com/en/Euclidean_vector">Euclidean vector</a></li>
+<li><a href="https://www.brown.edu/Departments/Engineering/Courses/En4/Tutorials/Vector_Tutorial.pdf">Brown University Vectors Tutorial</a></li>
+<li><a href="https://www.3blue1brown.com/essence-of-linear-algebra-page">Essence of Linear Algebra | 3 Blue 1 Brown</a></li>
+</ul>
+<hr />
+<a class="header" href="#velocity" id="velocity"><h2>Velocity</h2></a>
+<p>Velocity is a vector quantity that represents the rate at which something is traveling in distance per unit time. Because velocity is a vector, it has a magnitude and direction. An example of a velocity would be <em>&quot;The robot is traveling 12 ft per second northbound.&quot;</em> In this case, the magnitude of the velocity vector is <code>12 ft per second</code> and the direction is northbound. If we were only to specify the magnitude of this vector, we would call it speed instead of velocity. So saying <em>&quot;the ball is flying 2 meters per second&quot;</em> would be expressing the speed of the ball. We would need to specify a direction in order for it to be a velocity vector.</p>
+<p><a href="https://www.youtube.com/watch?v=UemTeesOazo" rel="" target="_blank"><img src="./img/video-thumbnails/velocity-intro-thumbnail.png" alt="Introduction to Velocity" /></a></p>
+<a class="header" href="#angular-velocity" id="angular-velocity"><h3>Angular Velocity</h3></a>
+<p>Angular velocity is a quantity that describes circular motion. It describes the rate of circular motion to be precise. Some possible units of angular velocity are <code>radians per second</code>, <code>revolutions per minute</code> <em>(RPM)</em>, <code>degrees per second</code>. Really any unit of &quot;turning&quot; (angular unit) per unit of time is an angular velocity. In the case of angular velocity, the direction is going to be either clockwise or counterclockwise. Which can be expressed by positive or negative numerical expressions of angular velocity.</p>
+<p><a href="https://www.youtube.com/watch?v=RMg7ZwYaPIM" rel="" target="_blank"><img src="./img/video-thumbnails/angular-velocity-intro-thumbnail.png" alt="Introduction to Angular Velocity" /></a></p>
+<p>One of the most prolific uses for angular velocity in FRC is in the analysis of wheel speed and how that will relate to the overall motion of the robot chassis across the field. The math and concepts you learn in this section will help when learning how to spec gearboxes and motors for a drivetrain because this teaches the relationship between angular velocity of a wheel and chassis velocity. Later you'll learn how to calculate the angular velocity of a wheel on a drivetrain given the motor and gearbox constraints.</p>
+<p><a href="https://www.youtube.com/watch?v=lO5Kheoe0KY" rel="" target="_blank"><img src="./img/video-thumbnails/angular-velocity-wheel-example-thumbnail.png" alt="Angular Velocity of a Wheel | Example Problem" /></a></p>
+<p>Another common use for angular velocity in FRC would be calculating how fast an assembly that is fixed to a belt would travel given the angular velocity of the pulley driving the belt. You can imagine this becoming useful if you have a target speed for a belt driven linear assembly and you want to reduce the load on the motor as much as possible so you'd want to find the highest reduction to achieve the desired linear speed. The relationship between angular velocity of a pulley and linear velocity of a belt is crucial for these assemblies.</p>
+<p><a href="https://www.youtube.com/watch?v=Z--5wroyVh0" rel="" target="_blank"><img src="./img/video-thumbnails/angular-velocity-belt-example-thumbnail.png" alt="Angular Velocity of a Pulley and Belt | Example Problem" /></a></p>
+<p>Another use case for angular velocity of the drive train wheel would be to compute the heading angular velocity based on the wheel speed. You should also be able to compute the angle at a specific timestamp given the wheel angular velocity and some data about the chassis.</p>
+<p><a href="https://www.youtube.com/watch?v=MWCk_umEnHY" rel="" target="_blank"><img src="./img/video-thumbnails/angular-velocity-drivetrain-example-thumbnail.png" alt="Angular Velocity of a Drive Train | Example Problem" /></a></p>
+<hr />
+<a class="header" href="#acceleration" id="acceleration"><h2>Acceleration</h2></a>
+<p>Acceleration is the the rate at which velocity is changing with respect to time. Because velocity is a vector and acceleration is base on the change in velocity, acceleration itself is a vector quantity. <code>a = v/t</code> where v is the change in velocity and t is the change in time. The units for acceleration is distance per square unit of time. Some people may be confused by the square unit of time in the denominator. But a better way of thinking about this may be more linguistic. Instead of thinking about an acceleration being <em>&quot;the object is accelerating 10 meters per second squared&quot;</em> think of it as <em>&quot;the object's velocity is increasing 10 meters per second every second&quot;</em> So if the object starts at rest, after one second, the velocity would be 10 meters per second. After two seconds the velocity would be 20 meters per second. After 3 seconds, 30 meters per second. So you can see that the velocity is changing when time is elapsing and that is exactly what acceleration is. Acceleration is the change in velocity with respect to a change in time. This is just the same as velocity being the change in distance with respect to the change in time except it's one step further because we're analysing the change in velocity not just the change in distance.</p>
+<p><a href="https://www.youtube.com/watch?v=W_2xBB1_yp0" rel="" target="_blank"><img src="./img/video-thumbnails/acceleration-intro-thumbnail.png" alt="Introduction to Acceleration" /></a></p>
+<p>This example covers using the known acceleration of a chassis to calculate the angular velocity of the wheel. (commonly called wheel speed)</p>
+<p><a href="https://www.youtube.com/watch?v=8Jb71SJjSiU" rel="" target="_blank"><img src="./img/video-thumbnails/acceleration-angular-velocity-example-thumbnail.png" alt="Acceleration and Angular Velocity | Example Problem" /></a></p>
+<hr />
+<a class="header" href="#frequency" id="frequency"><h2>Frequency</h2></a>
+<p>Frequency is a very important concept to grasp in robotics. It'll be used in a variety of applications from AC electricity, to processor speeds, to resonant frequencies, to any general repeated motion. This video briefly goes over the basic units of frequency, Hertz (Hz). And how it's basically &quot;how many time something occurred per second&quot; which can also be interpreted as inverse seconds.</p>
+<p><a href="https://www.youtube.com/watch?v=4ddqRB-wQ7w" rel="" target="_blank"><img src="./img/video-thumbnails/frequency-intro-thumbnail.png" alt="Introduction to Frequency" /></a></p>
+<hr />
+<a class="header" href="#practice-problems" id="practice-problems"><h2>Practice Problems</h2></a>
+<p><a href="./pdf/2.1-practice-problems.pdf" rel="" target="_blank"><img src=https://image.flaticon.com/icons/svg/80/80942.svg width="50px"></a></p>
+<hr />
+<a class="header" href="#mass-volume-and-density" id="mass-volume-and-density"><h1>Mass, Volume, and Density</h1></a>
+<a class="header" href="#mass" id="mass"><h2>Mass</h2></a>
+<a class="header" href="#what-is-mass-why-do-i-care" id="what-is-mass-why-do-i-care"><h3>What is Mass? Why do I care?</h3></a>
+<p>Mass is a property of matter that describes how much &quot;stuff&quot; is in an object. Basically, when we say that something is massive, we're expressing that it has a lot of protons and neutrons in it. Although it's not required to understand how the atomic anatomy of materials plays into the mass of those materials, it doesn't hurt to understand what makes up materials. Mass is measured in kilograms in the metric system and in slugs in the imperial system. Slugs aren't used very frequently and we use pounds as a substitute.</p>
+<p>There are two defining features of the property of mass.</p>
+<ul>
+<li>The more massive an object, that more it will resist accelerating when a force is applied. This is called <em>inertia</em>.</li>
+<li>The mass of an object determines it's gravitational force.</li>
+</ul>
+<p>The first point here is one that will be covered more in the section on force, but it's worth noting that when you hear or see the word <em>inertia</em> we are referring to mass. Inertia has units of kg (or empirical equivalent, slugs). One way to think of this on a higher level is to imagine throwing a baseball and then throwing a baseball that's made of steel. The steel will require a stronger throw (more force) to accelerate it a fraction of the baseball's acceleration.</p>
+<p>The second property of objects with mass being that the mass determines the gravitational force is how we typically interact with mass and that is through <em>weight</em>. In the United States a lot of the time when we talk about lbs we are referring to mass even when the units of pounds are actually a unit of force. When we say &quot;I weigh 140lbs&quot; we are saying, &quot;the force exerted on the surface of the earth by gravity when I stand here is 140lbs.&quot; Even though this is what we're saying, we usually just use weight and mass interchangeably. This leads us to endorse pounds (lbs) as being a good enough unit of mass (even though it's force) and then tacking on an <em>'f'</em> on the end of lbs to designate it as force. So when referring to pounds of force, use <em>&quot;lbsf&quot;</em> instead of just &quot;lbs.&quot;</p>
+<p><a href="https://www.youtube.com/watch?v=T_A5SkjrpY4" rel="" target="_blank"><img src="./img/video-thumbnails/mass-intro-thumbnail.png" alt="Introduction to Mass" /></a></p>
+<hr />
+<a class="header" href="#volume" id="volume"><h2>Volume</h2></a>
+<p>Volume is a measure of how much space an object occupies or how much space is inside an object, etc. Just as area is a measure of space in two dimensions, volume is a measure for space in three dimensions. The units for volume are cubic inches, and cubic feet in the imperial system and volume has a base si unit of cubic meters.</p>
+<p><a href="https://www.youtube.com/watch?v=ixJXndafV44" rel="" target="_blank"><img src="./img/video-thumbnails/volume-intro-thumbnail.png" alt="Introduction to Volume" /></a></p>
+<a class="header" href="#use-the-following-example-walkthroughs-to-get-a-better-understanding-of-how-volume-can-be-calculated" id="use-the-following-example-walkthroughs-to-get-a-better-understanding-of-how-volume-can-be-calculated"><h3>Use the following Example Walkthroughs to get a better understanding of how volume can be calculated.</h3></a>
+<p><a href="https://youtu.be/gYJpZ_0FLXY" rel="" target="_blank"><img src="./img/video-thumbnails/thumbnail-volume-pipe.png" alt="Example | Volume of a Pipe" /></a></p>
+<p><a href="https://www.youtube.com/watch?v=QY0jLiHF6Eg" rel="" target="_blank"><img src="./img/video-thumbnails/thumbnail-volume-cube.png" alt="Example | Volume of a Pipe" /></a></p>
+<hr />
+<a class="header" href="#density" id="density"><h2>Density</h2></a>
+<p>Density is a measure of mass per unit of volume. An example unit for density in the metric system in kilograms per cubic meter.</p>
+<p><a href="https://www.youtube.com/watch?v=4K78J_xr0Yo" rel="" target="_blank"><img src="./img/video-thumbnails/density-intro-thumbnail.png" alt="Introduction to Density" /></a></p>
+<a class="header" href="#use-the-following-examples-to-get-a-better-understanding-of-how-to-use-density" id="use-the-following-examples-to-get-a-better-understanding-of-how-to-use-density"><h3>Use the following examples to get a better understanding of how to use density.</h3></a>
+<p><a href="https://www.youtube.com/watch?v=C6-uNJLO0DY" rel="" target="_blank"><img src="./img/video-thumbnails/mass-fillet-thumbnail.png" alt="Example | Mass of a Fillet" /></a></p>
+<p><a href="https://www.youtube.com/watch?v=2Zg6XdDTt-s" rel="" target="_blank"><img src="./img/video-thumbnails/mass-tube-thumbnail.png" alt="Example | Mass of a Tube" /></a></p>
+<hr />
+<a class="header" href="#practice-problems-1" id="practice-problems-1"><h2>Practice Problems</h2></a>
+<p><a href="./pdf/2.2-practice.pdf" rel="" target="_blank"><img src=https://image.flaticon.com/icons/svg/80/80942.svg width="50px"></a></p>
+<hr />
+<a class="header" href="#extra-resources" id="extra-resources"><h2>Extra Resources</h2></a>
+<ul>
+<li><a href="https://www.khanacademy.org/science/physics/centripetal-force-and-gravitation/gravity-newtonian/v/mass-and-weight-clarification">Mass vs Weight | Khan Academy</a></li>
+<li><a href="https://www.youtube.com/watch?v=blUe0xV5sJA">Density = Mass/Volume</a></li>
+<li><a href="https://www.wikiwand.com/en/Density">Density</a></li>
+<li><a href="https://www.wikiwand.com/en/Volume">Volume</a></li>
+<li><a href="https://www.wikiwand.com/en/Mass">Mass</a></li>
+</ul>
+<a class="header" href="#force--torque" id="force--torque"><h2>Force &amp; Torque</h2></a>
+<a class="header" href="#power--work" id="power--work"><h2>Power &amp; Work</h2></a>
+<a class="header" href="#leverage--gearing" id="leverage--gearing"><h2>Leverage &amp; Gearing</h2></a>
+<a class="header" href="#mechanical-design-components" id="mechanical-design-components"><h1>Mechanical Design Components</h1></a>
+<a class="header" href="#fasteners" id="fasteners"><h2>Fasteners</h2></a>
+<a class="header" href="#springs" id="springs"><h2>Springs</h2></a>
+<a class="header" href="#bearings" id="bearings"><h2>Bearings</h2></a>
+<a class="header" href="#shafts" id="shafts"><h2>Shafts</h2></a>
+<a class="header" href="#belts--pulleys" id="belts--pulleys"><h2>Belts &amp; Pulleys</h2></a>
+<a class="header" href="#sprockets--chain" id="sprockets--chain"><h2>Sprockets &amp; Chain</h2></a>
+<a class="header" href="#gears" id="gears"><h2>Gears</h2></a>
+<a class="header" href="#versaplanetaries--am-sport" id="versaplanetaries--am-sport"><h2>VersaPlanetaries &amp; AM-Sport</h2></a>
+<a class="header" href="#electrical-components" id="electrical-components"><h1>Electrical Components</h1></a>
+<a class="header" href="#applied-physics-electricity" id="applied-physics-electricity"><h2>Applied Physics: Electricity</h2></a>
+<a class="header" href="#motors" id="motors"><h2>Motors</h2></a>
+<a class="header" href="#motors-with-reductions" id="motors-with-reductions"><h2>Motors With Reductions</h2></a>
+<a class="header" href="#connectors--crimps" id="connectors--crimps"><h2>Connectors &amp; Crimps</h2></a>
+<a class="header" href="#roborio" id="roborio"><h2>Roborio</h2></a>
+<a class="header" href="#pdb-vrm-pcm" id="pdb-vrm-pcm"><h2>PDB, VRM, PCM</h2></a>
+<a class="header" href="#can--pwm" id="can--pwm"><h2>CAN &amp; PWM</h2></a>
+<a class="header" href="#motor-controllers" id="motor-controllers"><h2>Motor Controllers</h2></a>
+<a class="header" href="#example-system" id="example-system"><h2>Example System</h2></a>
+<a class="header" href="#control-systems-for-hardware" id="control-systems-for-hardware"><h1>Control Systems For Hardware</h1></a>
+<a class="header" href="#sensors" id="sensors"><h2>Sensors</h2></a>
+<a class="header" href="#feedback-controllers" id="feedback-controllers"><h2>Feedback Controllers</h2></a>
+<a class="header" href="#control-systems-by-example" id="control-systems-by-example"><h2>Control Systems By Example</h2></a>
+<a class="header" href="#pneumatics" id="pneumatics"><h1>Pneumatics</h1></a>
+<a class="header" href="#manufacturing-methods" id="manufacturing-methods"><h1>Manufacturing Methods</h1></a>
+<a class="header" href="#manufacturing-basics" id="manufacturing-basics"><h2>Manufacturing Basics</h2></a>
+<a class="header" href="#hand-manufacturing" id="hand-manufacturing"><h2>Hand Manufacturing</h2></a>
+<a class="header" href="#milling--cnc" id="milling--cnc"><h2>Milling &amp; CNC</h2></a>
+<a class="header" href="#laser-cutting--water-jet" id="laser-cutting--water-jet"><h2>Laser Cutting &amp; Water Jet</h2></a>
+<a class="header" href="#turning-with-lathes" id="turning-with-lathes"><h2>Turning With Lathes</h2></a>
+<a class="header" href="#welding--plasma-cutting" id="welding--plasma-cutting"><h2>Welding &amp; Plasma Cutting</h2></a>
+<a class="header" href="#3d-printing" id="3d-printing"><h1>3D Printing</h1></a>
+<a class="header" href="#common-subsystems" id="common-subsystems"><h1>Common Subsystems</h1></a>
+<a class="header" href="#solidworks" id="solidworks"><h1>Solidworks</h1></a>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
