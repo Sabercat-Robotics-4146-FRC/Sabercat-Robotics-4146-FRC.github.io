@@ -1,1 +1,0 @@
-## Welding & Plasma Cutting
