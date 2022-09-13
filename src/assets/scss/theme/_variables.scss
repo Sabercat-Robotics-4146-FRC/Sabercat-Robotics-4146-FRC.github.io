@@ -312,7 +312,7 @@ $nav-link-height: ($navbar-nav-link-font-size * $line-height-base + $navbar-nav-
 $navbar-brand-font-size: $font-size-lg !default;
 $navbar-brand-img-size: 1.75rem !default;
 $navbar-brand-height: $navbar-brand-img-size !default;
-$navbar-brand-padding-y: (($nav-link-height - $navbar-brand-height) / 2) !default;
+$navbar-brand-padding-y: calc(($nav-link-height - $navbar-brand-height) / 2) !default;
 
 $navbar-dark-color: white !default;
 $navbar-dark-hover-color: $primary !default;
@@ -426,7 +426,7 @@ $section-padding-y: 7.5rem !default;
 
 // Slider
 
-$slider-item-gutter-width: $grid-gutter-width / 4 !default;
+$slider-item-gutter-width: calc($grid-gutter-width / 4) !default;
 
 $slider-nav-size: 2.5rem !default;
 $slider-nav-bg: white !default;
