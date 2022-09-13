@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="assets/ico/site.webmanifest">
+    <link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="node_modules/flickity/dist/flickity.min.css">
+    <link rel="stylesheet" href="node_modules/flickity-fade/flickity-fade.css">
+    <link rel="stylesheet" href="node_modules/fullpage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="node_modules/highlightjs/styles/codepen-embed.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- build:css assets/libs/incline-icons/style.min.css -->
+    <link rel="stylesheet" href="assets/libs/incline-icons/style.css">
+    <!-- endbuild -->
+
+    <!-- Theme CSS -->
+    <!-- build:css assets/css/theme-brown.min.css -->
+    <link rel="stylesheet" href="assets/css/theme-brown.css">
+    <!-- endbuild -->
+
+    <title>Incline | App</title>
+  </head>
+  <body>
+
+    <!-- NAVBAR
+    ================================================== -->
+    <nav class="navbar navbar-expand-xl navbar-dark  navbar-togglable  fixed-top">
+      <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/img/head-raw-large.png" style="width:5vw" alt="">
+          <!-- <svg class="navbar-brand-svg" viewBox="0 0 245 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M0 0 L 20 10 L 0 20 Z" class="navbar-brand-svg-i" fill="currentColor"></path>
+            <path d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z" fill="currentColor"></path>
+            <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
+          </svg> -->
+        </a>
+  
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Social -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item-divider">
+              <span class="nav-link">
+                <span></span>
+              </span>
+            </li>
+            <li class="nav-item">
+              <a href="https://github.com/Sabercat-Robotics-4146-FRC" class="nav-link">
+                <i class="fab fa-github"></i> 
+                <span class="d-xl-none ml-2">
+                  Github
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://twitter.com/Sabercats4146" class="nav-link">
+                <i class="fab fa-twitter"></i> 
+                <span class="d-xl-none ml-2">
+                  Twitter
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.instagram.com/sabercats4146/?hl=en" class="nav-link">
+                <i class="fab fa-instagram"></i> 
+                <span class="d-xl-none ml-2">
+                  Instagram
+                </span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Welcome
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarWelcome">
+                <a class="dropdown-item " href="index.html">
+                  Header: Image
+                </a>
+                <a class="dropdown-item " href="index-header-carousel.html">
+                  Header: Carousel
+                </a>
+                <a class="dropdown-item " href="index-header-parallax.html">
+                  Header: Parallax
+                </a>
+                <a class="dropdown-item " href="index-header-video.html">
+                  Header: Video
+                </a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarLandings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Landings
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarLandings">
+                <a class="dropdown-item  active " href="app.html">
+                  App
+                </a>
+                <a class="dropdown-item " href="company.html">
+                  Company
+                </a>
+                <a class="dropdown-item " href="fullpage.html">
+                  Fullpage
+                </a>
+                <a class="dropdown-item " href="product.html">
+                  Product
+                </a>
+                <a class="dropdown-item " href="real-estate.html">
+                  Real estate
+                </a>
+                <a class="dropdown-item " href="restaurant.html">
+                  Restaurant
+                </a>
+                <a class="dropdown-item " href="service.html">
+                  Service
+                </a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Pages
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarPages">
+                <li class="dropright">
+                  <a class="dropdown-item dropdown-toggle" href="#" id="pagesBlog" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Blog
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="pagesBlog">
+                    <a class="dropdown-item " href="blog.html">
+                      Blog
+                    </a>
+                    <a class="dropdown-item " href="blog-post.html">
+                      Blog: Post
+                    </a>
+                  </div>
+                </li>
+                <li class="dropright">
+                  <a class="dropdown-item dropdown-toggle" href="#" id="pagesShop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Shop
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="pagesShop">
+                    <a class="dropdown-item " href="shop.html">
+                      Shop
+                    </a>
+                    <a class="dropdown-item " href="shop-item.html">
+                      Shop: Item
+                    </a>
+                    <a class="dropdown-item " href="cart.html">
+                      Shop: Cart
+                    </a>
+                    <a class="dropdown-item " href="checkout.html">
+                      Shop: Checkout
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="about.html">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="contact.html">
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="faq.html">
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="pricing.html">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="sign-in.html">
+                    Sign In
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="sign-up.html">
+                    Sign Up
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="404.html">
+                    404
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarComponents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Components
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarComponents">
+                <a class="dropdown-item " href="components-theme.html">
+                  Theme
+                </a>
+                <a class="dropdown-item " href="components-bootstrap.html">
+                  Bootstrap
+                </a>
+              </div>
+            </li>
+            <li class="nav-item ">
+              <a href="documentation.html" class="nav-link">
+                Documentation
+              </a>
+            </li>
+            <li class="nav-item-divider">
+              <span class="nav-link">
+                <span></span>
+              </span>
+            </li>
+            <li class="nav-item">
+              <a href="https://themes.getbootstrap.com/product/incline-landing-page-set/" target="_blank" class="nav-link">
+                Purchase now
+              </a>
+            </li>
+          </ul>
+
+        </div> <!-- / .navbar-collapse -->
+  
+      </div> <!-- / .container -->    
+    </nav>
+
+    <!-- HERO
+    ================================================== -->
+    <section class="section section-top section-full">
+
+      <!-- Image -->
+      <div class="bg-cover" style="background-image: url(assets/img/26.jpg);"></div>
+
+      <!-- Overlay -->
+      <div class="bg-overlay"></div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-6 col-lg-5">
+
+            <!-- Preheading -->
+            <p class="font-weight-medium text-xs text-uppercase text-white text-muted" data-toggle="animation" data-animation="fadeUp" data-animation-order="0" data-animation-trigger="load">
+              by Simpleqode
+            </p>
+            
+            <!-- Heading -->
+            <h1 class="text-white mb-4" data-toggle="animation" data-animation="fadeUp" data-animation-order="1" data-animation-trigger="load">
+              Luxury homes for rental. Any country. Any time.
+            </h1>
+
+            <!-- Subheading -->
+            <p class="text-white text-muted mb-5" data-toggle="animation" data-animation="fadeUp" data-animation-order="2" data-animation-trigger="load">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quos vitae commodi sit, voluptas sequi adipisci vero repellat molestiae.
+            </p>
+
+            <!-- Buttons -->
+            <div class="mb-5 mb-md-0" data-toggle="animation" data-animation="fadeUp" data-animation-order="3" data-animation-trigger="load">
+              <a href="#!" class="btn btn-outline-primary text-white">
+                Download app
+              </a>
+              <a href="#about" class="btn btn-link text-white">
+                Find out more
+              </a>
+            </div>
+
+          </div>
+          <div class="col-md-5 offset-lg-1">
+
+            <!-- Image -->
+            <div class="text-center px-lg-4 mb-5 mb-md-0">
+              <img src="assets/img/32.png" alt="..." class="img-fluid mx-auto">
+            </div>
+
+          </div>
+          <div class="col-md-1 align-self-center d-flex justify-content-end">
+            
+            <!-- Heading -->
+            <h4 class="text-vertical text-white mb-0">
+              <span>Incline app</span>
+            </h4>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- ABOUT
+    ================================================== -->
+    <section class="section pb-0" id="about">
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 col-lg-5 offset-lg-1">
+            
+            <!-- Image -->
+            <div class="img-effect img-effect-solid mb-5 mb-md-0">
+              <img src="assets/img/35.png" class="img-fluid" alt="...">
+            </div>
+
+          </div>
+          <div class="col-md-6 col-lg-4 offset-lg-1">
+
+            <!-- Heading -->
+            <h2 class="mb-4">
+              The world leader in luxury real estate
+            </h2>
+
+            <!-- Content -->
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, maiores, aperiam. Excepturi assumenda non quasi ipsa quidem harum debitis aut alias dicta. Laudantium reprehenderit ea, suscipit nulla deleniti excepturi repudiandae!
+            </p>
+
+            <!-- Button -->
+            <a href="#quote" class="btn btn-outline-primary">
+              Read testimonials
+            </a>
+            
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- ABOUT
+    ================================================== -->
+    <section class="section">
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 col-lg-5 offset-lg-1 order-md-2">
+            
+            <!-- Image -->
+            <div class="img-effect img-effect-dotted mb-5 mb-md-0">
+              <img src="assets/img/36.png" class="img-fluid" alt="...">
+            </div>
+
+          </div>
+          <div class="col-md-6 col-lg-4 offset-lg-1 order-md-1">
+
+            <!-- Heading -->
+            <h2 class="mb-4">
+              Personal and company profiles and property listings
+            </h2>
+
+            <!-- Content -->
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, maiores, aperiam. Excepturi assumenda non quasi ipsa quidem harum debitis aut alias dicta. Laudantium reprehenderit ea, suscipit nulla deleniti excepturi repudiandae!
+            </p>
+
+            <!-- Button -->
+            <a href="#pricing" class="btn btn-outline-primary">
+              Pricing options
+            </a>
+            
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- FEATURES
+    ================================================== -->
+    <section class="section bg-light">
+
+      <!-- Triangle -->
+      <div class="bg-triangle bg-triangle-dark bg-triangle-top bg-triangle-left"></div>
+      <div class="bg-triangle bg-triangle-dark bg-triangle-bottom bg-triangle-right"></div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            
+            <!-- Heading -->
+            <h2 class="text-center mb-4">
+              Our key features
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted text-center mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur ullam doloremque deleniti sequi obcaecat.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row align-items-center">
+          <div class="col-md-4 col-lg-3">
+
+            <!-- Item -->
+            <div class="mb-5">
+              
+              <!-- Icon -->
+              <div class="text-primary mb-4">
+                <span class="icon icon-marker icon-2x"></span>
+              </div>
+
+              <!-- Heading -->
+              <h4 class="mb-3">
+                Interactive map
+              </h4>
+
+              <!-- Content -->
+              <p class="text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, corporis.
+              </p>
+
+            </div>
+
+            <!-- Item -->
+            <div class="mb-5">
+              
+              <!-- Icon -->
+              <div class="text-primary mb-4">
+                <span class="icon icon-camera icon-2x"></span>
+              </div>
+
+              <!-- Heading -->
+              <h4 class="mb-3">
+                High-quality photos
+              </h4>
+
+              <!-- Content -->
+              <p class="text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, corporis.
+              </p>
+
+            </div>
+
+            <!-- Item -->
+            <div class="mb-5 mb-md-0">
+              
+              <!-- Icon -->
+              <div class="text-primary mb-4">
+                <span class="icon icon-support icon-2x"></span>
+              </div>
+
+              <!-- Heading -->
+              <h4 class="mb-3">
+                Customer support
+              </h4>
+
+              <!-- Content -->
+              <p class="text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, corporis.
+              </p>
+
+            </div>
+
+          </div>
+          <div class="col-md-4 col-lg-4 offset-lg-1">
+            
+            <!-- Image -->
+            <div class="text-center mb-5 mb-md-0">
+              <img src="assets/img/33.png" alt="..." class="img-fluid mx-auto">
+            </div>
+
+          </div>
+          <div class="col-md-4 col-lg-3 offset-lg-1">
+
+            <!-- Item -->
+            <div class="text-left text-md-right mb-5">
+              
+              <!-- Icon -->
+              <div class="text-primary mb-4">
+                <span class="icon icon-building icon-2x"></span>
+              </div>
+
+              <!-- Heading -->
+              <h4 class="mb-3">
+                Only best properties
+              </h4>
+
+              <!-- Content -->
+              <p class="text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, corporis.
+              </p>
+
+            </div>
+
+            <!-- Item -->
+            <div class="text-left text-md-right mb-5">
+              
+              <!-- Icon -->
+              <div class="text-primary mb-4">
+                <span class="icon icon-at icon-2x"></span>
+              </div>
+
+              <!-- Heading -->
+              <h4 class="mb-3">
+                Daily updates
+              </h4>
+
+              <!-- Content -->
+              <p class="text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, corporis.
+              </p>
+
+            </div>
+
+            <!-- Item -->
+            <div class="text-left text-md-right">
+              
+              <!-- Icon -->
+              <div class="text-primary mb-4">
+                <span class="icon icon-businessman icon-2x"></span>
+              </div>
+
+              <!-- Heading -->
+              <h4 class="mb-3">
+                Personalized alerts
+              </h4>
+
+              <!-- Content -->
+              <p class="text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, corporis.
+              </p>
+
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- QUOTE
+    ================================================== -->
+    <section class="section" id="quote">
+
+      <!-- Line -->
+      <div class="line line-top"></div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-9">
+            
+            <!-- Quote -->
+            <div class="quote">
+              <blockquote class="quote-blockquote">
+                <p class="quote-blockquote-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam exercitationem nobis incidunt alias ipsa quis, rerum doloribus nostrum, recusandae. Laboriosam, quasi, dolores!
+                </p>
+                <footer class="quote-blockquote-footer">
+                  <span class="text-zigzag">
+                    Simpleqode team
+                  </span>
+                </footer>
+              </blockquote>
+            </div> <!-- / .quote -->
+            
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- CTA
+    ================================================== -->
+    <section class="section bg-dark">
+
+      <!-- Triangles -->
+      <div class="bg-triangle bg-triangle-light bg-triangle-top bg-triangle-left"></div>
+      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-right"></div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-8">
+            
+            <!-- Heading -->
+            <h3 class="text-white mb-4">
+              Wait no more. Download it now.
+            </h3>
+
+            <!-- Content -->
+            <p class="text-white text-muted mb-4 mb-md-0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae dolores, voluptates atque dicta vero quibusdam laudantium saepe sequi harum.
+            </p>
+
+          </div>
+          <div class="col-md-4">
+            
+            <!-- Button -->
+            <a href="#!" class="btn btn-outline-primary text-white">
+              Download app
+            </a>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- SLIDER
+    ================================================== -->
+    <section class="section">
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+
+            <!-- Heading -->
+            <h2 class="text-center mb-4">
+              Designed for an international audience
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-center text-muted mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quasi voluptatibus commodi non, cupiditate consequuntur.
+            </p>
+            
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col">
+            
+            <!-- Gallery -->
+            <div class="slider">
+              <div class="slider-item col-6 col-md-3">
+                <img src="assets/img/34.png" class="img-fluid" alt="...">
+              </div>
+              <div class="slider-item col-6 col-md-3">
+                <img src="assets/img/35.png" class="img-fluid" alt="...">
+              </div>
+              <div class="slider-item col-6 col-md-3">
+                <img src="assets/img/36.png" class="img-fluid" alt="...">
+              </div>
+              <div class="slider-item col-6 col-md-3">
+                <img src="assets/img/37.png" class="img-fluid" alt="...">
+              </div>
+              <div class="slider-item col-6 col-md-3">
+                <img src="assets/img/34.png" class="img-fluid" alt="...">
+              </div>
+              <div class="slider-item col-6 col-md-3">
+                <img src="assets/img/35.png" class="img-fluid" alt="...">
+              </div>
+              <div class="slider-item col-6 col-md-3">
+                <img src="assets/img/36.png" class="img-fluid" alt="...">
+              </div>
+              <div class="slider-item col-6 col-md-3">
+                <img src="assets/img/37.png" class="img-fluid" alt="...">
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- PROMO
+    ================================================== -->
+    <section class="section bg-light">
+
+      <!-- Triangles -->
+      <div class="bg-triangle bg-triangle-dark bg-triangle-top bg-triangle-left"></div>
+      <div class="bg-triangle bg-triangle-dark bg-triangle-bottom bg-triangle-right"></div>
+      
+      <!-- Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+
+            <!-- Image -->
+            <div class="text-center">
+              <img src="assets/img/29.jpg" alt="..." class="img-fluid">
+            </div>
+
+            <!-- Content -->
+            <div class="row justify-content-center mt-5 mt-md-n10">
+              <div class="col-md-10 col-lg-8 col-xl-6">
+                
+                <!-- Promo -->
+                <div class="bg-white text-center shadow py-5 px-5">
+
+                  <!-- Icon -->
+                  <div class="mb-4">
+                    <span class="icon icon-marker icon-2x"></span>
+                  </div>
+                  
+                  <!-- Heading -->
+                  <h3 class="text-center mb-4">
+                    Feel home. Everywhere.
+                  </h3>
+                  
+                  <!-- Content -->
+                  <p class="text-muted text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eum vel qui natus sit quas suscipit aperiam deserunt voluptatum.
+                  </p>
+
+                  <!-- Button -->
+                  <a href="#!" class="btn btn-outline-primary">
+                    Download app
+                  </a>
+
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- PRICING
+    ================================================== -->
+    <section class="section" id="pricing">
+
+      <!-- Incline -->
+      <div class="bg-incline bg-incline-dark bg-incline-right"></div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+
+            <!-- Heading -->
+            <h2 class="text-center mb-4">
+              Pricing options
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-center text-muted mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatum obcaecati facilis sed, excepturi iste iusto laborum.
+            </p>
+            
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-lg-4">
+            
+            <!-- Card -->
+            <div class="card card-lg mb-3 mb-lg-0">
+              
+              <!-- Body -->
+              <div class="card-body text-center bg-white">
+
+                <!-- Title -->
+                <h4 class="card-title">
+                  Free
+                </h4>
+
+                <!-- Price -->
+                <h3 class="card-title font-weight-normal text-primary">
+                  $0 <small>/ mo</small>
+                </h3>
+
+                <!-- Text -->
+                <ul class="card-text list-iconed">
+                  <li class="list-iconed-item">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </li>
+                  <li class="list-iconed-item">
+                    Aliquam quis perferendis, quas fugiat. Iste quisquam sit
+                  </li>
+                  <li class="list-iconed-item">
+                    Cum ab error sit totam nemo
+                  </li>
+                </ul>
+
+                <!-- Button -->
+                <a href="#!" class="btn btn-outline-primary">
+                  Get it now
+                </a>
+
+              </div>
+              
+            </div> <!-- / .card -->
+
+          </div>
+          <div class="col-lg-4">
+            
+            <!-- Card -->
+            <div class="card card-lg bg-white card-active mb-3 mb-lg-0">
+              
+              <!-- Body -->
+              <div class="card-body text-center">
+
+                <!-- Title -->
+                <h4 class="card-title">
+                  Regular
+                </h4>
+
+                <!-- Price -->
+                <h3 class="card-title font-weight-normal text-primary">
+                  $4.99 <small>/ mo</small>
+                </h3>
+
+                <!-- Text -->
+                <ul class="card-text list-iconed">
+                  <li class="list-iconed-item">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </li>
+                  <li class="list-iconed-item">
+                    Aliquam quis perferendis, quas fugiat. Iste quisquam sit
+                  </li>
+                  <li class="list-iconed-item">
+                    Cum ab error sit totam nemo
+                  </li>
+                </ul>
+
+                <!-- Button -->
+                <a href="#!" class="btn btn-outline-primary">
+                  Get it now
+                </a>
+
+              </div>
+              
+            </div> <!-- / .card -->
+
+          </div>
+          <div class="col-lg-4">
+            
+            <!-- Card -->
+            <div class="card card-lg bg-white">
+              
+              <!-- Body -->
+              <div class="card-body text-center">
+
+                <!-- Title -->
+                <h4 class="card-title">
+                  Premium
+                </h4>
+
+                <!-- Price -->
+                <h3 class="card-title font-weight-normal text-primary">
+                  $9.99 <small>/ mo</small>
+                </h3>
+
+                <!-- Text -->
+                <ul class="card-text list-iconed">
+                  <li class="list-iconed-item">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </li>
+                  <li class="list-iconed-item">
+                    Aliquam quis perferendis, quas fugiat. Iste quisquam sit
+                  </li>
+                  <li class="list-iconed-item">
+                    Cum ab error sit totam nemo
+                  </li>
+                </ul>
+
+                <!-- Button -->
+                <a href="#!" class="btn btn-outline-primary">
+                  Get it now
+                </a>
+
+              </div>
+              
+            </div> <!-- / .card -->
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- TILES
+    ================================================== -->
+    <section class="section">
+
+      <!-- Line -->
+      <div class="line line-top"></div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+
+            <!-- Heading -->
+            <h2 class="text-center mb-4">
+              Take a sneak peek
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted text-center mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit doloribus possimus cum ducimus consequatur aspernatur.
+            </p>
+            
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col">
+            <div class="form-row">
+              <div class="col-md-6 col-lg-3 mb-2">
+                
+                <!-- Image -->
+                <div class="square">
+                  
+                  <!-- Cover -->
+                  <div class="bg-cover" style="background-image: url(assets/img/28.jpg);"></div>
+
+                </div>
+                
+              </div>
+              <div class="col-md-6 col-lg-3 mb-2">
+                
+                <!-- Image -->
+                <div class="square">
+                  
+                  <!-- Cover -->
+                  <div class="bg-cover" style="background-image: url(assets/img/29.jpg);"></div>
+
+                </div>
+
+              </div>
+              <div class="col-md-12 col-lg-6 mb-2">
+                
+                <!-- Card -->
+                <div class="card card-stretch text-white text-center bg-primary">
+
+                  <!-- Body -->
+                  <div class="card-body">
+
+                    <!-- Icon -->
+                    <div class="card-icon">
+                      <span class="icon icon-camera"></span>
+                    </div>
+
+                    <!-- Content -->
+                    <p class="card-text">
+                      High-quality photos and detailed property description are available for you to make the right choice.
+                    </p>
+
+                  </div>
+
+                </div> <!-- / .card -->
+
+              </div>
+            </div> <!-- / .form-row -->
+            <div class="form-row">
+              <div class="col-md-6 col-lg-3 mb-2 order-lg-2">
+                
+                <!-- Image -->
+                <div class="square">
+                  
+                  <!-- Cover -->
+                  <div class="bg-cover" style="background-image: url(assets/img/30.jpg);"></div>
+
+                </div>
+
+              </div>
+              <div class="col-md-6 col-lg-3 mb-2 order-lg-3">
+                
+                <!-- Image -->
+                <div class="square">
+                  
+                  <!-- Cover -->
+                  <div class="bg-cover" style="background-image: url(assets/img/31.jpg);"></div>
+
+                </div>
+
+              </div>
+              <div class="col-md-12 col-lg-6 mb-2 order-lg-1">
+                
+                <!-- Card -->
+                <div class="card card-stretch text-white text-center bg-primary">
+
+                  <!-- Body -->
+                  <div class="card-body">
+
+                    <!-- Icon -->
+                    <div class="card-icon">
+                      <span class="icon icon-tick icon"></span>
+                    </div>
+
+                    <!-- Content -->
+                    <p class="card-text">
+                      The app is available in 10 languages and offsers 12 different currencies for clients throughout the world.
+                    </p>
+
+                  </div>
+
+                </div> <!-- / .card -->
+
+              </div>
+            </div> <!-- / .form-row -->
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- FOOTER
+    ================================================== -->
+    <footer class="section bg-dark">
+
+      <!-- Triangles -->
+      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-left"></div>
+      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-right"></div>
+
+      <!--Content -->
+      <div class="container">
+        <div class="row align-self-center">
+          <div class="col-md-auto">
+
+            <!-- Brand -->
+            <p>
+              <a href="#" class="footer-brand text-white">
+                <img src="./assets/img/smsa.png" style="width:5vw" alt="">
+              </a>
+            </p>
+        
+          </div>
+          <div class="col-md">
+        
+            <!-- Links -->
+            <ul class="list-unstyled list-inline text-md-right">
+              <li class="list-inline-item mr-2">
+                <a href="../terms-and-conditions.html" class="text-white">
+                  Terms and conditions
+                </a>
+              </li>
+              <li class="list-inline-item mr-2">
+                <a href="https://www.freeprivacypolicy.com/privacy-policy.html" class="text-white">
+                  Privacy policy
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:team@sabercatrobotics.com" class="text-white">
+                  Contact us
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row align-items-center">
+          <div class="col-md">
+        
+            <!-- Copyright -->
+            <p class="text-white text-muted">
+              <small>
+                &copy; Copyright <span class="current-year"></span> Scottsdale Math And Science Academy. All rights reserved.
+              </small>
+            </p>
+
+          </div>
+          <div class="col-md">
+        
+            <!-- Social links -->
+            <ul class="list-inline list-unstyled text-md-right">
+              <li class="list-inline-item">
+                <a href="https://github.com/Sabercat-Robotics-4146-FRC">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item ml-3">
+                <a href="https://twitter.com/Sabercats4146">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item ml-3">
+                <a href="https://www.instagram.com/sabercats4146/?hl=en">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </footer>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Global JS -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnKt8_N4-FKOnhI_pSaDL7g_g-XI1-R9E"></script>
+
+    <!-- Plugins JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="node_modules/flickity-fade/flickity-fade.js"></script>
+    <script src="node_modules/jquery-parallax.js/parallax.min.js"></script>
+    <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="node_modules/waypoints/lib/shortcuts/inview.min.js"></script>
+    <script src="node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script>
+    <script src="node_modules/fullpage.js/dist/fullpage.min.js"></script>
+    <script src="node_modules/highlightjs/highlight.pack.min.js"></script>
+
+    <!-- Theme JS -->
+    <!-- build:js assets/js/theme.min.js -->
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/alert.js"></script>
+    <script src="assets/js/code.js"></script>
+    <script src="assets/js/dropdown.js"></script>
+    <script src="assets/js/faq.js"></script>
+    <script src="assets/js/fullpage.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/newsletter.js"></script>
+    <script src="assets/js/polyfill.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/testimonials.js"></script>
+    <script src="assets/js/year.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>
