@@ -3,6 +3,8 @@ name: NodeJS with Gulp
 on:
   push:
     branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -24,7 +26,3 @@ jobs:
       run: |
         npm install
         gulp
-        
-    - name: Gulp Runner
-      uses: 2KAbhishek/gulp-runner@v0.3
-
