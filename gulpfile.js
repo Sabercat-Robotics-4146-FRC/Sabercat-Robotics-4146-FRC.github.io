@@ -21,9 +21,12 @@ var deploy      = require('gulp-gh-pages');
 /**
  * Push build to gh-pages
  */
+var options = { 
+  remoteUrl: "https://github.com/Sabercat-Robotics-4146-FRC/Sabercat-Robotics-4146-FRC.github.io.git",
+  branch: "master"};
 gulp.task('deploy', function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
+  gulp.src("dist/**/*.*")
+      .pipe(deploy(options));
 });
 
 // Define paths
