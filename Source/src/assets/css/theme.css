@@ -13090,3 +13090,24 @@ h1, .h1,
   margin: 1rem 0 1.5rem;
   border-top: 2px solid #f5ba4b;
 }
+
+.banner {
+  width: 150px;
+  height: 200px;
+  height: auto;
+  padding: 10px;
+  padding-bottom: 5px;
+  color: white;
+  font-family: 'Adam', sans-serif;
+  border: 5px solid #0F4BCB;
+  background-color: #0F4BCB;
+}
+.banner-bottom {
+  width: 0; 
+  height: 0; 
+  border-top: 25px solid #0F4BCB;
+  border-left: 75px solid #0F4BCB;
+  border-right: 75px solid #0F4BCB;
+
+  border-bottom: 25px solid transparent;
+}
