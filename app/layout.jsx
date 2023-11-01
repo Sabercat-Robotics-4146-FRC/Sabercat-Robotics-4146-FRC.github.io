@@ -1,7 +1,11 @@
 import "/css/globals.css";
 import Header from "/components/header";
+import ClientCookiesProvider from "/components/cookie-provider"
+import CookieConsent from "/components/cookie-consent";
 import Footer from "/components/footer";
 import localFont from "next/font/local";
+import Script from "next/script";
+import { cookies } from "next/headers";
 
 const url = "https://www.sabercatrobotics.com";
 const title = "Sabercat Robotics";
@@ -116,6 +120,24 @@ export default function RootLayout({children}) {
       <body className="text-lg leading-7 text-neutral-900">
         <Header />
         {children}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-8MHGG86QKT" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag("consent", "default", {
+              "ad_storage": "denied",
+              "analytics_storage": "denied",
+            });
+            gtag("js", new Date());
+            gtag("config", "G-8MHGG86QKT");
+          `}
+        </Script>
+        <ClientCookiesProvider value={cookies().getAll()}>
+          <CookieConsent />
+        </ClientCookiesProvider>
         <Footer />
       </body>
     </html>

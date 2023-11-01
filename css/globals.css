@@ -7,8 +7,7 @@
     @apply outline-yellow-600;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-medium;
-    @apply tracking-tighter;
+    @apply font-medium tracking-tighter;
   }
   b, strong {
     @apply font-semibold;
@@ -17,7 +16,7 @@
 
 @layer components {
   .animate-load {
-    @apply animate-[load_400ms_ease-in-out_forwards];
+    @apply translate-y-4 opacity-0 animate-[load_400ms_ease-in-out_forwards];
   }
   @layer components {
     @keyframes load {

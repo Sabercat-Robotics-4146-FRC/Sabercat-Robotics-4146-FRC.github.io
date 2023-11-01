@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-wrap justify-center gap-8 bg-zinc-700 px-8 py-10 md:py-20 shadow-black shadow-[0_8px_16px]">
-      <section className="w-full sm:w-2/5 lg:w-1/3">
+    <footer className="flex flex-wrap gap-y-8 min-[800px]:justify-center min-[800px]:gap-y-0 min-[800px]:gap-x-8 lg:gap-x-16 bg-zinc-700 px-8 py-10 min-[800px]:py-20 shadow-black shadow-[0_8px_16px]">
+      <section className="w-full min-[800px]:w-max min-[800px]:max-w-xs">
         <h2 className="font-medium text-slate-100 text-3xl">Support Us</h2>
         <nav className="flex flex-col flex-wrap text-slate-100">
           <a href="/tax-credit" className="transition-colors duration-300 hover:text-yellow-500 focus-visible:text-yellow-500">Tax Credit</a>
@@ -11,14 +11,14 @@ export default function Footer() {
           <a href="/mentors" className="transition-colors duration-300 hover:text-yellow-500 focus-visible:text-yellow-500">Mentors</a>
         </nav>
       </section>
-      <section className="w-full sm:w-2/5 lg:w-1/3">
+      <section className="w-full min-[800px]:w-max min-[800px]:max-w-xs">
         <h2 className="font-medium text-slate-100 text-3xl">Learn More</h2>
         <nav className="flex flex-col flex-wrap text-slate-100">
           <a href="/awards" className="transition-colors duration-300 hover:text-yellow-500 focus-visible:text-yellow-500">Awards</a>
           <a href="/innovation-center" className="transition-colors duration-300 hover:text-yellow-500 focus-visible:text-yellow-500">Innovation Center</a>
         </nav>
       </section>
-      <section className="w-full sm:w-2/5 lg:w-1/3">
+      <section className="w-full min-[800px]:w-max min-[800px]:max-w-xs">
         <h2 className="font-medium text-slate-100 text-3xl">Contact</h2>
         <nav className="flex flex-col flex-wrap text-slate-100">
           <a href="/#contact" className="transition-colors duration-300 hover:text-yellow-500 focus-visible:text-yellow-500">Contact Form</a>
@@ -40,18 +40,18 @@ export default function Footer() {
           </a>
         </nav>
       </section>
-      {/* <section className="w-full sm:w-2/5 lg:w-1/3">
+      {/* <section className="w-full min-[800px]:w-max min-[800px]:max-w-xs">
         <h2 className="font-medium text-slate-100 text-3xl">Social Media</h2>
         <nav className="flex flex-col flex-wrap text-slate-100">
           <a href="/#contact" target="_blank" rel="noopener noreferrer" className="transition-colors duration-300 hover:text-yellow-500 focus-visible:text-yellow-500">Contact Form</a>
         </nav>
       </section> */}
-      <footer className="w-full flex flex-col flex-wrap md:flex-row md:flex-nowrap justify-center items-center divide-y md:divide-x md:divide-y-0 divide-slate-100/50 text-sm text-slate-100/50">
-        <a href="https://www.saguaromsaboosters.org/" target="_blank" rel="noopener noreferrer" className="min-w-[25px] px-2 md:px-4 py-4 inline">
+      <footer className="w-full flex flex-col flex-wrap min-[800px]:flex-row min-[800px]:flex-nowrap justify-center items-center divide-y min-[800px]:divide-x min-[800px]:divide-y-0 divide-slate-100/50 text-sm text-slate-100/50">
+        <a href="https://www.saguaromsaboosters.org/" target="_blank" rel="noopener noreferrer" className="min-w-[25px] px-2 min-[800px]:px-4 py-4 inline">
           <Image src="/assets/img/smsa.png" alt="Saguaro Math and Science Academy logo" width={40} height={40} quality={100}></Image>
         </a>
-        <p className="px-2 md:px-4 py-4 inline">Copyright &copy; 2023 Scottsdale Math And Science Academy. All rights reserved.</p>
-        <a href="/privacy-policy" className="px-2 md:px-4 py-4 inline">Privacy Policy</a>
+        <p className="px-2 min-[800px]:px-4 py-4 inline">Copyright &copy; 2023 Scottsdale Math And Science Academy. All rights reserved.</p>
+        <a href="/privacy-policy" className="px-2 min-[800px]:px-4 py-4 inline">Privacy Policy</a>
       </footer>
     </footer>
   );

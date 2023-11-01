@@ -11,7 +11,7 @@ export default function Page() {
       <main className="px-6 min-[480px]:px-12">
         <header className="text-neutral-900 mb-4">
           <h2 className="text-3xl">Our Sponsors and Partners</h2>
-          <p>Every sponsorship and partnership we currently have. Without them, Sabercat Robotics would not be possible, so we appreciate their support very much.</p>
+          <p>Without our sponsors and partners, Sabercat Robotics would not be possible. Because of this, to show our gratitude, here is a list of every sponsorship and partnership we currently have.</p>
         </header>
         <section className="text-neutral-900 mb-2">
           <header>
