@@ -64,7 +64,9 @@ export default function Home() {
       <header className="px-2 py-24 relative flex justify-center items-center flex-col flex-wrap text-center text-white/75">
         <div className="absolute inset-0 flex justify-center items-center overflow-clip w-full h-full -z-50 before:absolute before:inset-0 before:bg-neutral-900/50 before:w-full before:h-full">
           <video width={853} height={480} className="absolute inset-0 flex justify-center items-center overflow-clip object-cover w-full h-full -z-50 before:absolute before:inset-0 before:bg-neutral-900/50 before:w-full before:h-full" autoPlay loop muted>
+            <source src="/assets/vid/robot.webm" type="video/webm" />
             <source src="/assets/vid/robot.mp4" type="video/mp4" />
+            Your browser does not support videos.
           </video>
         </div>
         <p className="font-medium animate-load">Team #4146</p>
