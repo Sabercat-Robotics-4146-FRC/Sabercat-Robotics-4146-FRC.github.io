@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <main className="px-3 min-[320px]:px-6 md:px-12 py-3 min-[320px]:py-6 md:py-12">
       <header className="relative w-full m-auto px-5 py-20 text-center mb-6">
-        <Image className="absolute inset-0 h-full w-full object-cover -z-[1] brightness-50 rounded-xl sm:rounded-3xl" src="/assets/img/tax-credit-generic.jpg" alt="Tax Credit" width={672} height={228} quality={100}></Image>
+        <Image className="absolute inset-0 h-full w-full object-cover -z-[1] brightness-50 rounded-xl sm:rounded-3xl" src="/assets/img/tax-credit-generic.jpg" alt="Tax Credit" width={256} height={368} quality={100}></Image>
         <h2 className="text-slate-100 text-4xl font-semibold">Tax Credit</h2>
         <p className="text-white/75 text-xl font-medium">We are a 501(c)-3 organization. Tax Credit sets Arizona apart in education funding. Let's take advantage of it.</p>
       </header>
