@@ -149,7 +149,7 @@ export default function Home() {
           <header className="w-full sm:w-1/2 px-4 mb-4">
             <h2 className="mb-4 font-medium text-3xl text-neutral-900">Contact Us</h2>
             <p className="mb-2">Need to reach out to our team? Contact us using the form to the right, and make sure to provide as much detail as possible so we can get back to you quickly.</p>
-            <p className="mb-2">If the contact form is <i>not</i> working, then please <Link href="mailto:team@sabercatrobotics.com" className="transition-colors duration-300 text-yellow-500 hover:text-yellow-600 focus-visible:text-yellow-600">email us</Link> and mention what error appears when you fill out the contact form (and if you can, include a photo) so we can fix it quickly. Thank you!</p>
+            <p className="mb-2">If the contact form is <i>not</i> working, then please <a href="mailto:team@sabercatrobotics.com" className="transition-colors duration-300 text-yellow-500 hover:text-yellow-600 focus-visible:text-yellow-600">email us</a> and mention what error appears when you fill out the contact form (and if you can, include a photo) so we can fix it quickly. Thank you!</p>
           </header>
           <main className="w-full sm:w-1/2">
             <section className="mb-4 relative flex flex-wrap items-strech w-full border-2 transition-[border-color] duration-300 focus-within:border-yellow-500">
