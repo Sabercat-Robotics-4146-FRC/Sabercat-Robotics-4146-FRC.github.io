@@ -19,45 +19,59 @@ export async function POST(Request) {
       },
     });
 
-    let Verified = true;
-    await Transport.verify(function(Err) {
+    let Verified;
+    let Successful;
+    Transport.verify(function(Err) {
       if (Err) {
         console.warn(Err);
         Verified = false;
+      } else {
+        Verified = true;
+        Transport.sendMail({
+          from: "team@sabercatrobotics.com",
+          to: ["team@sabercatrobotics.com"],
+          replyTo: Body.Email,
+          subject: `[Contact Form]: "${Body.Subject}"`,
+          text: `[Message Content]: "${Body.Message}"`,
+        }, function(Err) {
+          if (Err) {
+            console.warn(Err);
+            Successful = false;
+          } else {
+            Successful = true;
+          };
+        });
       };
     });
 
-    if (Verified) {
-      let Successful = true;
-      Transport.sendMail({
-        from: "team@sabercatrobotics.com",
-        to: ["team@sabercatrobotics.com"],
-        replyTo: Body.Email,
-        subject: `[Contact Form]: "${Body.Subject}"`,
-        text: `[Message Content]: "${Body.Message}"`,
-      }, function(Err) {
-        if (Err) {
-          console.warn(Err);
-          Successful = false;
-        };
-      });
-
-      if (Successful) {
-        return Response.json({
-          Success: true,
-          Message: "Thank you for sending an email! Your email was successfully sent, so expect a response within 3-5 business days. Thank you!",
-        });
-      } else {
-        return Response.json({
-          Success: false,
-          Message: "There was an error on our server when sending your email. Please try again, or contact our email team@sabercatrobotics.com if you think this was a mistake.",
-        });  
+    await new Promise(function(Resolve) {
+      const Loop = function() {
+        Verified !== undefined ? Resolve(Verified) : setTimeout(Loop);
       };
-    } else {
+      Loop();
+    });
+    if (!Verified) {
       return Response.json({
         Success: false,
         Message: "There was an error with authenticating our email account. Please try again, or contact our email team@sabercatrobotics.com.",
       });
+    };
+    await new Promise(function(Resolve) {
+      const Loop = function() {
+        Successful !== undefined ? Resolve(Verified) : setTimeout(Loop);
+      };
+      Loop();
+    });
+    if (Successful) {
+      return Response.json({
+        Success: true,
+        Message: "Thank you for sending an email! Your email was successfully sent, so expect a response within 3-5 business days. Thank you!",
+      });
+    } else {
+      return Response.json({
+        Success: false,
+        Message: "There was an error on our server when sending your email. Please try again, or contact our email team@sabercatrobotics.com if you think this was a mistake.",
+      });  
     };
   } else {
     return Response.json({
