@@ -13,11 +13,9 @@ export default function CookieConsent() {
     CookieStore.set("Consent", ConsentCookies[0], {
       expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
     });
-    useEffect(function() {
-      window.gtag("consent", "update", {
-        "ad_storage": "granted",
-        "analytics_storage": "granted",
-      });
+    window.gtag("consent", "update", {
+      "ad_storage": "granted",
+      "analytics_storage": "granted",
     });
     document.getElementById("CookieConsent").classList.toggle("opacity-0");
     setTimeout(function() {
