@@ -4,6 +4,22 @@ import Link from "next/link";
 import { validate } from "email-validator";
 import { createRef, useState } from "react";
 
+function Card({title, description, href, external, src, important, children}) {
+  return (
+    <section className="w-full">
+      {!external ? <Link href={href} className="text-start group">
+        <Image src={src} height={360} width={235} alt={title} className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]" sizes="(max-width: 767px) 100vw, 33vw"></Image>
+        <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">{title}{important ? <span className="bg-red-600 text-white font-semibold py-1 px-2 text-base align-[0.125rem]">Important!</span> : ""}</h3>
+        <p className="px-2">{description || children}</p>
+      </Link> : <a href={href} target="_blank" rel="noopener noreferrer" className="text-start group">
+        <Image src={src} height={360} width={235} alt={title} className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]" sizes="(max-width: 767px) 100vw, 33vw"></Image>
+        <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">{title}{important ? <span className="bg-red-600 text-white font-semibold py-1 px-2 text-base align-[0.125rem]">Important!</span> : ""}</h3>
+        <p className="px-2">{description || children}</p>
+      </a>}
+    </section>
+  );
+};
+
 export default function Home() {
   const ResponseRef = createRef();
 
@@ -82,58 +98,16 @@ export default function Home() {
           <p className="mb-2">Sabercat Robotics exists to train the next generation of engineers, innovators, creatives, and more through competitive robotics and training programs.</p>
         </header>
         <main className="flex flex-col flex-wrap md:grid md:grid-cols-3 -mx-6 w-full gap-6">
+          <Card title="Tax Credit" description="We are a 501(c)-3 organization. Tax Credit sets Arizona apart in education funding. Let's take advantage of it." href="/tax-credit" src="/assets/img/tax-credit-generic.jpg" important />
+          <Card title="Awards" description="Check out what we've accomplished so far!" href="/awards" src="/assets/img/awards.jpg" />
+          <Card title="Sponsors & Partners" description="We rely on the support of our community. Whether you're a local business, global conglomerate, or self employed, there's need for your support." href="/sponsors-and-partners" src="/assets/img/sponsors-and-partners.jpg" />
+          <Card title="Innovation Center" description="Learn more about Saguaro High School's Innovation Center and our part in its creation." href="/innovation-center" src="/assets/img/innovation-center.jpg" />
+          <Card title="Sisters in STEM" description="Learn more about Sisters in STEM." href="https://www.sistersinstem.net" external src="/assets/img/sistersinstem.jpg" />
+          <Card title="Mentors" href="/mentors" src="/assets/img/mentors.jpg">We are <b>always</b> looking for more mentors. Everyone has something to teach.</Card>
+          <Card title="Contact Information" description="Need to get a hold of a team member of ours? Find their contact on this page." href="/contact-information" src="/assets/img/15.jpg" />
           <section className="w-full">
-            <Link href="/tax-credit" className="text-start group">
-              <Image src="/assets/img/tax-credit-generic.jpg" height={360} width={235} alt="Tax Credit" className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]"></Image>
-              <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">Tax Credit <span className="bg-red-600 text-white font-semibold py-1 px-2 text-base align-[0.125rem]">Important!</span></h3>
-              <p className="px-2">We are a 501(c)-3 organization. Tax Credit sets Arizona apart in education funding. Let's take advantage of it.</p>
-            </Link>
-          </section>
-          <section className="w-full">
-            <Link href="/awards" className="text-start group">
-              <Image src="/assets/img/awards.jpg" height={360} width={235} alt="Innovation Center" className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]"></Image>
-              <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">Awards</h3>
-              <p className="px-2">Check out what we've accomplished so far!</p>
-            </Link>
-          </section>
-          <section className="w-full">
-            <Link href="/sponsors-and-partners" className="text-start group">
-              <Image src="/assets/img/sponsors-and-partners.jpg" height={360} width={235} alt="Sponsors and Partners" className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]"></Image>
-              <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">Sponsors & Partners</h3>
-              <p className="px-2">We rely on the support of our community. Whether you're a local business, global conglomerate, or self employed, there's need for your support.</p>
-            </Link>
-          </section>
-          <section className="w-full">
-            <Link href="/innovation-center" className="text-start group">
-              <Image src="/assets/img/innovation-center.jpg" height={360} width={235} alt="Innovation Center" className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]"></Image>
-              <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">Innovation Center</h3>
-              <p className="px-2">Learn more about Saguaro High School's Innovation Center and our part in its creation.</p>
-            </Link>
-          </section>
-          <section className="w-full">
-            <a href="https://www.sistersinstem.net" target="_blank" rel="noopener noreferrer" className="text-start group">
-              <Image src="/assets/img/sistersinstem.jpg" height={360} width={235} alt="Sisters in STEM" className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]"></Image>
-              <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">Sisters in STEM</h3>
-              <p className="px-2">Learn more about Sisters in STEM.</p>
-            </a>
-          </section>
-          <section className="w-full">
-            <Link href="/mentors" className="text-start group">
-              <Image src="/assets/img/mentors.jpg" height={360} width={235} alt="Mentors" className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]"></Image>
-              <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">Mentors</h3>
-              <p className="px-2">We are <b>always</b> looking for more mentors. Everyone has something to teach.</p>
-            </Link>
-          </section>
-          <section className="w-full">
-            <Link href="/contact-information" className="text-start group">
-              <Image src="/assets/img/15.jpg" height={360} width={235} alt="Innovation Center" className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]"></Image>
-              <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">Contact Information</h3>
-              <p className="px-2">Need to get a hold of a team member of ours? Find their contact on this page.</p>
-            </Link>
-          </section>
-          <section className="w-full">
-            <Link href="#" className="text-start opacity-50 pointer-events-none">
-              <div className="pb-[66.5%] bg-gray-300 relative">
+            <a href="#" className="text-start opacity-50 pointer-events-none" onClick={function(Event) {Event.preventDefault();}}>
+              <div className="pb-[66.72%] bg-gray-300 relative">
                 <svg className="fill-zinc-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512" fill="#212529">
                   <title>Clock Icon</title>
                   <path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"></path>
@@ -142,7 +116,7 @@ export default function Home() {
               </div>
               <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">Coming Soon</h3>
               <p className="px-2">Feel free to contact us with your ideas about new pages and components.</p>
-            </Link>
+            </a>
           </section>
         </main>
         <section className="flex flex-col flex-wrap gap-4 sm:flex-row sm:flex-nowrap justify-center items-center text-center py-16 text-neutral-900/75" id="contact">
@@ -184,7 +158,7 @@ export default function Home() {
             </section>
             <section className="relative flex flex-wrap items-strech w-full">
               <button className="w-full overflow-clip text-neutral-900 border-2 px-6 py-3 leading-none border-yellow-500 font-medium relative transition-colors duration-500 hover:text-slate-100 focus-visible:text-slate-100 before:absolute before:h-full before:w-full before:scale-x-0 before:inset-0 before:bg-yellow-500 before:-z-[1] before:origin-left before:transition-[transform,transform-origin] before:duration-[500ms,0ms] before:delay-[0ms,500ms] hover:before:scale-x-100 hover:before:origin-right focus-visible:before:scale-x-100 focus-visible:before:origin-right" onClick={SendEmail}>Submit</button>
-              <p ref={ResponseRef} className={`w-full ${InfoClasses} mt-2 leading-none`} id="Response"></p>
+              <p ref={ResponseRef} className={`w-full ${InfoClasses} mt-2 leading-none`} id="response"></p>
             </section>
           </main>
         </section>

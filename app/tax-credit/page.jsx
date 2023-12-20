@@ -1,13 +1,9 @@
-import Image from "next/image";
+import PageHeader from "@/components/page-header";
 
 export default function Page() {
   return (
     <main className="px-3 min-[320px]:px-6 md:px-12 py-3 min-[320px]:py-6 md:py-12">
-      <header className="relative w-full m-auto px-5 py-20 text-center mb-6">
-        <Image className="absolute inset-0 h-full w-full object-cover -z-[1] brightness-50 rounded-xl sm:rounded-3xl" src="/assets/img/tax-credit-generic.jpg" alt="Tax Credit" width={256} height={368} quality={100} priority></Image>
-        <h2 className="text-slate-100 text-4xl font-semibold">Tax Credit</h2>
-        <p className="text-white/75 text-xl font-medium">We are a 501(c)-3 organization. Tax Credit sets Arizona apart in education funding. Let's take advantage of it.</p>
-      </header>
+      <PageHeader title="Tax Credit" description="We are a 501(c)-3 organization. Tax Credit sets Arizona apart in education funding. Let's take advantage of it." src="/assets/img/tax-credit-generic.jpg" />
       <main className="px-6 min-[480px]:px-12">
         <section className="text-neutral-900/80 mb-4">
           <header className="text-neutral-900">

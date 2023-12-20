@@ -1,12 +1,12 @@
-import Image from "next/image";
+import PageHeader from "@/components/page-header";
 
 export default function Page() {
-  function Banner({Title, Text}) {
+  function Banner({title, text}) {
     return (
       <section className="p-3 bg-[#0F4BCB] w-40 relative mb-16 flex flex-col flex-wrap">
         <img src="/assets/img/first.svg" alt="FIRST Robotics Logo" width={100} height={60} className="mx-auto" />
-        <h3 className="font-semibold text-center mt-auto">{Title}</h3>
-        <p className="text-center mt-auto">{Text}</p>
+        <h3 className="font-semibold text-center mt-auto">{title}</h3>
+        <p className="text-center mt-auto">{text}</p>
         <svg className="absolute inset-0 top-full -mt-px" width="10rem" viewBox="0 0 60 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <g fill="#0F4BCB" fillOpacity={1} stroke="none" strokeWidth={0.271434} strokeLinecap="butt" strokeLinejoin="miter" strokeOpacity={1}>
             <path d="M 0.01412096,0 V 20 L 29.787275,9.6253601 60,19.942362 V 0 H 0 v 0 0"></path>
@@ -18,11 +18,7 @@ export default function Page() {
 
   return (
     <main className="px-3 min-[320px]:px-6 md:px-12 py-3 min-[320px]:py-6 md:py-12">
-      <header className="relative w-full m-auto px-5 py-20 text-center mb-6">
-        <Image className="absolute inset-0 h-full w-full object-cover -z-[1] brightness-50 rounded-xl sm:rounded-3xl" src="/assets/img/awards.jpg" alt="Awards" width={256} height={368} quality={100} priority></Image>
-        <h2 className="text-slate-100 text-4xl font-semibold">Awards</h2>
-        <p className="text-white/75 text-xl font-medium">Check out what we've accomplished so far!</p>
-      </header>
+      <PageHeader title="Awards" description="Check out what we've accomplished so far!" src="/assets/img/awards.jpg" />
       <main className="px-6 min-[480px]:px-12">
         <section className="text-neutral-900/80 mb-4">
           <header className="text-neutral-900">
@@ -30,11 +26,11 @@ export default function Page() {
             <p>Take a look at every banner award from FIRST Robotics we have won.</p>
           </header>
           <main className="py-6 flex flex-wrap justify-center gap-4 text-slate-100">
-            <Banner Title="Regional Finalists" Text="2012 Arizona Regional" />
-            <Banner Title="Rookie All Star" Text="2012 Arizona Regional" />
-            <Banner Title="Woodie Flowers Finalist" Text="2015 Arizona West Regional" />
-            <Banner Title="Regional Winners" Text="2015 Arizona East Regional" />
-            <Banner Title="Regional Chairman's Award" Text="2020 Arizona West Regional" />
+            <Banner title="Regional Finalists" text="2012 Arizona Regional" />
+            <Banner title="Rookie All Star" text="2012 Arizona Regional" />
+            <Banner title="Woodie Flowers Finalist" text="2015 Arizona West Regional" />
+            <Banner title="Regional Winners" text="2015 Arizona East Regional" />
+            <Banner title="Regional Chairman's Award" text="2020 Arizona West Regional" />
           </main>
         </section>
         <section className="text-neutral-900/80 mb-4">
