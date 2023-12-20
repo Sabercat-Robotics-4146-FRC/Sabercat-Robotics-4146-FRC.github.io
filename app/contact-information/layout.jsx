@@ -37,6 +37,15 @@ export const metadata = {
     siteId: "1067297456",
     creatorId: "1067297456",
   },
+  alternates: {
+    canonical: "/contact-information",
+    languages: {
+      "en": "/contact-information",
+      // "es": "/es/contact-information",
+      // "fr": "/fr/contact-information",
+      // "ja": "/ja/contact-information",
+    },
+  },
 };
 
 export default function Layout({children}) {

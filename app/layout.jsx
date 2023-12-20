@@ -82,9 +82,9 @@ export const metadata = {
     canonical: "/",
     languages: {
       "en": "/",
-      // "es": "/localization/es",
-      // "fr": "/localization/fr",
-      // "ja": "/localization/ja",
+      // "es": "/es",
+      // "fr": "/fr",
+      // "ja": "/ja",
     },
   },
   robots: {

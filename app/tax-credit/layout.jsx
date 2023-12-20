@@ -37,6 +37,15 @@ export const metadata = {
     siteId: "1067297456",
     creatorId: "1067297456",
   },
+  alternates: {
+    canonical: "/tax-credit",
+    languages: {
+      "en": "/tax-credit",
+      // "es": "/es/tax-credit",
+      // "fr": "/fr/tax-credit",
+      // "ja": "/ja/tax-credit",
+    },
+  },
 };
 
 export default function Layout({children}) {

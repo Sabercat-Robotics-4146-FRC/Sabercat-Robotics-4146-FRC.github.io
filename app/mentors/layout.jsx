@@ -37,6 +37,15 @@ export const metadata = {
     siteId: "1067297456",
     creatorId: "1067297456",
   },
+  alternates: {
+    canonical: "/mentors",
+    languages: {
+      "en": "/mentors",
+      // "es": "/es/mentors",
+      // "fr": "/fr/mentors",
+      // "ja": "/ja/mentors",
+    },
+  },
 };
 
 export default function Layout({children}) {

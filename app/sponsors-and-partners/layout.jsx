@@ -37,6 +37,15 @@ export const metadata = {
     siteId: "1067297456",
     creatorId: "1067297456",
   },
+  alternates: {
+    canonical: "/sponsors-and-partners",
+    languages: {
+      "en": "/sponsors-and-partners",
+      // "es": "/es/sponsors-and-partners",
+      // "fr": "/fr/sponsors-and-partners",
+      // "ja": "/ja/sponsors-and-partners",
+    },
+  },
 };
 
 export default function Layout({children}) {

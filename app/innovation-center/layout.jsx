@@ -37,6 +37,15 @@ export const metadata = {
     siteId: "1067297456",
     creatorId: "1067297456",
   },
+  alternates: {
+    canonical: "/innovation-center",
+    languages: {
+      "en": "/innovation-center",
+      // "es": "/es/innovation-center",
+      // "fr": "/fr/innovation-center",
+      // "ja": "/ja/innovation-center",
+    },
+  },
 };
 
 export default function Layout({children}) {

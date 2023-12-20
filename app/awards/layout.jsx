@@ -37,6 +37,15 @@ export const metadata = {
     siteId: "1067297456",
     creatorId: "1067297456",
   },
+  alternates: {
+    canonical: "/awards",
+    languages: {
+      "en": "/awards",
+      // "es": "/es/awards",
+      // "fr": "/fr/awards",
+      // "ja": "/ja/awards",
+    },
+  },
 };
 
 export default function Layout({children}) {

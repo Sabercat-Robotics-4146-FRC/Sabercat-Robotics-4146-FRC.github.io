@@ -41,6 +41,15 @@ export const metadata = {
     index: false,
     follow: true,
   },
+  alternates: {
+    canonical: "/privacy-policy",
+    languages: {
+      "en": "/privacy-policy",
+      // "es": "/es/privacy-policy",
+      // "fr": "/fr/privacy-policy",
+      // "ja": "/ja/privacy-policy",
+    },
+  },
 };
 
 export default function Layout({children}) {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function PageHeader({src, title, description}) {
+export default function PageHeader({title, description, src}) {
   return (
     <header className="relative w-full m-auto px-5 py-20 text-center mb-6">
       <Image className="absolute inset-0 h-full w-full object-cover -z-[1] brightness-50 rounded-xl sm:rounded-3xl" src={src} alt={title} width={672} height={228} quality={75} priority sizes="100vw"></Image>
