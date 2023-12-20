@@ -9,11 +9,11 @@ function Card({title, description, href, external, src, important, children}) {
     <section className="w-full">
       {!external ? <Link href={href} className="text-start group">
         <Image src={src} height={360} width={235} alt={title} className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]" sizes="(max-width: 767px) 100vw, 33vw"></Image>
-        <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">{title}{important ? <span className="bg-red-600 text-white font-semibold py-1 px-2 text-base align-[0.125rem]">Important!</span> : ""}</h3>
+        <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">{title}{important ? <>{" "}<span className="bg-red-600 text-white font-semibold py-1 px-2 text-base align-[0.125rem]">Important!</span></> : ""}</h3>
         <p className="px-2">{description || children}</p>
       </Link> : <a href={href} target="_blank" rel="noopener noreferrer" className="text-start group">
         <Image src={src} height={360} width={235} alt={title} className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]" sizes="(max-width: 767px) 100vw, 33vw"></Image>
-        <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">{title}{important ? <span className="bg-red-600 text-white font-semibold py-1 px-2 text-base align-[0.125rem]">Important!</span> : ""}</h3>
+        <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">{title}{important ? <>{" "}<span className="bg-red-600 text-white font-semibold py-1 px-2 text-base align-[0.125rem]">Important!</span></> : ""}</h3>
         <p className="px-2">{description || children}</p>
       </a>}
     </section>
