@@ -6,6 +6,7 @@ import Footer from "/components/footer";
 import localFont from "next/font/local";
 import Script from "next/script";
 import { cookies } from "next/headers";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const url = "https://www.sabercatrobotics.com";
 const title = "Sabercat Robotics";
@@ -120,6 +121,7 @@ export default function RootLayout({children}) {
       <body className="text-lg leading-7 text-neutral-900">
         <Header />
         {children}
+        <SpeedInsights />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-8MHGG86QKT" />
         <Script id="google-analytics">
           {`
