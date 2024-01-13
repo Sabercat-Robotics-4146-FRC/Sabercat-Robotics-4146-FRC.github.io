@@ -36,7 +36,7 @@ export default function Page() {
         <section className="text-neutral-900/80 mb-4">
           <header className="text-neutral-900">
             <h2 className="text-3xl">Yearly Awards</h2>
-            <p>Every yearly competition award we've won ever since we started in 2012.</p>
+            <p>Every yearly competition award we&apos;ve won ever since we started in 2012.</p>
           </header>
           <main className="py-6 flex flex-col flex-wrap gap-4 text-neutral-900/80">
             <section>
@@ -56,7 +56,7 @@ export default function Page() {
               </header>
               <ul className="list-disc marker:text-neutral-900">
                 <b>Arizona Valley Regional</b>
-                <li>Judges' Award</li>
+                <li>Judges&apos; Award</li>
               </ul>
             </section>
             <section>
@@ -74,7 +74,7 @@ export default function Page() {
               </header>
               <ul className="list-disc marker:text-neutral-900">
                 <b>Arizona West Regional</b>
-                <li>Regional Chairman's Award</li>
+                <li>Regional Chairman&apos;s Award</li>
               </ul>
             </section>
             <section>
@@ -85,7 +85,7 @@ export default function Page() {
                 <b>Arizona West Regional</b>
                 <li>Safety Award sponsored by Underwriters Laboratories</li>
                 <li>Industrial Design Award sponsored by General Motors</li>
-                <li>FIRST Dean's List Finalist Award</li>
+                <li>FIRST Dean&apos;s List Finalist Award</li>
                 <b>Arizona North Regional</b>
                 <li>Industrial Design Award sponsored by General Motors</li>
               </ul>

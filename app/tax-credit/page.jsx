@@ -20,7 +20,7 @@ export default function Page() {
         <section className="text-neutral-900/80 mb-4">
           <header className="mb-2">
             <h2 className="text-neutral-900 text-3xl">How to donate through tax credit</h2>
-            <p>Depending on what you prefer, you can either support us through tax credit by submitting a digital form, or by sending SUSD a phsyical form. We'll go over both ways, so you can easily do it how you want to.</p>
+            <p>Depending on what you prefer, you can either support us through tax credit by submitting a digital form, or by sending SUSD a phsyical form. We&apos;ll go over both ways, so you can easily do it how you want to.</p>
           </header>
           <section className="mb-2">
             <header className="text-neutral-900">
@@ -68,7 +68,7 @@ export default function Page() {
                 <p className="inline">Click on the document titled <q className="font-semibold">2023-2024 Tax Credit Form - English</q>.</p>
               </li>
               <li>
-                <p className="inline">Under the header <q className="font-semibold">Contributor's Information</q>, fill out your information and check the maximum dollar amount that best applies to you.</p>
+                <p className="inline">Under the header <q className="font-semibold">Contributor&apos;s Information</q>, fill out your information and check the maximum dollar amount that best applies to you.</p>
               </li>
               <li>
                 <p className="inline">Under step 2 (<q className="font-semibold">Select schools(s) from the list below</q>), mark the line next to <q>Saguaro HS</q>.</p>
