@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { validate } from "email-validator";
 import { createRef, useState } from "react";
+import { SendEmail } from "@/server/email";
 
 function Card({title, description, href, external, src, important, children}) {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
   const [Subject, SetSubject] = useState();
   const [InfoClasses, SetInfoClasses] = useState("hidden");
 
-  async function SendEmail() {
+  async function HandleEmailEvent() {
     const ResponseText = ResponseRef.current;
     if (ResponseText && ResponseText.classList) {
       SetInfoClasses("hidden");
@@ -37,29 +38,22 @@ export default function Home() {
           if (Message && Message.replace(/\s/g, "").length) {
             ResponseText.innerText = "Attempting to send email...";
             SetInfoClasses("text-neutral-900");
-            const EmailRequest = await fetch("/api/send-email", {
-              method: "POST",
-              body: JSON.stringify({
+            try {
+              const EmailResponse = await SendEmail({
                 Email: Email,
                 Subject: Subject,
                 Message: Message,
-              }),
-            }).catch(function(Err) {
-              console.warn(Err);
-              SetInfoClasses("text-red-500");
-              ResponseText.innerText = "There was an error with your internet connection. Please try again.";
-            });
-            if (EmailRequest.ok) {
-              const EmailResponse = await EmailRequest.json();
+              });
               if (EmailResponse && EmailResponse.Success) {
                 SetInfoClasses("text-green-500");
               } else {
                 SetInfoClasses("text-red-500");
               };
-              ResponseText.innerText = EmailResponse.Message || (!EmailResponse.Success ? "There was an error on our server when sending your email. Please try again, or contact our email team@sabercatrobotics.com if you think this was a mistake." : "Thank you for your email!");
-            } else {
+              ResponseText.innerText = EmailResponse.Message || (!EmailResponse.Success ? "There was an error on our server when sending your email. Please try again, or contact our email team@sabercatrobotics.com if you think this was a mistake." : "Thank you for your email!");  
+            } catch(Err) {
+              console.warn(Err);
               SetInfoClasses("text-red-500");
-              ResponseText.innerText = "There was an error on our server when sending your email. Please try again, or contact our email team@sabercatrobotics.com if you think this was a mistake.";  
+              ResponseText.innerText = "There was an error on our server when sending your email. Please try again, or contact our email team@sabercatrobotics.com if you think this was a mistake.";    
             };
           } else {
             SetInfoClasses("text-red-500");
@@ -157,7 +151,7 @@ export default function Home() {
               </div>
             </section>
             <section className="relative flex flex-wrap items-strech w-full">
-              <button className="w-full overflow-clip text-neutral-900 border-2 px-6 py-3 leading-none border-yellow-500 font-medium relative transition-colors duration-500 hover:text-slate-100 focus-visible:text-slate-100 before:absolute before:h-full before:w-full before:scale-x-0 before:inset-0 before:bg-yellow-500 before:-z-[1] before:origin-left before:transition-[transform,transform-origin] before:duration-[500ms,0ms] before:delay-[0ms,500ms] hover:before:scale-x-100 hover:before:origin-right focus-visible:before:scale-x-100 focus-visible:before:origin-right" onClick={SendEmail}>Submit</button>
+              <button className="w-full overflow-clip text-neutral-900 border-2 px-6 py-3 leading-none border-yellow-500 font-medium relative transition-colors duration-500 hover:text-slate-100 focus-visible:text-slate-100 before:absolute before:h-full before:w-full before:scale-x-0 before:inset-0 before:bg-yellow-500 before:-z-[1] before:origin-left before:transition-[transform,transform-origin] before:duration-[500ms,0ms] before:delay-[0ms,500ms] hover:before:scale-x-100 hover:before:origin-right focus-visible:before:scale-x-100 focus-visible:before:origin-right" onClick={HandleEmailEvent}>Submit</button>
               <p ref={ResponseRef} className={`w-full ${InfoClasses} mt-2 leading-none`} id="response"></p>
             </section>
           </main>
