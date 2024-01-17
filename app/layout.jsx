@@ -1,11 +1,7 @@
 import "/css/globals.css";
 import Header from "/components/header";
-import ClientCookiesProvider from "/components/cookie-provider"
-import CookieConsent from "/components/cookie-consent";
 import Footer from "/components/footer";
 import localFont from "next/font/local";
-import Script from "next/script";
-import { cookies } from "next/headers";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const url = "https://www.sabercatrobotics.com";
