@@ -122,24 +122,6 @@ export default function RootLayout({children}) {
         <Header />
         {children}
         <SpeedInsights />
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-8MHGG86QKT" />
-        <Script id="google-analytics">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            };
-            gtag("consent", "default", {
-              "ad_storage": "denied",
-              "analytics_storage": "denied",
-            });
-            gtag("js", new Date());
-            gtag("config", "G-8MHGG86QKT");
-          `}
-        </Script>
-        <ClientCookiesProvider value={cookies().getAll()}>
-          <CookieConsent />
-        </ClientCookiesProvider>
         <Footer />
       </body>
     </html>

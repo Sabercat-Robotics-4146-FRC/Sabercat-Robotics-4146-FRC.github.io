@@ -59,15 +59,15 @@ export default function Footer() {
       <section className="w-full min-[800px]:w-max min-[800px]:max-w-xs">
         <h2 className="font-medium text-slate-100 text-3xl">Contact</h2>
         <nav className="flex flex-col flex-wrap text-slate-100">
-          <Link href="/#contact" className="transition-colors duration-300 hover:text-yellow-500 focus-visible:text-yellow-500">Contact Form</Link>
-          <Link href="mailto:team@sabercatrobotics.com" className="fill-slate-100 transition-colors duration-300 hover:text-yellow-500 hover:fill-yellow-500 focus-visible:text-yellow-500 focus-visible:fill-yellow-500 break-all">
+          <a href="/#contact" className="transition-colors duration-300 hover:text-yellow-500 focus-visible:text-yellow-500">Contact Form</a>
+          <a href="mailto:team@sabercatrobotics.com" className="fill-slate-100 transition-colors duration-300 hover:text-yellow-500 hover:fill-yellow-500 focus-visible:text-yellow-500 focus-visible:fill-yellow-500 break-all">
             <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 512 512" className="inline mr-1 mb-0.5">
               <title>Envelope Icon</title>
               <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
             </svg>
             <span className="sr-only">Envelope Icon</span>
             <p className="inline">team@sabercatrobotics.com</p>
-          </Link>
+          </a>
           <a href="https://maps.app.goo.gl/25SioJ1JU4hxqWKU9" target="_blank" rel="noopener noreferrer" className="fill-slate-100 transition-colors duration-300 hover:text-yellow-500 hover:fill-yellow-500 focus-visible:text-yellow-500 focus-visible:fill-yellow-500">
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" className="inline mr-1 mb-1.5">
               <title>Location Icon</title>
@@ -78,11 +78,11 @@ export default function Footer() {
           </a>
         </nav>
       </section>
-      <footer className="mt-6 w-full flex flex-col flex-wrap min-[800px]:flex-row min-[800px]:flex-nowrap justify-center items-center divide-y min-[800px]:divide-x min-[800px]:divide-y-0 divide-slate-100/50 text-sm text-slate-100/50">
+      <footer className="mt-6 w-full flex flex-col flex-wrap min-[800px]:flex-row min-[800px]:flex-nowrap justify-center items-center divide-y min-[800px]:divide-x min-[800px]:divide-y-0 divide-slate-100/70 text-sm text-slate-100/70">
         <a href="https://www.saguaromsaboosters.org/" target="_blank" rel="noopener noreferrer" className="min-w-[25px] px-2 min-[800px]:px-4 py-4 inline">
           <Image src="/assets/img/smsa.png" alt="Saguaro Math and Science Academy logo" width={40} height={40} quality={100}></Image>
         </a>
-        <p className="px-2 min-[800px]:px-4 py-4 inline">Copyright &copy; 2023 Scottsdale Math And Science Academy. All rights reserved.</p>
+        <p className="px-2 min-[800px]:px-4 py-4 inline">Copyright &copy; {new Date().getFullYear()} Scottsdale Math And Science Academy. All rights reserved.</p>
         <Link href="/privacy-policy" className="px-2 min-[800px]:px-4 py-4 inline">Privacy Policy</Link>
       </footer>
     </footer>

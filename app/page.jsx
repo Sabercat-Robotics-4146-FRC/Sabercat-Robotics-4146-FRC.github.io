@@ -9,11 +9,11 @@ function Card({title, description, href, external, src, important, children}) {
   return (
     <section className="w-full">
       {!external ? <Link href={href} className="text-start group">
-        <Image src={src} height={360} width={235} alt={title} className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]" sizes="(max-width: 767px) 100vw, 33vw"></Image>
+        <Image src={src} height={360} width={235} alt={title} className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]" sizes="(max-width: 767px) 90vw, 30vw"></Image>
         <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">{title}{important ? <>{" "}<span className="bg-red-600 text-white font-semibold py-1 px-2 text-base align-[0.125rem]">Important!</span></> : ""}</h3>
         <p className="px-2">{description || children}</p>
       </Link> : <a href={href} target="_blank" rel="noopener noreferrer" className="text-start group">
-        <Image src={src} height={360} width={235} alt={title} className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]" sizes="(max-width: 767px) 100vw, 33vw"></Image>
+        <Image src={src} height={360} width={235} alt={title} className="mb-2 w-full transition-[box-shadow,transform] duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_16px_32px_-16px_rgb(0_0_0/75)]" sizes="(max-width: 767px) 90vw, 30vw"></Image>
         <h3 className="px-2 text-neutral-900 text-2xl mt-4 mb-2">{title}{important ? <>{" "}<span className="bg-red-600 text-white font-semibold py-1 px-2 text-base align-[0.125rem]">Important!</span></> : ""}</h3>
         <p className="px-2">{description || children}</p>
       </a>}
@@ -116,8 +116,7 @@ export default function Home() {
         <section className="flex flex-col flex-wrap gap-4 sm:flex-row sm:flex-nowrap justify-center items-center text-center py-16 text-neutral-900/75" id="contact">
           <header className="w-full sm:w-1/2 px-4 mb-4">
             <h2 className="mb-4 font-medium text-3xl text-neutral-900">Contact Us</h2>
-            <p className="mb-2">Need to reach out to our team? Contact us using the form to the right, and make sure to provide as much detail as possible so we can get back to you quickly.</p>
-            <p className="mb-2">If the contact form is <i>not</i> working, then please <a href="mailto:team@sabercatrobotics.com" className="transition-colors duration-300 text-yellow-500 hover:text-yellow-600 focus-visible:text-yellow-600">email us</a> and mention what error appears when you fill out the contact form (and if you can, include a photo) so we can fix it quickly. Thank you!</p>
+            <p>Need to reach out to our team? Contact us using either the form to the right or <a href="mailto:team@sabercatrobotics.com" className="transition-colors duration-300 text-yellow-500 hover:text-yellow-600 focus-visible:text-yellow-600">by email</a>, and make sure to provide as much detail as possible so we can get back to you quickly.</p>
           </header>
           <main className="w-full sm:w-1/2">
             <section className="mb-4 relative flex flex-wrap items-strech w-full border-2 transition-[border-color] duration-300 focus-within:border-yellow-500">
