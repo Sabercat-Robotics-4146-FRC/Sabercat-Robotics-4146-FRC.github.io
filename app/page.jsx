@@ -84,7 +84,7 @@ export default function Home() {
         <Image src="/assets/img/head-raw-large-white.png" alt="Sabercat Robotics logo" width={160} height={124} priority></Image>
         <h2 className="text-slate-100 text-4xl mb-2 animation-delay-100 animate-load">Sabercat Robotics</h2>
         <p className="mb-5 animation-delay-200 animate-load">We pride ourselves on pushing STEM education to its limits.</p>
-        <Link href="/tax-credit" className="animation-delay-300 animate-load text-slate-100 overflow-clip border-2 px-6 py-3 leading-none border-yellow-500 font-medium relative before:absolute before:h-full before:w-full before:scale-x-0 before:inset-0 before:bg-yellow-500 before:-z-[1] before:origin-left before:transition-[transform,transform-origin] before:duration-[500ms,0ms] before:delay-[0ms,500ms] hover:before:scale-x-100 hover:before:origin-right focus-visible:before:scale-x-100 focus-visible:before:origin-right">Support Us</Link>
+        <Link href="/tax-credit" className="animation-delay-300 animate-load text-slate-100 overflow-clip border-2 px-6 py-3 leading-none border-yellow-500 font-medium relative before:absolute before:h-full before:w-full before:scale-x-0 before:inset-0 before:bg-yellow-500 before:-z-[1] before:origin-left before:[transition:transform_500ms_0ms,transform-origin_0ms_500ms] hover:before:scale-x-100 hover:before:origin-right focus-visible:before:scale-x-100 focus-visible:before:origin-right">Support Us</Link>
       </header>
       <main className="flex flex-col flex-wrap justify-center items-center text-center py-16 px-6 text-neutral-900/75">
         <header className="w-full sm:w-3/4 px-4 mb-4">
@@ -150,7 +150,7 @@ export default function Home() {
               </div>
             </section>
             <section className="relative flex flex-wrap items-strech w-full">
-              <button className="w-full overflow-clip text-neutral-900 border-2 px-6 py-3 leading-none border-yellow-500 font-medium relative transition-colors duration-500 hover:text-slate-100 focus-visible:text-slate-100 before:absolute before:h-full before:w-full before:scale-x-0 before:inset-0 before:bg-yellow-500 before:-z-[1] before:origin-left before:transition-[transform,transform-origin] before:duration-[500ms,0ms] before:delay-[0ms,500ms] hover:before:scale-x-100 hover:before:origin-right focus-visible:before:scale-x-100 focus-visible:before:origin-right" onClick={HandleEmailEvent}>Submit</button>
+              <button className="w-full overflow-clip text-neutral-900 border-2 px-6 py-3 leading-none border-yellow-500 font-medium relative transition-colors duration-500 hover:text-slate-100 focus-visible:text-slate-100 before:absolute before:h-full before:w-full before:scale-x-0 before:inset-0 before:bg-yellow-500 before:-z-[1] before:origin-left before:[transition:transform_500ms_0ms,transform-origin_0ms_500ms] hover:before:scale-x-100 hover:before:origin-right focus-visible:before:scale-x-100 focus-visible:before:origin-right" onClick={HandleEmailEvent}>Submit</button>
               <p ref={ResponseRef} className={`w-full ${InfoClasses} mt-2 leading-none`} id="response"></p>
             </section>
           </main>
