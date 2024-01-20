@@ -45,7 +45,7 @@ export default function Page() {
           <Sponsor title="Raytheon" src="raytheon.png">
             <p className="text-lg">Raytheon is a company that helps it&apos;s parent company, RTX, solve the hardest problems in aerospace and defense. So far, Raytheon has donated $2,500 to our team, allowing us to buy important materials required for our robot. For more information on RTX and Raytheon, visit the <a href="https://rtx.com/" target="_blank" rel="noopener noreferrer" className="transition-colors duration-300 text-yellow-500 hover:text-yellow-600 focus-visible:text-yellow-600">RTX website</a>.</p>
           </Sponsor>
-          <Sponsor title="SOAR Foundation" src="soar-foundation.jfif">
+          <Sponsor title="SOAR Foundation" src="soar-foundation.png">
             <p className="text-lg">The SOAR Foundation helps spark interest in STEM/Aerospace early on in a child&apos;s educational journey. If you&apos;re interested in learning more about the SOAR Foundation, visit the <a href="https://soar-foundation.net/" target="_blank" rel="noopener noreferrer" className="transition-colors duration-300 text-yellow-500 hover:text-yellow-600 focus-visible:text-yellow-600">SOAR Foundation website</a>.</p>
           </Sponsor>
           <Sponsor title="Scottsdale Unified School District" src="susd.png">
