@@ -1,6 +1,6 @@
+import Image from "next/image";
 import PageHeader from "@/components/page-header";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import Image from "next/image";
 
 function Sponsor({ title, src, children }) {
   return (

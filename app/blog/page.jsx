@@ -1,8 +1,8 @@
-import PageHeader from "@/components/page-header";
-import { Suspense } from "react";
-import { readdirSync } from "fs";
 import Link from "next/link";
 import Image from "next/image";
+import { Suspense } from "react";
+import { readdirSync } from "fs";
+import PageHeader from "@/components/page-header";
 
 async function BlogPost({ filePath }) {
   const { title, description, image } = await import(`@/app/blog/(posts)/${filePath}`);

@@ -1,6 +1,6 @@
 "use client";
-import { validate } from "email-validator";
 import { createRef, useState } from "react";
+import { validate } from "email-validator";
 import { SendEmail } from "@/server/email";
 
 export default function EmailForm() {
