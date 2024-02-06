@@ -25,7 +25,7 @@ export default function Page() {
             <h2 className="text-3xl">Banner Awards</h2>
             <p>Take a look at every banner award from FIRST Robotics we have won.</p>
           </header>
-          <main className="py-6 w-[55rem] grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] text-slate-100">
+          <main className="py-6 grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] justify-center md:justify-start gap-4 text-slate-100">
             <Banner title="Regional Finalists" text="2012 Arizona Regional" />
             <Banner title="Rookie All Star" text="2012 Arizona Regional" />
             <Banner title="Woodie Flowers Finalist" text="2015 Arizona West Regional" />
