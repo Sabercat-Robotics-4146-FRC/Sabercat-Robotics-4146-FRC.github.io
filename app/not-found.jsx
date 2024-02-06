@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <main className="px-8 py-24 flex flex-col flex-wrap md:flex-row md:flex-nowrap justify-between gap-12 relative text-neutral-900/75">
+    <main className="px-8 py-24 flex flex-col flex-wrap md:flex-row md:flex-nowrap justify-between space-x-12 space-y-12 relative text-neutral-900/75">
       <aside className="w-full md:w-1/4">
         <p className="border-b-2 border-yellow-500 font-medium text-neutral-900">Error 404</p>
       </aside>
       <main className="flex flex-col flex-wrap w-full md:w-1/2">
         <h2 className="mb-3 text-3xl text-neutral-900">Page <span className="text-yellow-500">not</span> found</h2>
         <p className="mb-6">The page you were looking for could not be found. Please press the button below to go back to the homepage. If you think this is a mistake, please <Link href="/#contact" className="text-yellow-500 transition-colors duration-300 hover:text-yellow-600 focus-visible:text-yellow-600">contact us</Link>. Thank you!</p>
-        <Link href="/" className="w-fit overflow-clip text-neutral-900 border-2 px-6 py-3 leading-none border-yellow-500 font-medium relative transition-colors duration-500 hover:text-slate-100 focus-visible:text-slate-100 before:absolute before:h-full before:w-full before:scale-x-0 before:inset-0 before:bg-yellow-500 before:-z-[1] before:origin-left before:transition-[transform,transform-origin] before:duration-[500ms,0ms] before:delay-[0ms,500ms] hover:before:scale-x-100 hover:before:origin-right focus-visible:before:scale-x-100 focus-visible:before:origin-right">Homepage</Link>
+        <Link href="/" className="w-fit overflow-hidden text-neutral-900 border-2 px-6 py-3 leading-none border-yellow-500 font-medium relative transition-colors duration-500 hover:text-slate-100 focus-visible:text-slate-100 before:absolute before:h-full before:w-full before:scale-x-0 before:top-0 before:left-0 before:bg-yellow-500 before:-z-[1] before:origin-left before:[transition:transform_500ms_0ms,transform-origin_0ms_500ms] hover:before:scale-x-100 hover:before:origin-right focus-visible:before:scale-x-100 focus-visible:before:origin-right">Homepage</Link>
       </main>
       <aside className="w-full md:w-1/4">
         <svg className="m-auto max-w-[50%] md:max-w-full h-fit" width="1200px" height="1200px" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">

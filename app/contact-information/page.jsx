@@ -9,7 +9,7 @@ export default function Page() {
           <header className="text-neutral-900 mb-4">
             <h2 className="text-3xl">Robotics Lead</h2>
           </header>
-          <main className="mb-4 flex flex-col flex-wrap gap-2">
+          <main className="mb-4 flex flex-col flex-wrap space-y-2">
             <section>
               <h3 className="text-2xl">Alex Stephenson</h3>
               <p>Job Title: Team Lead</p>
@@ -21,7 +21,7 @@ export default function Page() {
           <header className="text-neutral-900 mb-4">
             <h2 className="text-3xl">Head of Robot</h2>
           </header>
-          <main className="mb-4 flex flex-col flex-wrap gap-2">
+          <main className="mb-4 flex flex-col flex-wrap space-y-2">
             <section>
               <h3 className="text-2xl">Gian Raboin</h3>
               <p>Job Title: Head of Robot</p>
@@ -33,7 +33,7 @@ export default function Page() {
           <header className="text-neutral-900 mb-4">
             <h2 className="text-3xl">Business</h2>
           </header>
-          <main className="mb-4 flex flex-col flex-wrap gap-2">
+          <main className="mb-4 flex flex-col flex-wrap space-y-2">
             <section>
               <h3 className="text-2xl">Korbin Gugisberg</h3>
               <p>Job Title: Head of Business</p>
@@ -58,7 +58,7 @@ export default function Page() {
               <header className="text-neutral-900 mb-4">
                 <h2 className="text-3xl">Software</h2>
               </header>
-              <main className="mb-4 flex flex-col flex-wrap gap-2">
+              <main className="mb-4 flex flex-col flex-wrap space-y-2">
                 <section>
                   <h3 className="text-2xl">Ryder Horne</h3>
                   <p>Job Title: Website Developer and Designer</p>
@@ -70,7 +70,7 @@ export default function Page() {
               <header className="text-neutral-900 mb-4">
                 <h2 className="text-3xl">Floater</h2>
               </header>
-              <main className="mb-4 flex flex-col flex-wrap gap-2">
+              <main className="mb-4 flex flex-col flex-wrap space-y-2">
                 <section>
                   <h3 className="text-2xl">Nikhil Sethi</h3>
                   <p>Job Title: Floater</p>

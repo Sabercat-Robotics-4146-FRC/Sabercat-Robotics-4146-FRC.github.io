@@ -7,7 +7,7 @@ export default function Page() {
         <img src="/assets/img/first.svg" alt="FIRST Robotics Logo" width={100} height={60} className="mx-auto" />
         <h3 className="font-semibold text-center mt-auto">{title}</h3>
         <p className="text-center mt-auto">{text}</p>
-        <svg className="absolute inset-0 top-full -mt-px" width="10rem" viewBox="0 0 60 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute top-full left-0 -mt-px" width="10rem" viewBox="0 0 60 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <g fill="#0F4BCB" fillOpacity={1} stroke="none" strokeWidth={0.271434} strokeLinecap="butt" strokeLinejoin="miter" strokeOpacity={1}>
             <path d="M 0.01412096,0 V 20 L 29.787275,9.6253601 60,19.942362 V 0 H 0 v 0 0"></path>
           </g>
@@ -25,7 +25,7 @@ export default function Page() {
             <h2 className="text-3xl">Banner Awards</h2>
             <p>Take a look at every banner award from FIRST Robotics we have won.</p>
           </header>
-          <main className="py-6 flex flex-wrap justify-center gap-4 text-slate-100">
+          <main className="py-6 w-[55rem] grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] text-slate-100">
             <Banner title="Regional Finalists" text="2012 Arizona Regional" />
             <Banner title="Rookie All Star" text="2012 Arizona Regional" />
             <Banner title="Woodie Flowers Finalist" text="2015 Arizona West Regional" />
@@ -38,7 +38,7 @@ export default function Page() {
             <h2 className="text-3xl">Yearly Awards</h2>
             <p>Every yearly competition award we&apos;ve won ever since we started in 2012.</p>
           </header>
-          <main className="py-6 flex flex-col flex-wrap gap-4 text-neutral-900/80">
+          <main className="py-6 flex flex-col flex-wrap space-y-4 text-neutral-900/80">
             <section>
               <header className="text-neutral-900">
                 <h3 className="text-2xl">2023</h3>

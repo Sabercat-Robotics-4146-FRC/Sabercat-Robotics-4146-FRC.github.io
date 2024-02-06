@@ -6,8 +6,8 @@ function Sponsor({ title, src, children }) {
   return (
     <AccordionItem value={encodeURIComponent(title)}>
       <AccordionTrigger>
-        <h3 className="text-3xl flex flex-row flex-nowrap items-center gap-2">
-          {title}
+        <h3 className="text-xl md:text-3xl font-medium flex flex-row flex-nowrap items-center space-x-2">
+          <p>{title}</p>
           {
             (function() {
               if (src) {

@@ -114,7 +114,7 @@ const Objective = localFont({
 export default function RootLayout({children}) {
   return (
     <html className={`scroll-smooth selection:bg-yellow-500 selection:text-white ${Objective.className}`} lang={locale}>
-      <body className="text-lg leading-7 text-neutral-900">
+      <body className="text-lg leading-7 text-neutral-900 flex flex-col flex-wrap min-h-screen">
         <Header />
         {children}
         <SpeedInsights />
