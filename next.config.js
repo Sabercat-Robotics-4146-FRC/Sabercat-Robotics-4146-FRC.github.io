@@ -3,11 +3,11 @@ const createMDX = require("@next/mdx");
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx"],
-  i18n: {
-    // "es", "fr", "ja"
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+  // i18n causes 404's on Vercel (see https://github.com/vercel/next.js/discussions/55531)
+  // i18n: {
+  //   locales: ["en", "es", "fr", "ja"],
+  //   defaultLocale: "en",
+  // },
   async headers() {
     return [
       {
