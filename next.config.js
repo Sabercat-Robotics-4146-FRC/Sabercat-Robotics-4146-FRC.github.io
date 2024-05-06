@@ -1,13 +1,9 @@
 const createMDX = require("@next/mdx");
+const createNextIntlPlugin = require('next-intl/plugin');
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx"],
-  // i18n causes 404's on Vercel (see https://github.com/vercel/next.js/discussions/55531)
-  // i18n: {
-  //   locales: ["en", "es", "fr", "ja"],
-  //   defaultLocale: "en",
-  // },
   async headers() {
     return [
       {
@@ -15,7 +11,7 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; child-src 'none'; object-src 'none'; img-src 'self' blob: data:;",
+            value: process.env.NODE_ENV === "development" ? "default-src 'self' 'unsafe-inline' 'unsafe-eval';" : "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; child-src 'none'; object-src 'none'; img-src 'self' blob: data:;;",
           },
         ],
       },
@@ -26,5 +22,5 @@ const nextConfig = {
 };
 
 module.exports = createMDX({
-  extension: /\.mdx?$/,
-})(nextConfig);
+  extension: /\.mdx$|\.md$/,
+})(createNextIntlPlugin()(nextConfig));

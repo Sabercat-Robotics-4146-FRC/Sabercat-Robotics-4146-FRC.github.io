@@ -1,19 +1,46 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function NotFound() {
+  const Translate = useTranslations("NotFound");
+  
   return (
     <main className="px-8 py-24 flex flex-col flex-wrap md:flex-row md:flex-nowrap justify-between space-x-12 space-y-12 relative text-neutral-900/75">
       <aside className="w-full md:w-1/4">
-        <p className="border-b-2 border-yellow-500 font-medium text-neutral-900">Error 404</p>
+        <p className="border-b-2 border-yellow-500 font-medium text-neutral-900">{Translate("Error")}</p>
       </aside>
       <main className="flex flex-col flex-wrap w-full md:w-1/2">
-        <h2 className="mb-3 text-3xl text-neutral-900">Page <span className="text-yellow-500">not</span> found</h2>
-        <p className="mb-6">The page you were looking for could not be found. Please press the button below to go back to the homepage. If you think this is a mistake, please <Link href="/#contact" className="text-yellow-500 transition-colors duration-300 hover:text-yellow-600 focus-visible:text-yellow-600">contact us</Link>. Thank you!</p>
-        <Link href="/" className="w-fit overflow-hidden text-neutral-900 border-2 px-6 py-3 leading-none border-yellow-500 font-medium relative transition-colors duration-500 hover:text-slate-100 focus-visible:text-slate-100 before:absolute before:h-full before:w-full before:scale-x-0 before:top-0 before:left-0 before:bg-yellow-500 before:-z-[1] before:origin-left before:[transition:transform_500ms_0ms,transform-origin_0ms_500ms] hover:before:scale-x-100 hover:before:origin-right focus-visible:before:scale-x-100 focus-visible:before:origin-right">Homepage</Link>
+        <h2 className="mb-3 text-3xl text-neutral-900">
+          {
+            Translate.rich("Header", {
+              yellow: function(Chunks) {
+                return (
+                  <span className="text-yellow-500">{Chunks}</span>
+                );
+              },
+            })
+          }
+        </h2>
+        <p className="mb-6">
+          {
+            Translate.rich("Paragraph", {
+              inlineLink: function(Chunks) {
+                return (
+                  <Link href="/#contact" className="text-yellow-500 transition-colors duration-300 hover:text-yellow-600 focus-visible:text-yellow-600">
+                    {Chunks}
+                  </Link>
+                );
+              },
+            })
+          }
+        </p>
+        <Link href="/" className="w-fit overflow-hidden text-neutral-900 border-2 px-6 py-3 leading-none border-yellow-500 font-medium relative transition-colors duration-500 hover:text-slate-100 focus-visible:text-slate-100 before:absolute before:h-full before:w-full before:scale-x-0 before:top-0 before:left-0 before:bg-yellow-500 before:-z-[1] before:origin-left before:[transition:transform_500ms_0ms,transform-origin_0ms_500ms] hover:before:scale-x-100 hover:before:origin-right focus-visible:before:scale-x-100 focus-visible:before:origin-right">
+          {Translate("Homepage")}
+        </Link>
       </main>
       <aside className="w-full md:w-1/4">
         <svg className="m-auto max-w-[50%] md:max-w-full h-fit" width="1200px" height="1200px" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-          <title>Printer Vector</title>
+          <title>{Translate("PrinterTitle")}</title>
           <path d="M20 30 H 2.5 A 2.5 2.5 0 0 0 0 32.5 V 77.5 A 2.5 2.5 0 0 0 2.5 80 H 117.5 A 2.5 2.5 0 0 0 120 77.5 V 32.5 A 2.5 2.5 0 0 0 117.5 30 H 100" fill="#adb5bd"></path>
           <path d="M20 50 V 0 H 100 V 50 Z" fill="#f8f9fa"></path>
           <path d="M30 10 H 90" stroke="#ced4da" strokeWidth={1}></path>

@@ -5,7 +5,7 @@ import { readdirSync } from "fs";
 import PageHeader from "@/components/page-header";
 
 async function BlogPost({ filePath }) {
-  const { title, description, image } = await import(`@/app/blog/(posts)/${filePath}`);
+  const { title, description, image } = await import(`@/app/[locale]/blog/(posts)/${filePath}`);
   if (title && description && image) {
     return (
       <section className="w-full">
@@ -21,7 +21,7 @@ async function BlogPost({ filePath }) {
 };
 
 export default function Page() {
-  const BlogChildren = readdirSync("./app/blog/(posts)", {
+  const BlogChildren = readdirSync("./app/[locale]/blog/(posts)", {
     withFileTypes: true,
   });
   const Directories = BlogChildren.filter(function(Directory) {

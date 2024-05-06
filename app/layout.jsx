@@ -1,96 +1,98 @@
-import "/css/globals.css";
-import Header from "/components/header";
-import Footer from "/components/footer";
+import "@/css/globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const url = "https://www.sabercatrobotics.com";
 const title = "Sabercat Robotics";
 const description = "Sabercat Robotics: Inspiring high schoolers through robots. A 501c charity Robotics team shaping future innovators.";
-const locale = "en";
-export const metadata = {
-  metadataBase: new URL(url),
-  title: {
-    default: title,
-    template: `%s | ${title}`,
-  },
-  description: description,
-  openGraph: {
-    title: title,
-    description: description,
-    url: url,
-    siteName: "Sabercat Robotics",
-    images: [
-      {
-        url: "/assets/img/head-raw-large.png",
-        width: 1200,
-        height: 630,
-        alt: title,
-      },
-    ],
-    locale: locale,
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: title,
-    description: description,
-    images: [
-      {
-        url: "/assets/img/head-raw-large.png",
-        width: 1200,
-        height: 630,
-        alt: title,
-      },
-    ],
-    siteId: "1067297456",
-    creatorId: "1067297456",
-  },
-  manifest: "/assets/ico/site.webmanifest",
-  icons: {
-    icon: [
-      {
-        url: "/assets/ico/favicon-16x16.png",
-        sizes: "16x16",
-      },
-      {
-        url: "/assets/ico/favicon-32x32.png",
-        sizes: "32x32",
-      },
-      {
-        url: "/assets/ico/favicon.ico",
-        sizes: "48x48",
-      },
-      {
-        url: "/assets/ico/android-chrome-192x192.png",
-        sizes: "192x192",
-      },
-    ],
-    shortcut: ["/assets/ico/favicon.ico"],
-    apple: [
-      {
-        rel: "apple-touch-icon",
-        url: "/assets/ico/apple-touch-icon.png",
-      },
-    ],
-  },
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en": "/",
-      // "es": "/es",
-      // "fr": "/fr",
-      // "ja": "/ja",
+export function generateMetadata({ params }) {
+  const locale = params && params.locale ? params.locale : "en";
+  return {
+    metadataBase: new URL(url),
+    title: {
+      default: title,
+      template: `%s | ${title}`,
     },
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+    description,
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "Sabercat Robotics",
+      images: [
+        {
+          url: "/assets/img/head-raw-large.png",
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+      locale: locale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [
+        {
+          url: "/assets/img/head-raw-large.png",
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+      siteId: "1067297456",
+      creatorId: "1067297456",
+    },
+    manifest: "/assets/ico/site.webmanifest",
+    icons: {
+      icon: [
+        {
+          url: "/assets/ico/favicon-16x16.png",
+          sizes: "16x16",
+        },
+        {
+          url: "/assets/ico/favicon-32x32.png",
+          sizes: "32x32",
+        },
+        {
+          url: "/assets/ico/favicon.ico",
+          sizes: "48x48",
+        },
+        {
+          url: "/assets/ico/android-chrome-192x192.png",
+          sizes: "192x192",
+        },
+      ],
+      shortcut: ["/assets/ico/favicon.ico"],
+      apple: [
+        {
+          rel: "apple-touch-icon",
+          url: "/assets/ico/apple-touch-icon.png",
+        },
+      ],
+    },
+    alternates: {
+      canonical: `/${params && params.locale && params.locale !== "en" ? params.locale : "/"}`,
+      languages: {
+        "x-default": "/",
+        "en": "/",
+        // "es": "/es",
+        // "fr": "/fr",
+        // "ja": "/ja",
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
 };
 
 const Objective = localFont({
-  adjustFontFallback: true,
   display: "swap",
   fallback: ["sans-serif"],
   src: [
@@ -111,9 +113,10 @@ const Objective = localFont({
     },
   ],
 });
-export default function RootLayout({children}) {
+export const dynamic = "force-dynamic";
+export default function RootLayout({ params, children }) {
   return (
-    <html className={`scroll-smooth selection:bg-yellow-500 selection:text-white ${Objective.className}`} lang={locale}>
+    <html className={`scroll-smooth selection:bg-yellow-500 selection:text-white ${Objective.className}`} lang={params && params.locale ? params.locale : "en"}>
       <body className="text-lg leading-7 text-neutral-900 flex flex-col flex-wrap min-h-screen">
         <Header />
         {children}
@@ -121,5 +124,5 @@ export default function RootLayout({children}) {
         <Footer />
       </body>
     </html>
-  );
+  );  
 };

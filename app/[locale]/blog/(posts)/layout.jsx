@@ -6,7 +6,7 @@ export async function generateMetadata() {
   const nextHeaders = headers();
   const url = "https://www.sabercatrobotics.com";
   const path = nextHeaders.get("X-Blog-Path");
-  const { title, description, image, locale } = await import(`@/app/blog/(posts)/${path}/page.mdx`);
+  const { title, description, image, locale } = await import(`@/app/[locale]/blog/(posts)/${path}/page.mdx`);
 
   return {
     metadataBase: new URL(url),
