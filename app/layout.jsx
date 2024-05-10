@@ -117,7 +117,7 @@ export const dynamic = "force-dynamic";
 export default function RootLayout({ params, children }) {
   return (
     <html className={`scroll-smooth selection:bg-yellow-500 selection:text-white ${Objective.className}`} lang={params && params.locale ? params.locale : "en"}>
-      <body className="text-lg leading-7 text-neutral-900 flex flex-col flex-wrap min-h-screen">
+      <body className="text-lg leading-7 text-neutral-900 flex flex-col flex-wrap min-h-screen overflow-x-clip">
         <Header />
         {children}
         <SpeedInsights />
