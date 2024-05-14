@@ -36,7 +36,7 @@ function Sponsor({ title, src, href }) {
   );
 };
 export default function Page() {
-  const PageHeaderTranslate = useTranslations("Website");
+  const PageHeaderTranslate = useTranslations("Website.Headers");
   const Translate = useTranslations("SponsorsAndPartners");
 
   return (
