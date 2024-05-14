@@ -61,6 +61,12 @@ export const en = {
       Copyright: "Copyright © {year} Saguaro Math and Science Academy. All Rights Reserved.",
     },
   },
+  // Sponsors and Partners page
+  SponsorsAndPartners: {
+    Header: "Our Sponsors & Partners",
+    Description: "Without our sponsors and partners, Sabercat Robotics would not be possible. Because of this, to show our gratitude, here is a list of every sponsorship and partnership we currently have.",
+    Visit: "Visit Their Website",
+  },
   // Email form shown on the home page of our website
   EmailForm: {
     Header: "Contact Us",
