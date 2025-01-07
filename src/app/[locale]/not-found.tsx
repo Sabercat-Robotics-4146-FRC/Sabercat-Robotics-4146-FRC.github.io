@@ -1,0 +1,22 @@
+import { useTranslations } from "next-intl";
+import metadata from "~/components/metadata";
+import { Button } from "~/components/ui/button";
+import { Link } from "~/i18n/routing";
+
+export async function generateMetadata({ params }: Readonly<{ params: Promise<{ locale: string }> }>) {
+  return await metadata({ params, namespace: "notFound", path: "/not-found" });
+};
+
+export default function NotFound() {
+  const t = useTranslations("notFound");
+
+  return (
+    <main className="flex flex-col gap-2 p-4">
+      <h1 className="text-3xl font-heading font-bold">{t("title")}</h1>
+      <p className="text-lg">{t("description")}</p>
+      <Button variant="default" className="w-fit" asChild>
+        <Link href="/">{t("back")}</Link>
+      </Button>
+    </main>
+  );
+};

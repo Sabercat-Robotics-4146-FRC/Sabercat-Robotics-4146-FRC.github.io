@@ -1,0 +1,335 @@
+{
+  "title": "Sabercat Robotics",
+  "description": "Sabercat Robotics: Inspiring high schoolers through robots. A 501c charity Robotics team shaping future innovators.",
+  "alt": "",
+  "language": "Language",
+  "menu": {
+    "title": "Menu",
+    "description": "Quick navigation menu",
+    "close": "Close menu"
+  },
+  "home": {
+    "title": "Home",
+    "hero": {
+      "team": "Team #4146",
+      "mission": "We pride ourselves on pushing STEM education to its limits.",
+      "buttons": {
+        "about": "About Our Team"
+      }
+    },
+    "mission": {
+      "title": "Join the Mission.",
+      "description": "Sabercat Robotics exists to train the next generation of engineers, innovators, creatives, and more through competitive robotics and training programs.",
+      "important": "Important!",
+      "comingSoon": {
+        "title": "Coming Soon",
+        "description": "Feel free to contact us with your ideas about new pages and components."
+      }
+    },
+    "noVideoSupport": "Your browser does not support videos."
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Learn more about Team #4146's mission, values, and history.",
+    "overview": {
+      "title": "Overview",
+      "content": "4146 Sabercat Robotics is a FIRST Robotics Competition (FRC) team, which aims to combine the excitement of sport with the rigor of science and technology. The FIRST website defines FRC as: \"Under strict rules, limited time and resources, teams of students are challenged to raise funds, design a team 'brand,' hone teamwork skills, and build and program industrial-size robots to play a difficult field game against like-minded competitors. It's as close to real-world engineering as a student can get.\""
+    },
+    "history": {
+      "title": "History",
+      "content": "During the 2011-2012 school year, multiple students came together to find something that would change the lives of many future high school students: Sabercat Robotics. In 2013, we decided to expand our team to include more schools and students by starting the FLL Qualifier, which persuaded us to mentor many schools such as Mohave and Tonalea. Throughout the years, we continued to volunteer in our community with the goal of making STEM accessible to all students. One key program we volunteered at was Scottsdale Community College's GirlPOWERED program. When this was discontinued in 2018, a few of us decided to start a new program with similar goals. This program, now known as Sisters in STEM, has been a huge success, from hosting our previous CyberSiS/online program during the pandemic and our annual celebratory event to our SiS Roadshows. As we continued to grow Sisters in STEM, we realized that while what we were doing was great, it wasn't enough. This is why, in 2021, we started our partnership with Northern Arizona University's Occupational Therapy program to help them with one of their own initiatives, \"Go Baby Go.\" \"Go Baby Go\" is a program that gathers volunteers to combine their STEM skills to build cars that kids can ride in, and then gives them to young disabled children. We have been working with them since then, and we are excited to continue our partnership with them. Recently, two robotics students from our team realized there was a core part of our team and future that was missing from the STEM initiative: the arts. This led to them starting \"Melody Makers\" in 2023, a program that teaches STEM to young children through the arts; primarily music. What we've learned from our history is that, no matter who you are or what you do, you can make a positive impact on the world."
+    }
+  },
+  "taxCredit": {
+    "title": "Tax Credit",
+    "description": "We are a 501(c)-3 organization. Tax Credit sets Arizona apart in education funding. Let's take advantage of it.",
+    "you": {
+      "title": "What does tax credit do for <underline>you</underline>?",
+      "content": "When donating to a school through tax-credit, you will receive a receipt that writes-off your donation, meaning you can help out local students without any loss to yourself!"
+    },
+    "us": {
+      "title": "What does tax credit do for <underline>us</underline>?",
+      "content": "Your contribution will be used to pay for registration fees for Regional and World competitions (which require air-travel), as well as the many different materials necessary to build our robots. Your donation will also allow us to continue to mentor other teams and impact our community through our many outreach programs."
+    },
+    "how": {
+      "title": "How to donate through tax credit",
+      "content": "Depending on what you prefer, you can either support us through tax credit by submitting a digital form, or by sending SUSD a phsyical form. We'll go over both ways, so you can easily do it how you want to.",
+      "digital": {
+        "title": "How to donate through tax credit digitally",
+        "steps": {
+          "step1": "Go to the <susdTCLink>SUSD Tax Credit page</susdTCLink>.",
+          "step2": "After reading the information about tax credit, click on the <quote>Donate Today!</quote> button at the top of the page.",
+          "step3": "In the <italics>SCHOOL</italics> drop-down menu on the next screen, select <quote>Saguaro High School</quote>.",
+          "step4": "In the <italics>ITEM</italics> drop-down menu on the same screen, scroll down and select <quote>Robotics - Tax Credit (T869)</quote>.",
+          "step5": "Input the amount in the <quote>Amount</quote> field.",
+          "step6": "Click the blue <blueQuote>Buy</blueQuote> button.",
+          "step7": "Click the green <greenQuote>Cart</greenQuote> button.",
+          "step8": "Click the <blueQuote>Pay</blueQuote> button on the next screen and follow the remaining prompts to make an online payment. You will have an option to print your receipt for the donation for use with your tax return."
+        }
+      },
+      "physical": {
+        "title": "How to donate through tax credit physically",
+        "steps": {
+          "step1": "Go to the <susdTCLink>SUSD Tax Credit page</susdTCLink>.",
+          "step2": "Click the blue button that says <blueQuote>Tax Credit Form</blueQuote> at the bottom of the <quote>Welcome</quote> section. <italics>If you need the form in Spanish, click the blue button that says <blueQuote>Formulario del Credito Tributario</blueQuote> instead.</italics>",
+          "step3": "Under the header <quote>Contributor's Information</quote> (or <quote>Información del contribuyente</quote> if you're filling out the Spanish form), fill out your information and check the maximum dollar amount that best applies to you.",
+          "step4": "Under <quote>Select school(s) from the list below</quote> (or <quote>Escojan una escuelas o escuelas de la siguiente lista</quote> on the Spanish form), check the line next to <quote>Saguaro HS</quote> / <quote>Esc. Sec. Saguaro</quote>.",
+          "step5": "Below the last section, <quote>Select Preference</quote> (or <quote>Escojan su preferencia</quote> on the Spanish form), check <quote>Activity from Preference List</quote> / <quote>Actividad de la lista preferencial</quote> and write down <quote>Sabercat Robotics Team #4146</quote> next to <quote>Activity</quote> / <quote>Actividad</quote>.",
+          "step6": "Mail the form and check of your contribution to the physical address listed at the bottom of the form."
+        }
+      }
+    }
+  },
+  "awards": {
+    "title": "Awards",
+    "description": "Check out what we've accomplished so far!",
+    "banners": {
+      "title": "Banner Awards",
+      "description": "Take a look at every banner award from FIRST Robotics we have won",
+      "az2012Finalists": {
+        "title": "Regional Finalists",
+        "description": "2012 Arizona Regional"
+      },
+      "az2012Rookie": {
+        "title": "Rookie All Star",
+        "description": "2012 Arizona Regional"
+      },
+      "az2015WoodieFlowers": {
+        "title": "Woodie Flowers Finalists",
+        "description": "2015 Arizona West Regional"
+      },
+      "az2015Regional": {
+        "title": "Regional Winners",
+        "description": "2015 Arizona East Regional"
+      },
+      "az2020Chairman": {
+        "title": "Regional Chairman's Award",
+        "description": "2020 Arizona West Regional"
+      }
+    },
+    "yearly": {
+      "title": "Yearly Awards",
+      "description": "Every yearly competition award we've won ever since we started in 2012.",
+      "2023": {
+        "azEast": {
+          "title": "Arizona East Regional",
+          "award1": "Creativity Award sponsored by Rockwell Automation"
+        },
+        "azWest": {
+          "title": "Arizona West Regional",
+          "award1": "Gracious Professionalism Award"
+        }
+      },
+      "2022": {
+        "azValley": {
+          "title": "Arizona Valley Regional",
+          "award1": "Judges' Award"
+        }
+      },
+      "2021": {
+        "neonGroup": {
+          "title": "Neon Group-FIRST Innovation Challenge",
+          "award1": "FIRST Innovation Challenge Semi-Finalist Award"
+        }
+      },
+      "2020": {
+        "azWest": {
+          "title": "Arizona West Regional",
+          "award1": "Regional Chairman's Award"
+        }
+      },
+      "2019": {
+        "azWest": {
+          "title": "Arizona West Regional",
+          "award1": "Safety Award sponsored by Underwriters Laboratories",
+          "award2": "Industrial Design Award sponsored by General Motors",
+          "award3": "FIRST Dean's List Finalist Award"
+        },
+        "azNorth": {
+          "title": "Arizona North Regional",
+          "award1": "Industrial Design Award sponsored by General Motors"
+        }
+      },
+      "2018": {
+        "azWest": {
+          "title": "Arizona West Regional",
+          "award1": "Excellence in Engineering Award sponsored by Delphi - Turning Division Wildcard",
+          "award2": "Excellence in Engineering Award sponsored by Delphi",
+          "award3": "Regional Finalists"
+        }
+      },
+      "2017": {
+        "azNorth": {
+          "title": "Arizona North Regional",
+          "award1": "Safety Award sponsored by Underwriters Laboratories",
+          "award2": "Regional Finalists"
+        }
+      },
+      "2016": {
+        "azWest": {
+          "title": "Arizona West Regional",
+          "award1": "Wildcard",
+          "award2": "Industrial Safety Award sponsored by Underwriters Laboratories",
+          "award3": "Regional Finalists"
+        }
+      },
+      "2015": {
+        "azWest": {
+          "title": "Arizona West Regional",
+          "award1": "Woodie Flowers Finalist Award",
+          "award2": "Regional Finalists"
+        },
+        "azEast": {
+          "title": "Arizona East Regional",
+          "award1": "Industrial Safety Award sponsored by Underwriters Laboratories"
+        }
+      },
+      "2014": {
+        "az": {
+          "title": "Arizona Regional",
+          "award1": "Creativity Award sponsored by Xerox"
+        },
+        "lv": {
+          "title": "Las Vegas Regional",
+          "award1": "Creativity Award sponsored by Xerox"
+        }
+      },
+      "2013": {
+        "azWest": {
+          "title": "Arizona West Regional",
+          "award1": "Excellence in Engineering Award sponsored by Delphi - Turning Division Wildcard",
+          "award2": "Excellence in Engineering Award sponsored by Delphi",
+          "award3": "Regional Finalists"
+        }
+      },
+      "2012": {
+        "az": {
+          "title": "Arizona Regional",
+          "award1": "Rookie All Star",
+          "award2": "Regional Finalists"
+        }
+      }
+    }
+  },
+  "sponsorsAndPartners": {
+    "title": "Sponsors & Partners",
+    "description": "We rely on the support of our community. Whether you're a local business, global conglomerate, or self employed, there's need for your support."    
+  },
+  "innovationCenter": {
+    "title": "Innovation Center",
+    "description": "Learn more about Saguaro High School's Innovation Center and our part in its creation.",
+    "about": {
+      "title": "About the Innovation Center",
+      "content": "The SUSD Innovation Center is a makerspace for our community to use and experience STEM, as well as the message of FIRST. Sabercat Robotics members played a vital role in the design and creation of the Innovation Center, working closely with our district, charitable foundations, and the Saguaro Math and Science Academy to get it built in 2019. The center has a classroom, a full FRC playing field, and a fully-equipped shop with tools and storage, making it a driving force behind the success of our team."
+    }
+  },
+  "sistersInStem": {
+    "title": "Sisters in STEM",
+    "description": "Sisters in STEM is one of the many programs hosted and supported by our team that gets girls into the world of STEM."
+  },
+  "mentors": {
+    "title": "Mentors",
+    "description": "We are always looking for more mentors. Everyone has something to teach.",
+    "why": {
+      "title": "Why Do We Need Mentors?",
+      "content": "Sabercat Robotics cannot do what it does without the help of our mentors. From mechanical, design, coding, and business, everything we do is supplemented with the expertise of our generous mentors."
+    },
+    "who": {
+      "title": "Who We Have",
+      "lindberg": {
+        "title": "Susan Lindberg",
+        "title1": "Teacher",
+        "title2": "MSA Coordinator",
+        "email": "slindberg@susd.org"
+      },
+      "brandt": {
+        "title": "Christopher Brandt",
+        "title1": "MSA Coordinator",
+        "email": "cbrandt@susd.org"
+      },
+      "ruskin": {
+        "title": "Lewis Ruskin",
+        "title1": "Former Sabercat",
+        "title2": "Computer Scientist",
+        "title3": "PhD Student",
+        "email": "cbrandt@susd.org"
+      },
+      "smith": {
+        "title": "Zach Smith",
+        "title1": "Business",
+        "title2": "Computer Scientist",
+        "email": "cbrandt@susd.org"
+      },
+      "olson": {
+        "title": "Laney Olson",
+        "title1": "Business",
+        "email": "cbrandt@susd.org"
+      },
+      "arnold": {
+        "title": "Eli Arnold",
+        "title1": "Mechanical",
+        "email": "cbrandt@susd.org"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Questions about our team? Interested in joining as a student or mentor? We'd love to hear from you!",
+    "form": {
+      "title": "Contact Form",
+      "description": "This form is the best way to get in touch with us. We'll get back to you as soon as possible.",
+      "name": {
+        "first": {
+          "label": "First Name",
+          "description": "Your preferred first name.",
+          "placeholder": "John"
+        },
+        "last": {
+          "label": "Last Name",
+          "description": "Your legal last name.",
+          "placeholder": "Doe"
+        }
+      },
+      "email": {
+        "label": "Email",
+        "description": "The email address you would like us to contact you at.",
+        "placeholder": "john.doe@example.com"
+      },
+      "topic": {
+        "label": "Contact Topic",
+        "description": "What is your question or concern?",
+        "mentorship": "Mentorship",
+        "sponsorship": "Sponsorship/Partnership",
+        "taxCredit": "Tax Credit Inquiry",
+        "programs": "Programs (e.g. Sisters in STEM)",
+        "innovationCenter": "Inquiry about the Innovation Center",
+        "other": "Other"
+      },
+      "content": {
+        "label": "Content",
+        "description": "An in-depth description of your inquiry.",
+        "placeholder": "Dear Sabercat Robotics Team, I am interested in..."
+      },
+      "submit": "Submit"
+    },
+    "email": "team@sabercatrobotics.com"
+  },
+  "notFound": {
+    "title": "Not Found",
+    "description": "The page you were looking for could not be found. Please press the button below to go back to the homepage. If you think this is a mistake, please contact us. Thank you!",
+    "back": "Back to Homepage"
+  },
+  "footer": {
+    "company": "Company",
+    "resources": "Resources",
+    "contact": "Contact",
+    "subscribe": "Subscribe to our newsletter"
+  },
+  "privacy": {
+    "title": "Privacy Policy"
+  },
+  "cookies": {
+    "title": "Cookies"
+  },
+  "copyright": "© {year} Saguaro Math and Science Academy"
+}
