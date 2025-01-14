@@ -213,7 +213,7 @@
   },
   "sponsorsAndPartners": {
     "title": "Sponsors & Partners",
-    "description": "We rely on the support of our community. Whether you're a local business, global conglomerate, or self employed, there's need for your support."    
+    "description": "We rely on the support of our community. Whether you're a local business, global conglomerate, or self employed, there's need for your support."
   },
   "innovationCenter": {
     "title": "Innovation Center",
@@ -282,18 +282,24 @@
         "first": {
           "label": "First Name",
           "description": "Your preferred first name.",
-          "placeholder": "John"
+          "placeholder": "John",
+          "emptyError": "Please enter your first name.",
+          "invalidError": "Your first name must be at least 2 characters long."
         },
         "last": {
           "label": "Last Name",
           "description": "Your legal last name.",
-          "placeholder": "Doe"
+          "placeholder": "Doe",
+          "emptyError": "Please enter your last name.",
+          "invalidError": "Your last name must be at least 2 characters long."
         }
       },
       "email": {
         "label": "Email",
         "description": "The email address you would like us to contact you at.",
-        "placeholder": "john.doe@example.com"
+        "placeholder": "john.doe@example.com",
+        "emptyError": "Please enter your email.",
+        "invalidError": "Your email must be a valid email address."
       },
       "topic": {
         "label": "Contact Topic",
@@ -308,9 +314,14 @@
       "content": {
         "label": "Content",
         "description": "An in-depth description of your inquiry.",
-        "placeholder": "Dear Sabercat Robotics Team, I am interested in..."
+        "placeholder": "Dear Sabercat Robotics Team, I am interested in...",
+        "emptyError": "Please enter the content of your message.",
+        "invalidError": "Your message must be at least 8 characters long."
       },
-      "submit": "Submit"
+      "submit": "Submit",
+      "pending": "Sending your message...",
+      "success": "Your message has been sent successfully.",
+      "unknownError": "An unknown error occurred. Please try again later."
     },
     "email": "team@sabercatrobotics.com"
   },

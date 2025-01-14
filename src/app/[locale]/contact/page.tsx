@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { createTransport } from "nodemailer";
-import { FormField } from "~/components/form";
-import { PageHeader } from "~/components/global";
+import { contactFormAction } from "~/components/actions";
+import { Form, FormField, FormSelect } from "~/components/form";
+import { PageHeader, topicOptions } from "~/components/global";
 import metadata from "~/components/metadata";
 import { Button } from "~/components/ui/button";
 import {
@@ -13,70 +13,18 @@ import {
 } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
 import {
-  Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
 } from "~/components/ui/select";
 import { Textarea } from "~/components/ui/textarea";
-import { env } from "~/env";
 
 export async function generateMetadata({
   params,
 }: Readonly<{ params: Promise<{ locale: string }> }>) {
   return await metadata({ params, namespace: "contact", path: "/contact" });
 }
-
-const topicOptions: string[] = [
-  "mentorship",
-  "sponsorship",
-  "taxCredit",
-  "programs",
-  "innovationCenter",
-  "other",
-];
-
-async function contactFormAction(formData: FormData): Promise<> {
-  "use server";
-
-  const name = formData.getAll("name").join(" ");
-  const email = formData.get("email");
-  const topic = formData.get("topic");
-  const content = formData.get("content");
-
-  const transporter = createTransport({
-    host: "mail.google.com",
-    service: "gmail",
-    port: 465,
-    secure: true,
-    auth: {
-      type: "OAuth2",
-      user: "team@sabercatrobotics.com",
-      clientId: env.GMAIL_CLIENT_ID,
-      clientSecret: env.GMAIL_CLIENT_SECRET,
-      refreshToken: env.GMAIL_REFRESH_TOKEN,
-      accessToken: env.GMAIL_ACCESS_TOKEN,
-    },  
-  });
-
-  try {
-    await transporter.verify();
-  } catch (e) {
-    console.warn(e);
-  }
-
-  try {
-    await transporter.sendMail({
-      from: `${name} <team@sabercatrobotics.com>`,
-      to: "Sabercat Robotics Team team@sabercatrobotics.com",
-      subject: `Contact Form Submission from ${name}: "${topic}"`,
-      text: `Name: ${name}\nEmail: ${email}\nTopic: ${topic}\nContent: ${content}`,
-    });
-  } catch (e) {
-    console.warn(e);
-  };
-};
 
 export default async function ContactPage({
   params,
@@ -101,9 +49,19 @@ export default async function ContactPage({
             <CardDescription>{t("form.description")}</CardDescription>
           </CardHeader>
           <CardContent>
-            <form
+            <Form
               className="flex flex-col gap-4"
               action={contactFormAction}
+              submitButton={
+                <Button className="w-max" type="submit">
+                  {t("form.submit")}
+                </Button>
+              }
+              pendingText={
+                <p className="text-sm text-slate-500 dark:text-slate-400">
+                  {t("form.pending")}
+                </p>
+              }
             >
               <section className="flex flex-col gap-4 md:flex-row">
                 <FormField
@@ -112,7 +70,7 @@ export default async function ContactPage({
                   description={t("form.name.first.description")}
                   component={
                     <Input
-                      name="name"
+                      name="firstName"
                       placeholder={t("form.name.first.placeholder")}
                       type="text"
                       inputMode="text"
@@ -125,7 +83,7 @@ export default async function ContactPage({
                   description={t("form.name.last.description")}
                   component={
                     <Input
-                      name="name"
+                      name="lastName"
                       placeholder={t("form.name.last.placeholder")}
                       type="text"
                       inputMode="text"
@@ -152,7 +110,7 @@ export default async function ContactPage({
                   label={t("form.topic.label")}
                   description={t("form.topic.description")}
                   component={
-                    <Select name="topic" defaultValue={topicOptions[0]}>
+                    <FormSelect name="topic" defaultValue={topicOptions[0]}>
                       <SelectTrigger>
                         <SelectValue />
                       </SelectTrigger>
@@ -161,7 +119,7 @@ export default async function ContactPage({
                         defaultValue={topicOptions[0]}
                       >
                         {topicOptions.map(function (topicOption, i) {
-                          const key = `form.topic.${topicOption.toString()}`;
+                          const key = `form.topic.${topicOption}`;
 
                           return (
                             <SelectItem
@@ -173,7 +131,7 @@ export default async function ContactPage({
                           );
                         })}
                       </SelectContent>
-                    </Select>
+                    </FormSelect>
                   }
                 />
               </section>
@@ -188,10 +146,7 @@ export default async function ContactPage({
                   />
                 }
               />
-              <Button className="w-max" type="submit">
-                {t("form.submit")}
-              </Button>
-            </form>
+            </Form>
           </CardContent>
         </Card>
       </main>

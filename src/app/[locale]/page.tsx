@@ -4,20 +4,26 @@ import Image from "next/image";
 import { homeCards } from "~/components/global";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "~/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "~/components/ui/card";
 import { Link } from "~/i18n/routing";
 import { cn } from "~/lib/utils";
 
-function HomeCard(props: typeof homeCards[0]) {
+function HomeCard(props: (typeof homeCards)[0]) {
   const { localeKey, src, badge } = props;
+
+  const t = useTranslations();
 
   if (props.disabled !== undefined) {
     const { disabled } = props;
 
-    const t = useTranslations();
-
     const title = t("home.mission." + localeKey + ".title");
-    const description = t("home.mission." + localeKey + ".description");  
+    const description = t("home.mission." + localeKey + ".description");
 
     return (
       <Card
@@ -48,9 +54,7 @@ function HomeCard(props: typeof homeCards[0]) {
         </CardContent>
       </Card>
     );
-  };
-
-  const t = useTranslations();
+  }
 
   const title = t(localeKey + ".title");
   const description = t(localeKey + ".description");
@@ -82,7 +86,7 @@ function HomeCard(props: typeof homeCards[0]) {
       </Card>
     </Link>
   );
-};
+}
 
 export default async function HomePage({
   params,
@@ -96,7 +100,7 @@ export default async function HomePage({
 
   return (
     <main className="flex flex-col gap-2" role="main">
-      <header className="from-brand to-brand/85 flex min-h-[calc(100vh-17.5625rem)] flex-col items-center gap-4 bg-gradient-to-br p-4 sm:p-6 md:flex-row md:justify-between md:gap-8 md:p-8 lg:p-12">
+      <header className="flex min-h-[calc(100vh-17.5625rem)] flex-col items-center gap-4 bg-gradient-to-br from-brand to-brand/85 p-4 sm:p-6 md:flex-row md:justify-between md:gap-8 md:p-8 lg:p-12">
         <main className="flex flex-col gap-2 md:max-w-[50%] md:basis-1/2">
           <header className="flex flex-wrap items-center gap-4">
             <Image

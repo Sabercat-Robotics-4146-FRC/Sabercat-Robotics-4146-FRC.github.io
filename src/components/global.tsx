@@ -104,21 +104,21 @@ export function Header() {
       <nav className="flex flex-wrap gap-2 md:flex-row">
         <Button
           variant="outline"
-          className="hover:text-brand focus:text-brand hidden md:flex"
+          className="hidden hover:text-brand focus:text-brand md:flex"
           asChild
         >
           <Link href="/">{t("home.title")}</Link>
         </Button>
         <Button
           variant="outline"
-          className="hover:text-brand focus:text-brand hidden md:flex"
+          className="hidden hover:text-brand focus:text-brand md:flex"
           asChild
         >
           <Link href="/about">{t("about.title")}</Link>
         </Button>
         <Button
           variant="outline"
-          className="hover:text-brand focus:text-brand hidden md:flex"
+          className="hidden hover:text-brand focus:text-brand md:flex"
           asChild
         >
           <Link href="/tax-credit">{t("taxCredit.title")}</Link>
@@ -172,7 +172,7 @@ export function Header() {
               <DropdownMenuItem className="p-0" key={locale}>
                 <Button
                   variant="ghost"
-                  className="hover:text-brand focus:text-brand w-full justify-start"
+                  className="w-full justify-start hover:text-brand focus:text-brand"
                   asChild
                 >
                   <Link
@@ -476,7 +476,7 @@ export function Footer() {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="hover:text-brand focus:text-brand text-slate-700"
+                    className="text-slate-700 hover:text-brand focus:text-brand"
                     asChild
                   >
                     <Link href={href} target="_blank" rel="noopener noreferrer">
@@ -656,13 +656,17 @@ export const homeCards: (
   },
 ];
 
-export function PageHeader({ title, description, src }: Readonly<{
+export function PageHeader({
+  title,
+  description,
+  src,
+}: Readonly<{
   title: string;
   description: string;
   src: string;
 }>) {
   return (
-    <header className="from-brand to-brand/85 flex flex-col items-center gap-4 rounded-lg bg-gradient-to-br p-4 shadow-lg sm:p-6 md:flex-row md:justify-between md:gap-8">
+    <header className="flex flex-col items-center gap-4 rounded-lg bg-gradient-to-br from-brand to-brand/85 p-4 shadow-lg sm:p-6 md:flex-row md:justify-between md:gap-8">
       <main className="flex flex-col gap-4 md:max-w-[50%] md:basis-1/2">
         <h1 className="font-heading text-5xl font-bold tracking-tight text-slate-50">
           {title}
@@ -681,3 +685,12 @@ export function PageHeader({ title, description, src }: Readonly<{
     </header>
   );
 }
+
+export const topicOptions: Readonly<[string, ...string[]]> = [
+  "mentorship",
+  "sponsorship",
+  "taxCredit",
+  "programs",
+  "innovationCenter",
+  "other",
+];
