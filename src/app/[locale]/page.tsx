@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { homeCards } from "~/components/global";
+import { AspectRatio } from "~/components/ui/aspect-ratio";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import {
@@ -14,7 +15,7 @@ import {
 import { Link } from "~/i18n/routing";
 import { cn } from "~/lib/utils";
 
-function HomeCard(props: (typeof homeCards)[0]) {
+function HomeCard(props: (typeof homeCards)[number]) {
   const { localeKey, src, badge } = props;
 
   const t = useTranslations();
@@ -34,17 +35,19 @@ function HomeCard(props: (typeof homeCards)[0]) {
         )}
       >
         <CardHeader className="p-4">
-          <Image
-            src={src}
-            alt={title}
-            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 30vw"
-            className="aspect-[1820/1213] w-full rounded bg-gray-300/50 py-16 shadow"
-            width={1820}
-            height={1213}
-          />
+          <AspectRatio ratio={1820 / 1213}>
+            <Image
+              src={src}
+              alt={title}
+              sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 30vw"
+              className="aspect-[1820/1213] h-full w-full rounded bg-gray-300/50 py-16 shadow"
+              width={1820}
+              height={1213}
+            />
+          </AspectRatio>
         </CardHeader>
-        <CardContent className="flex flex-col gap-2">
-          <main className="flex flex-wrap gap-2">
+        <CardContent className="flex flex-col space-y-2">
+          <main className="flex flex-wrap space-x-2">
             <CardTitle>{title}</CardTitle>
             {badge && (
               <Badge variant="default">{t(`home.mission.${badge}`)}</Badge>
@@ -69,13 +72,13 @@ function HomeCard(props: (typeof homeCards)[0]) {
             src={src}
             alt={title}
             sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 30vw"
-            className="aspect-[1820/1213] w-full rounded bg-gray-300/50 object-cover object-center shadow"
+            className="aspect-[1820/1213] h-full w-full rounded bg-gray-300/50 object-cover object-center shadow"
             width={1820}
             height={1213}
           />
         </CardHeader>
-        <CardContent className="flex flex-col gap-2">
-          <header className="flex flex-wrap gap-2">
+        <CardContent className="flex flex-col space-y-2">
+          <header className="flex flex-wrap space-x-2">
             <CardTitle>{title}</CardTitle>
             {badge && (
               <Badge variant="default">{t(`home.mission.${badge}`)}</Badge>
@@ -99,14 +102,14 @@ export default async function HomePage({
   const noNamespaceT = await getTranslations();
 
   return (
-    <main className="flex flex-col gap-2" role="main">
-      <header className="flex min-h-[calc(100vh-17.5625rem)] flex-col items-center gap-4 bg-gradient-to-br from-brand to-brand/85 p-4 sm:p-6 md:flex-row md:justify-between md:gap-8 md:p-8 lg:p-12">
-        <main className="flex flex-col gap-2 md:max-w-[50%] md:basis-1/2">
-          <header className="flex flex-wrap items-center gap-4">
+    <main className="flex flex-col space-y-2" role="main">
+      <header className="flex min-h-[calc(100vh-17.5625rem)] flex-col items-center space-y-4 bg-brand bg-gradient-to-br from-brand to-brand/85 p-4 sm:p-6 md:flex-row md:justify-between md:space-x-8 md:p-8 lg:p-12">
+        <main className="flex flex-col space-y-2 md:max-w-[50%] md:basis-1/2">
+          <header className="flex flex-wrap items-center">
             <Image
               src="/assets/img/head-raw-large-white.png"
               alt={noNamespaceT("title")}
-              className="w-40 drop-shadow-sm"
+              className="mr-4 w-40 drop-shadow-sm"
               priority
               width={4620}
               height={3570}
@@ -123,7 +126,7 @@ export default async function HomePage({
           <main className="text-slate-50">
             <p className="text-2xl">{t("hero.mission")}</p>
           </main>
-          <footer className="flex items-center gap-2">
+          <footer className="flex items-center space-x-2">
             <Button
               variant="default"
               className="bg-slate-100 text-slate-900 hover:bg-slate-100/90"
@@ -147,8 +150,8 @@ export default async function HomePage({
           <source src="/assets/vid/robot.mp4" type="video/mp4" />
         </video>
       </header>
-      <main className="flex flex-col justify-center gap-y-4 px-6 py-12 text-slate-900">
-        <header className="flex flex-col gap-2 px-4">
+      <main className="flex flex-col justify-center space-y-4 px-6 py-12 text-slate-900">
+        <header className="flex flex-col space-y-2 px-4">
           <h2 className="font-heading text-3xl font-bold text-slate-950">
             {t("mission.title")}
           </h2>

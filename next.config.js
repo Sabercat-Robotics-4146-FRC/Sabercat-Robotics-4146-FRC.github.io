@@ -9,6 +9,20 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 /** @type {import("next").NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-UA-Compatible",
+            value: "IE=edge",
+          },
+        ],
+      },
+    ];
+  },
+};
 
 export default withNextIntl(nextConfig);

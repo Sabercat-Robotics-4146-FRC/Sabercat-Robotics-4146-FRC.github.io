@@ -89,7 +89,7 @@ export function FormField<
     descriptionPropsProp ?? {};
 
   return (
-    <section className={cn("flex flex-col gap-2", className)}>
+    <section className={cn("flex flex-col space-y-2", className)}>
       <Label htmlFor={componentId} {...labelProps}>
         {label}
       </Label>

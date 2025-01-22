@@ -2,7 +2,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { PageHeader } from "~/components/global";
 import metadata from "~/components/metadata";
-import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 
 export async function generateMetadata({
   params,
@@ -69,7 +68,7 @@ export default async function AwardsPage({
   ];
 
   // Sorted by earliest to latest, format: competition = # of awards
-  const yearly: { [key: string]: number }[] = [
+  const yearly: Record<string, number>[] = [
     // 2012
     {
       az: 2,
@@ -125,21 +124,21 @@ export default async function AwardsPage({
   ];
 
   return (
-    <main className="flex flex-col gap-2 p-4">
+    <main className="flex flex-col space-y-2 p-4">
       <PageHeader
         title={t("title")}
         description={t("description")}
         src="/assets/img/awards.jpg"
       />
-      <main className="flex flex-col gap-4 px-4 py-2">
-        <section className="flex flex-col gap-6">
-          <header className="flex flex-col gap-2">
+      <main className="flex flex-col space-y-4 px-4 py-2">
+        <section className="flex flex-col space-y-6">
+          <header className="flex flex-col space-y-2">
             <h2 className="font-heading text-2xl font-bold">
               {t("banners.title")}
             </h2>
             <p className="text-lg">{t("banners.description")}</p>
           </header>
-          <main className="flex flex-wrap gap-6 text-slate-100">
+          <main className="flex flex-wrap text-slate-100 [&>*:not(:last-child)]:mr-6">
             {banners.map(function (key, i) {
               const baseKey = `banners.${key}`;
               return (
@@ -152,21 +151,21 @@ export default async function AwardsPage({
             })}
           </main>
         </section>
-        <section className="flex flex-col gap-6">
-          <header className="flex flex-col gap-2">
+        <section className="flex flex-col space-y-6">
+          <header className="flex flex-col space-y-2">
             <h2 className="font-heading text-2xl font-bold">
               {t("yearly.title")}
             </h2>
             <p className="text-lg">{t("yearly.description")}</p>
           </header>
-          <main className="flex flex-col gap-3">
+          <main className="flex flex-col space-y-3">
             {yearly
               .map(function (values, i) {
                 const year = 2012 + i;
                 const baseKey = `yearly.${year.toString()}`;
                 return (
                   <section
-                    className="flex flex-col gap-2"
+                    className="flex flex-col space-y-2"
                     key={`${year.toString()}_${i.toString()}`}
                   >
                     <header className="text-slate-950">

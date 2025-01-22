@@ -88,8 +88,8 @@ export function Header() {
   const t = useTranslations();
 
   return (
-    <header className="sticky top-0 z-50 flex flex-wrap items-center justify-center gap-2 border-b bg-slate-50 p-4 shadow-[0_-8px_16px] shadow-black md:justify-between">
-      <Link href="/" className="flex items-center justify-center gap-x-4">
+    <header className="sticky top-0 z-40 flex items-center justify-center space-x-2 border-b bg-slate-50 p-4 shadow-[0_-8px_16px] shadow-black md:justify-between">
+      <Link href="/" className="flex items-center justify-center space-x-4">
         <Image
           src="/assets/img/head-raw-large.png"
           alt={t("title")}
@@ -99,9 +99,11 @@ export function Header() {
           height={3570}
           className="w-12"
         />
-        <h2 className="font-heading text-2xl font-bold">{t("title")}</h2>
+        <h2 className="hidden font-heading text-2xl font-bold min-[450px]:block">
+          {t("title")}
+        </h2>
       </Link>
-      <nav className="flex flex-wrap gap-2 md:flex-row">
+      <nav className="flex space-x-2">
         <Button
           variant="outline"
           className="hidden hover:text-brand focus:text-brand md:flex"
@@ -149,7 +151,7 @@ export function Header() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuLabel className="flex items-center gap-2">
+            <DropdownMenuLabel className="flex items-center space-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -219,7 +221,7 @@ export function Header() {
               </SheetTitle>
               <SheetDescription>{t("menu.description")}</SheetDescription>
             </SheetHeader>
-            <nav className="flex flex-col gap-2 border-y-2 py-2">
+            <nav className="flex flex-col space-y-2 border-y-2 py-2">
               {links.map(({ href, key }) => (
                 <Button
                   className="w-fit justify-start"
@@ -420,9 +422,9 @@ export function Footer() {
   ];
 
   return (
-    <footer className="mt-auto flex flex-col items-center gap-2 bg-slate-50 p-4 shadow-[0_8px_16px] shadow-black">
+    <footer className="mt-auto flex flex-col items-center space-y-2 bg-slate-50 p-4 shadow-[0_8px_16px] shadow-black">
       <nav
-        className="flex w-full max-w-screen-2xl flex-wrap gap-y-2"
+        className="flex w-full max-w-screen-2xl flex-wrap space-y-2"
         role="navigation"
       >
         {footerLinks.map(function ({ text, links }) {
@@ -434,20 +436,20 @@ export function Footer() {
             >
               <h2 className="text-2xl font-semibold text-slate-950">{text}</h2>
               {links.map(function ({ href, text: linkText, icon }) {
-                const props: React.ComponentProps<typeof Link> =
-                  href.startsWith("?")
+                const props: React.ComponentPropsWithoutRef<typeof Link> =
+                  href.startsWith("/")
                     ? { href }
                     : { href, target: "_blank", rel: "noopener noreferrer" };
 
                 return (
                   <li
-                    className="flex items-center gap-2"
+                    className="flex items-center space-x-2"
                     key={linkText}
                     role="listitem"
                   >
                     <Button
                       variant="link"
-                      className="inline-flex h-auto justify-start gap-1 whitespace-break-spaces p-0 text-base font-normal text-slate-700"
+                      className="inline-flex h-auto justify-start space-x-1 whitespace-break-spaces p-0 text-base font-normal text-slate-700"
                       asChild
                     >
                       <Link {...props}>
@@ -465,11 +467,11 @@ export function Footer() {
           className="flex basis-full list-none px-3 md:w-1/2 md:basis-1/2 lg:flex-col lg:items-end lg:justify-between"
           role="list"
         >
-          <ul className="flex gap-3" role="list">
+          <ul className="flex space-x-3" role="list">
             {socials.map(function ({ href, text, icon }) {
               return (
                 <li
-                  className="flex items-center gap-2"
+                  className="flex items-center space-x-2"
                   key={text}
                   role="listitem"
                 >
@@ -488,7 +490,7 @@ export function Footer() {
               );
             })}
           </ul>
-          {/* <li className="flex items-center gap-2" role="listitem">
+          {/* <li className="flex items-center space-x-2" role="listitem">
             <button className="text-brand hover:bg-brand focus:bg-brand border-brand inline-flex items-center justify-center rounded-lg border-2 px-4 py-2 transition-colors duration-300 hover:text-slate-50 focus:text-slate-50">
               {t("footer.subscribe")}
             </button>
@@ -547,7 +549,7 @@ export function Footer() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuLabel className="flex items-center gap-2">
+            <DropdownMenuLabel className="flex items-center space-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -666,8 +668,8 @@ export function PageHeader({
   src: string;
 }>) {
   return (
-    <header className="flex flex-col items-center gap-4 rounded-lg bg-gradient-to-br from-brand to-brand/85 p-4 shadow-lg sm:p-6 md:flex-row md:justify-between md:gap-8">
-      <main className="flex flex-col gap-4 md:max-w-[50%] md:basis-1/2">
+    <header className="flex flex-col items-center space-y-4 rounded-lg bg-brand bg-gradient-to-br from-brand to-brand/85 p-4 shadow-lg sm:p-6 md:flex-row md:justify-between md:space-x-8 md:space-y-0">
+      <main className="flex flex-col space-y-4 md:max-w-[50%] md:basis-1/2">
         <h1 className="font-heading text-5xl font-bold tracking-tight text-slate-50">
           {title}
         </h1>

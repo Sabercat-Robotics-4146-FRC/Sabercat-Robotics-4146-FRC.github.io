@@ -36,13 +36,13 @@ export default async function ContactPage({
   const t = await getTranslations("contact");
 
   return (
-    <main className="flex flex-col gap-2 p-4">
+    <main className="flex flex-col space-y-2 p-4">
       <PageHeader
         title={t("title")}
         description={t("description")}
         src="/assets/img/15.jpg"
       />
-      <main className="flex flex-col gap-2">
+      <main className="flex flex-col space-y-2">
         <Card>
           <CardHeader>
             <CardTitle className="font-heading">{t("form.title")}</CardTitle>
@@ -50,7 +50,7 @@ export default async function ContactPage({
           </CardHeader>
           <CardContent>
             <Form
-              className="flex flex-col gap-4"
+              className="flex flex-col space-y-4"
               action={contactFormAction}
               submitButton={
                 <Button className="w-max" type="submit">
@@ -63,7 +63,7 @@ export default async function ContactPage({
                 </p>
               }
             >
-              <section className="flex flex-col gap-4 md:flex-row">
+              <section className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
                 <FormField
                   className="md:basis-1/2"
                   label={t("form.name.first.label")}
@@ -91,7 +91,7 @@ export default async function ContactPage({
                   }
                 />
               </section>
-              <section className="flex flex-col gap-4 md:flex-row">
+              <section className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
                 <FormField
                   className="md:basis-1/2"
                   label={t("form.email.label")}

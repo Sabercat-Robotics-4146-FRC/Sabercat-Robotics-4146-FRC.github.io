@@ -13,7 +13,7 @@ export async function generateMetadata({
   });
 }
 
-export default async function AboutPage({
+export default async function TaxCreditPage({
   params,
 }: Readonly<{ params: Promise<{ locale: string }> }>) {
   const { locale } = await params;
@@ -23,18 +23,18 @@ export default async function AboutPage({
   const t = await getTranslations("taxCredit");
 
   return (
-    <main className="flex flex-col gap-2 p-4">
+    <main className="flex flex-col space-y-2 p-4">
       <PageHeader
         title={t("title")}
         description={t("description")}
         src="/assets/img/tax-credit-generic.jpg"
       />
-      <main className="flex flex-col gap-4 px-4 py-2">
-        <section className="flex flex-col gap-2">
+      <main className="flex flex-col space-y-4 px-4 py-2">
+        <section className="flex flex-col space-y-2">
           <h2 className="font-heading text-2xl font-bold">
             {t.rich("you.title", {
               underline: (chunks) => (
-                <u className="decoration-brand underline underline-offset-4">
+                <u className="underline decoration-brand underline-offset-4">
                   {chunks}
                 </u>
               ),
@@ -42,11 +42,11 @@ export default async function AboutPage({
           </h2>
           <p className="text-lg">{t("you.content")}</p>
         </section>
-        <section className="flex flex-col gap-2">
+        <section className="flex flex-col space-y-2">
           <h2 className="font-heading text-2xl font-bold">
             {t.rich("us.title", {
               underline: (chunks) => (
-                <u className="decoration-brand underline underline-offset-4">
+                <u className="underline decoration-brand underline-offset-4">
                   {chunks}
                 </u>
               ),
@@ -54,7 +54,7 @@ export default async function AboutPage({
           </h2>
           <p className="text-lg">{t("us.content")}</p>
         </section>
-        <section className="flex flex-col gap-2">
+        <section className="flex flex-col space-y-2">
           <h2 className="font-heading text-2xl font-bold">{t("how.title")}</h2>
           <p className="text-lg">{t("how.content")}</p>
           <section className="flex flex-col">

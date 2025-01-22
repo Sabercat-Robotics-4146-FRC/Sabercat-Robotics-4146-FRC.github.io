@@ -90,13 +90,13 @@ export default async function metadata({
     },
     alternates: {
       canonical: `${locale !== routing.defaultLocale ? `/${locale}` : ""}${path}`,
-      languages: {
-        "x-default": path,
-        [routing.defaultLocale]: path,
-        ...routing.locales
-          .filter((locale) => locale !== routing.defaultLocale)
-          .map((locale) => `/${locale}${path}`),
-      },
+      languages: routing.locales
+        .map((locale) => ({
+          [locale]:
+            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+            locale !== routing.defaultLocale ? `/${locale}${path}` : path,
+        }))
+        .reduce((acc, curr) => ({ ...acc, ...curr }), { "x-default": path }),
     },
     robots: {
       index: index !== false,

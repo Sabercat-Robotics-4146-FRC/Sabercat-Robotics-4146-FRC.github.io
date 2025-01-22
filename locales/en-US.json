@@ -213,7 +213,18 @@
   },
   "sponsorsAndPartners": {
     "title": "Sponsors & Partners",
-    "description": "We rely on the support of our community. Whether you're a local business, global conglomerate, or self employed, there's need for your support."
+    "description": "We rely on the support of our community. Whether you're a local business, global conglomerate, or self employed, there's need for your support.",
+    "sponsors": {
+      "title": "Sponsors",
+      "visit": "Visit {sponsorName}'s website at <websiteLink>{website}</websiteLink>.",
+      "susdFoundation": "SUSD Foundation",
+      "farleyFamilyFoundation": "Farley Family Foundation",
+      "boeing": "Boeing",
+      "raytheonTechnologies": "Raytheon Technologies",
+      "rowlandFamilyFund": "Rowland Family Fund",
+      "soarFoundation": "SOAR Foundation",
+      "microchipTechnology": "Employees of Microchip Technology"
+    }
   },
   "innovationCenter": {
     "title": "Innovation Center",
@@ -225,7 +236,12 @@
   },
   "sistersInStem": {
     "title": "Sisters in STEM",
-    "description": "Sisters in STEM is one of the many programs hosted and supported by our team that gets girls into the world of STEM."
+    "description": "Sisters in STEM is one of the many programs hosted and supported by our team that gets girls into the world of STEM.",
+    "about": {
+      "title": "About Sisters in STEM",
+      "content": "Sisters in STEM is a program that brings girls into the world of STEM. We have a team of mentors who are dedicated to helping girls succeed in STEM. Our mentors are all volunteers who have been in the STEM field for a long time and have helped many girls get into STEM.",
+      "link": "Visit the Sisters in STEM website"
+    }
   },
   "mentors": {
     "title": "Mentors",
@@ -236,6 +252,7 @@
     },
     "who": {
       "title": "Who We Have",
+      "email": "You may email {mentor} at <emailLink>{email}</emailLink>.",
       "lindberg": {
         "title": "Susan Lindberg",
         "title1": "Teacher",
@@ -252,23 +269,20 @@
         "title1": "Former Sabercat",
         "title2": "Computer Scientist",
         "title3": "PhD Student",
-        "email": "cbrandt@susd.org"
+        "email": "lewis.ruskin@sabercatrobotics.com"
       },
       "smith": {
         "title": "Zach Smith",
         "title1": "Business",
-        "title2": "Computer Scientist",
-        "email": "cbrandt@susd.org"
+        "title2": "Computer Scientist"
       },
       "olson": {
         "title": "Laney Olson",
-        "title1": "Business",
-        "email": "cbrandt@susd.org"
+        "title1": "Business"
       },
       "arnold": {
         "title": "Eli Arnold",
-        "title1": "Mechanical",
-        "email": "cbrandt@susd.org"
+        "title1": "Mechanical"
       }
     }
   },

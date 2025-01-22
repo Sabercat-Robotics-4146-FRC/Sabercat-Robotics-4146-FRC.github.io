@@ -19,7 +19,7 @@ export default async function AboutPage({
   const t = await getTranslations("about");
 
   return (
-    <main className="flex flex-col gap-2 p-4">
+    <main className="flex flex-col space-y-2 p-4">
       <PageHeader
         title={t("title")}
         description={t("description")}
