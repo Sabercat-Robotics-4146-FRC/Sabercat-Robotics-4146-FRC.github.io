@@ -37,7 +37,13 @@
     },
     "history": {
       "title": "History",
-      "content": "During the 2011-2012 school year, multiple students came together to find something that would change the lives of many future high school students: Sabercat Robotics. In 2013, we decided to expand our team to include more schools and students by starting the FLL Qualifier, which persuaded us to mentor many schools such as Mohave and Tonalea. Throughout the years, we continued to volunteer in our community with the goal of making STEM accessible to all students. One key program we volunteered at was Scottsdale Community College's GirlPOWERED program. When this was discontinued in 2018, a few of us decided to start a new program with similar goals. This program, now known as Sisters in STEM, has been a huge success, from hosting our previous CyberSiS/online program during the pandemic and our annual celebratory event to our SiS Roadshows. As we continued to grow Sisters in STEM, we realized that while what we were doing was great, it wasn't enough. This is why, in 2021, we started our partnership with Northern Arizona University's Occupational Therapy program to help them with one of their own initiatives, \"Go Baby Go.\" \"Go Baby Go\" is a program that gathers volunteers to combine their STEM skills to build cars that kids can ride in, and then gives them to young disabled children. We have been working with them since then, and we are excited to continue our partnership with them. Recently, two robotics students from our team realized there was a core part of our team and future that was missing from the STEM initiative: the arts. This led to them starting \"Melody Makers\" in 2023, a program that teaches STEM to young children through the arts; primarily music. What we've learned from our history is that, no matter who you are or what you do, you can make a positive impact on the world."
+      "content1": "During the 2011-2012 school year, multiple students came together to find something that would change the lives of many future high school students: Sabercat Robotics.",
+      "content2": "In 2013, we decided to expand our team to include more schools and students by starting the FLL Qualifier, which persuaded us to mentor many schools such as Mohave and Tonalea. Throughout the years, we continued to volunteer in our community with the goal of making STEM accessible to all students.",
+      "content3": "One key program we volunteered at was Scottsdale Community College's GirlPOWERED program. When this was discontinued in 2018, a few of us decided to start a new program with similar goals. This program, now known as Sisters in STEM, has been a huge success, from hosting our previous CyberSiS/online program during the pandemic and our annual celebratory event to our SiS Roadshows.",
+      "content4": "As we continued to grow Sisters in STEM, we realized that while what we were doing was great, it wasn't enough. This is why, in 2021, we started our partnership with Northern Arizona University's Occupational Therapy program to help them with one of their own initiatives, \"Go Baby Go.\"",
+      "content5": "\"Go Baby Go\" is a program that gathers volunteers to combine their STEM skills to build cars that kids can ride in, and then gives them to young disabled children. We have been working with them since then, and we are excited to continue our partnership with them.",
+      "content6": "Recently, two robotics students from our team realized there was a core part of our team and future that was missing from the STEM initiative: the arts. This led to them starting \"Melody Makers\" in 2023, a program that teaches STEM to young children through the arts; primarily music.",
+      "content7": "What we've learned from our history is that, no matter who you are or what you do, you can make a positive impact on the world."
     }
   },
   "taxCredit": {
@@ -335,7 +341,12 @@
       "submit": "Submit",
       "pending": "Sending your message...",
       "success": "Your message has been sent successfully.",
-      "unknownError": "An unknown error occurred. Please try again later."
+      "unknownError": "An unknown error occurred. Please try again later.",
+      "unavailable": "Our form is currently unavailable right now. Please contact us through the other methods listed below instead."
+    },
+    "other": {
+      "title": "Other Ways to Contact Us",
+      "description": "Don't like our form? Contact us in any of the following ways instead."
     },
     "email": "team@sabercatrobotics.com"
   },

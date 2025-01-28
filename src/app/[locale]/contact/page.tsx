@@ -1,3 +1,4 @@
+import { MailIcon } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { contactFormAction } from "~/components/actions";
 import { Form, FormField, FormSelect } from "~/components/form";
@@ -19,6 +20,7 @@ import {
   SelectValue,
 } from "~/components/ui/select";
 import { Textarea } from "~/components/ui/textarea";
+import { Link } from "~/i18n/routing";
 
 export async function generateMetadata({
   params,
@@ -49,7 +51,8 @@ export default async function ContactPage({
             <CardDescription>{t("form.description")}</CardDescription>
           </CardHeader>
           <CardContent>
-            <Form
+            {t("form.unavailable")}
+            {/* <Form
               className="flex flex-col space-y-4"
               action={contactFormAction}
               submitButton={
@@ -146,7 +149,21 @@ export default async function ContactPage({
                   />
                 }
               />
-            </Form>
+            </Form> */}
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="font-heading">{t("other.title")}</CardTitle>
+            <CardDescription>{t("other.description")}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button className="gap-1 p-0" variant="link" asChild>
+              <Link href={t("email")} target="_blank" rel="noopener noreferrer">
+                <MailIcon className="size-5" role="presentation" />
+                {t("email")}
+              </Link>
+            </Button>
           </CardContent>
         </Card>
       </main>

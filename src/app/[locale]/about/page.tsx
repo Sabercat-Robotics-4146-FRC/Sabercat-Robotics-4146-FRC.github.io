@@ -18,6 +18,8 @@ export default async function AboutPage({
 
   const t = await getTranslations("about");
 
+  const amountOfHistory = 7;
+
   return (
     <main className="flex flex-col space-y-2 p-4">
       <PageHeader
@@ -36,7 +38,11 @@ export default async function AboutPage({
           <CardHeader>
             <CardTitle>{t("history.title")}</CardTitle>
           </CardHeader>
-          <CardContent>{t("history.content")}</CardContent>
+          <CardContent className="flex flex-col space-y-4">
+            {Array.from({ length: amountOfHistory }).map((_, i) => (
+              <p key={i}>{t(`history.content${i + 1}`)}</p>
+            ))}
+          </CardContent>
         </Card>
       </main>
     </main>

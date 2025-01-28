@@ -31,8 +31,8 @@ export default async function SponsorsPage({
     ["boeing", true, new URL("https://www.boeing.com/")],
     ["raytheonTechnologies", true, new URL("https://www.rtx.com/")],
     ["rowlandFamilyFund", false],
-    ["soarFoundation", true, new URL("https://www.soarfoundation.org/")],
-    ["microchipTechnology", false],
+    ["soarFoundation", false],
+    ["microchipTechnology", true, new URL("https://www.microchip.com/")],
   ];
 
   return (
