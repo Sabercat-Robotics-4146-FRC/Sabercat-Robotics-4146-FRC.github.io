@@ -118,7 +118,7 @@ export async function contactFormAction(
   try {
     await transporter.sendMail({
       from: `${data.name.first} ${data.name.last} <team@sabercatrobotics.com>`,
-      to: "Sabercat Robotics Team team@sabercatrobotics.com",
+      to: "Sabercat Robotics Team <team@sabercatrobotics.com>",
       subject: `Contact Form Submission from ${data.name.first}: "${data.topic}"`,
       text: `Name: ${data.name.first} ${data.name.last}\nEmail: ${data.email}\nTopic: ${data.topic}\nContent: ${data.content}`,
     });

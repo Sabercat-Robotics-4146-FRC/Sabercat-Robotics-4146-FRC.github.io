@@ -24,7 +24,7 @@ export default async function SponsorsPage({
 
   const t = await getTranslations("sponsorsAndPartners");
 
-  const sponsors: Array<[string, true, URL | undefined] | [string, false]> = [
+  const sponsors: Array<[string, true, URL] | [string, false]> = [
     // Format: [sponsorName, hasWebsite, websiteUrl?]
     ["susdFoundation", true, new URL("https://susdfoundation.org/")],
     ["farleyFamilyFoundation", false],
@@ -68,7 +68,7 @@ export default async function SponsorsPage({
                               asChild
                             >
                               <Link
-                                href={websiteUrl!}
+                                href={websiteUrl.toString()}
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >

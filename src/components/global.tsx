@@ -150,7 +150,7 @@ export function Header() {
               <span className="sr-only">{t("language")}</span>
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent>
+          <DropdownMenuContent align="end">
             <DropdownMenuLabel className="flex items-center space-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -548,7 +548,7 @@ export function Footer() {
               {t("language")}
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent>
+          <DropdownMenuContent align="end">
             <DropdownMenuLabel className="flex items-center space-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
