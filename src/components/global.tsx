@@ -20,6 +20,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
+import { SabercatRobotics } from "./logos";
 
 const localeInfo: {
   locale: string;
@@ -88,39 +89,35 @@ export function Header() {
   const t = useTranslations();
 
   return (
-    <header className="sticky top-0 z-40 flex items-center justify-center space-x-2 border-b bg-slate-50 p-4 shadow-[0_-8px_16px] shadow-black md:justify-between">
+    <header className="sticky top-0 z-40 flex items-center justify-center space-x-2 border-b border-slate-200 bg-slate-50 p-4 shadow-[0_-8px_16px] shadow-black md:justify-between">
       <Link href="/" className="flex items-center justify-center space-x-4">
-        <Image
-          src="/assets/img/head-raw-large.png"
-          alt={t("title")}
+        <SabercatRobotics
           role="presentation"
           aria-hidden
-          width={4620}
-          height={3570}
-          className="w-12"
+          className="h-auto w-12 fill-slate-950"
         />
-        <h2 className="hidden font-heading text-2xl font-bold min-[450px]:block">
+        <h2 className="font-heading hidden text-2xl font-bold min-[450px]:block">
           {t("title")}
         </h2>
       </Link>
       <nav className="flex space-x-2">
         <Button
           variant="outline"
-          className="hidden hover:text-brand focus:text-brand md:flex"
+          className="hover:text-brand focus:text-brand hidden md:flex"
           asChild
         >
           <Link href="/">{t("home.title")}</Link>
         </Button>
         <Button
           variant="outline"
-          className="hidden hover:text-brand focus:text-brand md:flex"
+          className="hover:text-brand focus:text-brand hidden md:flex"
           asChild
         >
           <Link href="/about">{t("about.title")}</Link>
         </Button>
         <Button
           variant="outline"
-          className="hidden hover:text-brand focus:text-brand md:flex"
+          className="hover:text-brand focus:text-brand hidden md:flex"
           asChild
         >
           <Link href="/tax-credit">{t("taxCredit.title")}</Link>
@@ -174,7 +171,7 @@ export function Header() {
               <DropdownMenuItem className="p-0" key={locale}>
                 <Button
                   variant="ghost"
-                  className="w-full justify-start hover:text-brand focus:text-brand"
+                  className="hover:text-brand focus:text-brand w-full justify-start"
                   asChild
                 >
                   <Link
@@ -221,7 +218,7 @@ export function Header() {
               </SheetTitle>
               <SheetDescription>{t("menu.description")}</SheetDescription>
             </SheetHeader>
-            <nav className="flex flex-col space-y-2 border-y-2 py-2">
+            <nav className="flex flex-col space-y-2 border-y-2 border-slate-200 py-2">
               {links.map(({ href, key }) => (
                 <Button
                   className="w-fit justify-start"
@@ -424,7 +421,7 @@ export function Footer() {
   return (
     <footer className="mt-auto flex flex-col items-center space-y-2 bg-slate-50 p-4 shadow-[0_8px_16px] shadow-black">
       <nav
-        className="flex w-full max-w-screen-2xl flex-wrap space-y-2"
+        className="flex w-full max-w-(--breakpoint-2xl) flex-wrap space-y-2"
         role="navigation"
       >
         {footerLinks.map(function ({ text, links }) {
@@ -449,7 +446,7 @@ export function Footer() {
                   >
                     <Button
                       variant="link"
-                      className="inline-flex h-auto justify-start space-x-1 whitespace-break-spaces p-0 text-base font-normal text-slate-700"
+                      className="inline-flex h-auto justify-start space-x-1 p-0 text-base font-normal whitespace-break-spaces text-slate-700"
                       asChild
                     >
                       <Link {...props}>
@@ -478,7 +475,7 @@ export function Footer() {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="text-slate-700 hover:text-brand focus:text-brand"
+                    className="hover:text-brand focus:text-brand text-slate-700"
                     asChild
                   >
                     <Link href={href} target="_blank" rel="noopener noreferrer">
@@ -497,7 +494,7 @@ export function Footer() {
           </li> */}
         </ul>
       </nav>
-      <footer className="flex w-full max-w-screen-2xl flex-col-reverse px-2 md:flex-row md:items-center md:justify-between">
+      <footer className="flex w-full max-w-(--breakpoint-2xl) flex-col-reverse px-2 md:flex-row md:items-center md:justify-between">
         <nav className="flex flex-wrap items-center">
           {/* <Button
             variant="link"
@@ -515,7 +512,7 @@ export function Footer() {
           </Button> */}
           <Button
             variant="link"
-            className="whitespace-break-spaces px-2 font-normal text-slate-500"
+            className="px-2 font-normal whitespace-break-spaces text-slate-500"
             asChild
           >
             <Link
@@ -668,7 +665,7 @@ export function PageHeader({
   src: string;
 }>) {
   return (
-    <header className="flex flex-col items-center space-y-4 rounded-lg bg-brand bg-gradient-to-br from-brand to-brand/85 p-4 shadow-lg sm:p-6 md:flex-row md:justify-between md:space-x-8 md:space-y-0">
+    <header className="bg-brand from-brand to-brand/85 flex flex-col items-center space-y-4 rounded-lg bg-linear-to-br p-4 shadow-lg sm:p-6 md:flex-row md:justify-between md:space-y-0 md:space-x-8">
       <main className="flex flex-col space-y-4 md:max-w-[50%] md:basis-1/2">
         <h1 className="font-heading text-5xl font-bold tracking-tight text-slate-50">
           {title}
@@ -678,7 +675,7 @@ export function PageHeader({
       <Image
         src={src}
         alt={title}
-        className="h-auto max-h-64 rounded object-cover object-center shadow md:max-w-[50%] md:basis-1/2"
+        className="h-auto max-h-64 rounded-sm object-cover object-center shadow-sm md:max-w-[50%] md:basis-1/2"
         priority
         sizes="(max-width: 768px) 80vw, 40vw"
         width={4032}

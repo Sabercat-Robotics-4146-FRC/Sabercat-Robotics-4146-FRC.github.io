@@ -1,7 +1,9 @@
+import { ClockIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { homeCards } from "~/components/global";
+import { SabercatRobotics } from "~/components/logos";
 import { AspectRatio } from "~/components/ui/aspect-ratio";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
@@ -15,7 +17,9 @@ import {
 import { Link } from "~/i18n/routing";
 import { cn } from "~/lib/utils";
 
-function HomeCard(props: (typeof homeCards)[number]) {
+function HomeCard(
+  props: Omit<(typeof homeCards)[number], "src"> & { src?: string },
+) {
   const { localeKey, src, badge } = props;
 
   const t = useTranslations();
@@ -36,11 +40,8 @@ function HomeCard(props: (typeof homeCards)[number]) {
       >
         <CardHeader className="p-4">
           <AspectRatio ratio={1820 / 1213}>
-            <Image
-              src={src}
-              alt={title}
-              sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 30vw"
-              className="aspect-[1820/1213] h-full w-full rounded bg-gray-300/50 py-16 shadow"
+            <ClockIcon
+              className="aspect-1820/1213 h-full w-full rounded-sm bg-gray-300/50 py-16 shadow-sm"
               width={1820}
               height={1213}
             />
@@ -64,15 +65,19 @@ function HomeCard(props: (typeof homeCards)[number]) {
 
   const { href } = props;
 
+  if (!src) {
+    throw new Error("src is required");
+  }
+
   return (
     <Link href={href as string}>
-      <Card className="h-full transition-[box-shadow,transform] duration-300 hover:scale-105 hover:shadow-lg">
+      <Card className="h-full transition-[box-shadow,scale] duration-300 hover:scale-105 hover:shadow-lg">
         <CardHeader className="p-4">
           <Image
             src={src}
             alt={title}
             sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 30vw"
-            className="aspect-[1820/1213] h-full w-full rounded bg-gray-300/50 object-cover object-center shadow"
+            className="aspect-1820/1213 h-full w-full rounded-sm bg-gray-300/50 object-cover object-center shadow-sm"
             width={1820}
             height={1213}
           />
@@ -103,17 +108,10 @@ export default async function HomePage({
 
   return (
     <main className="flex flex-col space-y-2" role="main">
-      <header className="flex min-h-[calc(100vh-17.5625rem)] flex-col items-center space-y-4 bg-brand bg-gradient-to-br from-brand to-brand/85 p-4 sm:p-6 md:flex-row md:justify-between md:space-x-8 md:p-8 lg:p-12">
+      <header className="bg-brand from-brand to-brand/85 flex min-h-[calc(100vh-17.5625rem)] flex-col items-center space-y-4 bg-linear-to-br p-4 sm:p-6 md:flex-row md:justify-between md:space-x-8 md:p-8 lg:p-12">
         <main className="flex flex-col space-y-2 md:max-w-[50%] md:basis-1/2">
           <header className="flex flex-wrap items-center">
-            <Image
-              src="/assets/img/head-raw-large-white.png"
-              alt={noNamespaceT("title")}
-              className="mr-4 w-40 drop-shadow-sm"
-              priority
-              width={4620}
-              height={3570}
-            />
+            <SabercatRobotics className="mr-4 h-auto w-40 fill-slate-50 drop-shadow-xs" />
             <main className="flex flex-col">
               <h1 className="font-heading text-5xl font-bold tracking-tight text-slate-50">
                 {noNamespaceT("title")}
@@ -139,15 +137,21 @@ export default async function HomePage({
         <video
           width={852}
           height={480}
-          className="h-auto rounded-lg shadow md:max-w-[50%] md:basis-1/2"
+          className="h-auto rounded-lg shadow-sm md:max-w-[50%] md:basis-1/2"
           autoPlay
           muted
           loop
           playsInline
         >
           {t("noVideoSupport")}
-          <source src="/assets/vid/robot.webm" type="video/webm" />
-          <source src="/assets/vid/robot.mp4" type="video/mp4" />
+          <source
+            src="https://j45q6n96a7.ufs.sh/f/nsUZWhaMhq5X9fx7do6Xj7nHtJeLs6fiM0wcWudK8ryo2Thq"
+            type="video/webm"
+          />
+          <source
+            src="https://j45q6n96a7.ufs.sh/f/nsUZWhaMhq5XmTNzPF06c3IpGS5btWVJjqNLQvU9ghoEM2yZ"
+            type="video/mp4"
+          />
         </video>
       </header>
       <main className="flex flex-col justify-center space-y-4 px-6 py-12 text-slate-900">
