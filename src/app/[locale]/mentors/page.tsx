@@ -31,7 +31,7 @@ export default async function MentorsPage({
   const t = await getTranslations("mentors");
   const formatter = await getFormatter();
 
-  const mentors: Record<string, [number, boolean]> = {
+  const mentors = {
     // Format: [mentorName]: [amountOfTitles, hasEmail]
     lindberg: [2, true],
     brandt: [1, true],
@@ -39,14 +39,14 @@ export default async function MentorsPage({
     smith: [2, false],
     olson: [1, false],
     arnold: [1, false],
-  };
+  } as const satisfies Record<string, [number, boolean]>;
 
   return (
     <main className="flex flex-col space-y-2 p-4">
       <PageHeader
         title={t("title")}
         description={t("description")}
-        src="/assets/img/15.jpg"
+        src="/assets/img/mentors.jpg"
       />
       <main className="flex flex-col space-y-4 px-4 py-2">
         <section className="flex flex-col space-y-2">
@@ -57,7 +57,8 @@ export default async function MentorsPage({
           <h2 className="font-heading text-2xl font-bold">{t("who.title")}</h2>
           <main className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {Object.keys(mentors).map(function (mentor) {
-              const [amountOfTitles, hasEmail] = mentors[mentor]!;
+              const [amountOfTitles, hasEmail] =
+                mentors[mentor as keyof typeof mentors];
               return (
                 <Card key={mentor}>
                   <CardHeader>
@@ -79,7 +80,7 @@ export default async function MentorsPage({
                           const email = t(`who.${mentor}.email`);
                           return (
                             <Button
-                              className="h-max p-0 text-base font-normal text-brand"
+                              className="text-brand h-max p-0 text-base font-normal"
                               variant="link"
                               asChild
                             >

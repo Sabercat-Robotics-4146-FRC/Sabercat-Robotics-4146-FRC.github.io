@@ -36,7 +36,7 @@ export function Form({
 
   async function action(
     ...params: Parameters<typeof actionProp>
-  ): Promise<ReturnType<typeof actionProp>> {
+  ): Promise<Awaited<ReturnType<typeof actionProp>>> {
     setActionHash(Math.random().toString(36));
     return await actionProp(...params);
   }

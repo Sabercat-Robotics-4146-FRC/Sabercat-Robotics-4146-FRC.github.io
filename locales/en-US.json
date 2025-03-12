@@ -26,6 +26,20 @@
         "description": "Feel free to contact us with your ideas about new pages and components."
       }
     },
+    "competitions": {
+      "title": "Our Upcoming Competitions",
+      "description": "Sabercat Robotics wants your support! We work very hard for each competition and we would appreciate seeing you there, which is why we have listed the competitions we will be participating in for you to easily access.",
+      "location": "Competition Location",
+      "dates": "Competition Dates",
+      "competition1": {
+        "title": "Arizona North Regional",
+        "location": "Flagstaff, AZ, USA"
+      },
+      "competition2": {
+        "title": "Arizona East Regional",
+        "location": "Tempe, AZ, USA"
+      }
+    },
     "noVideoSupport": "Your browser does not support videos."
   },
   "about": {

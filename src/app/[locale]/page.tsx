@@ -1,6 +1,10 @@
-import { ClockIcon } from "lucide-react";
+import { ClockIcon, MapPinIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getFormatter,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import Image from "next/image";
 import { homeCards } from "~/components/global";
 import { SabercatRobotics } from "~/components/logos";
@@ -18,7 +22,15 @@ import { Link } from "~/i18n/routing";
 import { cn } from "~/lib/utils";
 
 function HomeCard(
-  props: Omit<(typeof homeCards)[number], "src"> & { src?: string },
+  props: Omit<
+    (typeof homeCards)[number],
+    "href" | "src" | "badge" | "disabled"
+  > & {
+    href?: string;
+    src?: string;
+    badge?: "important";
+    disabled?: true;
+  },
 ) {
   const { localeKey, src, badge } = props;
 
@@ -76,7 +88,7 @@ function HomeCard(
           <Image
             src={src}
             alt={title}
-            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 30vw"
+            sizes="(max-width: 768px) 80vw, (max-width: 1024px) 40vw, 25vw"
             className="aspect-1820/1213 h-full w-full rounded-sm bg-gray-300/50 object-cover object-center shadow-sm"
             width={1820}
             height={1213}
@@ -105,6 +117,13 @@ export default async function HomePage({
 
   const t = await getTranslations("home");
   const noNamespaceT = await getTranslations();
+  const formatter = await getFormatter();
+
+  // Sorted by earliest to latest, format: [competition]: [startDate, endDate]
+  const competitions = [
+    [new Date(2025, 3, 13), new Date(2025, 3, 15)],
+    [new Date(2025, 3, 19), new Date(2025, 3, 22)],
+  ] as const satisfies [Date, Date][];
 
   return (
     <main className="flex flex-col space-y-2" role="main">
@@ -154,7 +173,7 @@ export default async function HomePage({
           />
         </video>
       </header>
-      <main className="flex flex-col justify-center space-y-4 px-6 py-12 text-slate-900">
+      <main className="flex flex-col justify-center space-y-4 px-6 py-12 pb-0 text-slate-900">
         <header className="flex flex-col space-y-2 px-4">
           <h2 className="font-heading text-3xl font-bold text-slate-950">
             {t("mission.title")}
@@ -167,6 +186,48 @@ export default async function HomePage({
           })}
         </main>
       </main>
+      <footer className="flex flex-col justify-center space-y-4 px-6 py-12 text-slate-900">
+        <header className="flex flex-col space-y-2 px-4">
+          <h2 className="font-heading text-3xl font-bold text-slate-950">
+            {t("competitions.title")}
+          </h2>
+          <p className="text-lg">{t("competitions.description")}</p>
+        </header>
+        <main className="grid gap-6 *:h-full md:grid-cols-2">
+          {competitions.map(function ([startDate, endDate], index) {
+            const title = t(`competitions.competition${index + 1}.title`);
+            const location = t(`competitions.competition${index + 1}.location`);
+
+            return (
+              <Card key={title}>
+                <CardContent className="flex flex-col gap-1.5 p-6">
+                  <CardTitle>{title}</CardTitle>
+                  <CardDescription className="flex items-center gap-1">
+                    <MapPinIcon
+                      aria-label={t("competitions.location")}
+                      className="size-4"
+                      stroke="currentColor"
+                    />
+                    {location}
+                  </CardDescription>
+                  <CardDescription className="flex items-center gap-1">
+                    <ClockIcon
+                      aria-label={t("competitions.dates")}
+                      className="size-4"
+                      stroke="currentColor"
+                    />
+                    {formatter.dateTimeRange(startDate, endDate, {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </main>
+      </footer>
     </main>
   );
 }

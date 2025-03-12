@@ -66,7 +66,7 @@ export default async function ContactPage({
                 </p>
               }
             >
-              <section className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+              <section className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
                 <FormField
                   className="md:basis-1/2"
                   label={t("form.name.first.label")}
@@ -94,7 +94,7 @@ export default async function ContactPage({
                   }
                 />
               </section>
-              <section className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+              <section className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
                 <FormField
                   className="md:basis-1/2"
                   label={t("form.email.label")}
@@ -105,6 +105,7 @@ export default async function ContactPage({
                       placeholder={t("form.email.placeholder")}
                       type="email"
                       inputMode="email"
+                      autoComplete="work email"
                     />
                   }
                 />

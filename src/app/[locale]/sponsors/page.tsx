@@ -24,7 +24,7 @@ export default async function SponsorsPage({
 
   const t = await getTranslations("sponsorsAndPartners");
 
-  const sponsors: Array<[string, true, URL] | [string, false]> = [
+  const sponsors = [
     // Format: [sponsorName, hasWebsite, websiteUrl?]
     ["susdFoundation", true, new URL("https://susdfoundation.org/")],
     ["farleyFamilyFoundation", false],
@@ -33,7 +33,7 @@ export default async function SponsorsPage({
     ["rowlandFamilyFund", false],
     ["soarFoundation", false],
     ["microchipTechnology", true, new URL("https://www.microchip.com/")],
-  ];
+  ] as const satisfies Array<[string, true, URL] | [string, false]>;
 
   return (
     <main className="flex flex-col space-y-2 p-4">
@@ -63,7 +63,7 @@ export default async function SponsorsPage({
                         websiteLink(chunks) {
                           return (
                             <Button
-                              className="h-max p-0 text-base font-normal text-brand"
+                              className="text-brand h-max p-0 text-base font-normal"
                               variant="link"
                               asChild
                             >
@@ -77,7 +77,7 @@ export default async function SponsorsPage({
                             </Button>
                           );
                         },
-                        website: websiteUrl?.toString(),
+                        website: websiteUrl.toString(),
                       })}
                     </CardContent>
                   )}

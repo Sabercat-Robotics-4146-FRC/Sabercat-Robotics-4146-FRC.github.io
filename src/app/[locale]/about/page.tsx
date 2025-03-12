@@ -18,7 +18,7 @@ export default async function AboutPage({
 
   const t = await getTranslations("about");
 
-  const amountOfHistory = 7;
+  const amountOfHistory = 7 as const satisfies number;
 
   return (
     <main className="flex flex-col space-y-2 p-4">

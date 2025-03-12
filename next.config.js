@@ -16,19 +16,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          {
-            key: "X-UA-Compatible",
-            value: "IE=edge",
-          },
-        ],
-      },
-    ];
-  },
 };
 
 export default withNextIntl(nextConfig);

@@ -28,7 +28,7 @@ function BannerAward({
       <h3 className="mt-auto text-center font-semibold">{title}</h3>
       <p className="mt-auto text-center">{description}</p>
       <svg
-        className="absolute left-0 top-full"
+        className="absolute top-full left-0"
         width="10rem"
         viewBox="0 0 60 20"
         version="1.1"
@@ -59,16 +59,16 @@ export default async function AwardsPage({
 
   const t = await getTranslations("awards");
 
-  const banners: string[] = [
+  const banners = [
     "az2012Finalists",
     "az2012Rookie",
     "az2015WoodieFlowers",
     "az2015Regional",
     "az2020Chairman",
-  ];
+  ] as const satisfies string[];
 
   // Sorted by earliest to latest, format: competition = # of awards
-  const yearly: Record<string, number>[] = [
+  const yearly = [
     // 2012
     {
       az: 2,
@@ -121,7 +121,7 @@ export default async function AwardsPage({
       azEast: 1,
       azWest: 1,
     },
-  ];
+  ] as const satisfies Record<string, number>[];
 
   return (
     <main className="flex flex-col space-y-2 p-4">
@@ -175,7 +175,7 @@ export default async function AwardsPage({
                     </header>
                     <main className="marker:text-slate-900">
                       {Object.keys(values).map(function (key, i) {
-                        const awards = values[key]!;
+                        const awards = values[key as keyof typeof values];
                         key = `${baseKey}.${key}`;
                         return (
                           <ul

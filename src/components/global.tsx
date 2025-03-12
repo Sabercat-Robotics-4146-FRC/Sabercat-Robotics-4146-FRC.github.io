@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "~/i18n/routing";
+import { Link, type routing } from "~/i18n/routing";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -23,10 +23,7 @@ import {
 import { GitHub, Instagram, LinkedIn, SabercatRobotics, X } from "./logos";
 import { MailIcon, MapPinIcon } from "lucide-react";
 
-const localeInfo: {
-  locale: string;
-  lang: string;
-}[] = [
+const localeInfo = [
   {
     locale: "en-US",
     lang: "English (United States)",
@@ -43,11 +40,11 @@ const localeInfo: {
   //   locale: "ja-JP",
   //   lang: "日本語 (日本)",
   // },
-];
-const links: {
-  href: string;
-  key: string;
-}[] = [
+] as const satisfies {
+  locale: typeof routing.defaultLocale;
+  lang: string;
+}[];
+const links = [
   {
     href: "/",
     key: "home",
@@ -77,14 +74,17 @@ const links: {
     key: "innovationCenter",
   },
   {
-    href: "/about/mentors",
+    href: "/mentors",
     key: "mentors",
   },
   {
     href: "/contact",
     key: "contact",
   },
-];
+] as const satisfies {
+  href: string;
+  key: string;
+}[];
 
 export function Header() {
   const t = useTranslations();
@@ -97,7 +97,7 @@ export function Header() {
           aria-hidden
           className="h-auto w-12 fill-slate-950"
         />
-        <h2 className="font-heading hidden text-2xl font-bold min-[450px]:block">
+        <h2 className="font-heading sr-only text-2xl font-bold min-[450px]:not-sr-only">
           {t("title")}
         </h2>
       </Link>
@@ -212,14 +212,14 @@ export function Header() {
               <span className="sr-only">{t("menu.title")}</span>
             </Button>
           </SheetTrigger>
-          <SheetContent>
-            <SheetHeader className="py-2">
+          <SheetContent className="flex flex-col gap-4 space-y-0">
+            <SheetHeader>
               <SheetTitle className="font-heading text-2xl font-bold">
                 {t("menu.title")}
               </SheetTitle>
               <SheetDescription>{t("menu.description")}</SheetDescription>
             </SheetHeader>
-            <nav className="flex flex-col space-y-2 border-y-2 border-slate-200 py-2">
+            <nav className="flex flex-col gap-2 overflow-y-scroll border-y-2 border-slate-200 py-2">
               {links.map(({ href, key }) => (
                 <Button
                   className="w-fit justify-start"
@@ -231,7 +231,7 @@ export function Header() {
                 </Button>
               ))}
             </nav>
-            <SheetFooter className="py-2">
+            <SheetFooter className="mt-auto">
               <Button variant="outline" asChild>
                 <SheetClose>{t("menu.close")}</SheetClose>
               </Button>
@@ -243,11 +243,7 @@ export function Header() {
   );
 }
 
-const socials: {
-  href: `https://${string}/${string}`;
-  text: string;
-  icon?: React.ReactNode;
-}[] = [
+const socials = [
   {
     href: "https://instagram.com/sabercats4146/",
     text: "Instagram",
@@ -300,19 +296,16 @@ const socials: {
       />
     ),
   },
-];
+] as const satisfies {
+  href: `https://${string}/${string}`;
+  text: string;
+  icon?: React.ReactNode;
+}[];
 
 export function Footer() {
   const t = useTranslations();
 
-  const footerLinks: {
-    text: string;
-    links: {
-      href: `/${string}` | `https://${string}/${string}` | `mailto:${string}`;
-      text: string;
-      icon?: React.ReactNode;
-    }[];
-  }[] = [
+  const footerLinks = [
     {
       text: t("footer.company"),
       links: [
@@ -378,7 +371,14 @@ export function Footer() {
         },
       ],
     },
-  ];
+  ] as const satisfies {
+    text: string;
+    links: {
+      href: `/${string}` | `https://${string}/${string}` | `mailto:${string}`;
+      text: string;
+      icon?: React.ReactNode;
+    }[];
+  }[];
 
   return (
     <footer className="mt-auto flex flex-col items-center space-y-2 bg-slate-50 p-4 shadow-[0_8px_16px] shadow-black">
@@ -393,8 +393,17 @@ export function Footer() {
               role="list"
               key={text}
             >
-              <h2 className="text-2xl font-semibold text-slate-950">{text}</h2>
-              {links.map(function ({ href, text: linkText, icon }) {
+              <h2
+                className="text-2xl font-semibold text-slate-950"
+                role="heading"
+              >
+                {text}
+              </h2>
+              {links.map(function ({
+                href,
+                text: linkText,
+                icon,
+              }: (typeof links)[number] & { icon?: React.ReactNode }) {
                 const props: React.ComponentPropsWithoutRef<typeof Link> =
                   href.startsWith("/")
                     ? { href }
@@ -422,10 +431,7 @@ export function Footer() {
             </ul>
           );
         })}
-        <ul
-          className="flex basis-full list-none px-3 md:w-1/2 md:basis-1/2 lg:flex-col lg:items-end lg:justify-between"
-          role="list"
-        >
+        <ul className="flex basis-full list-none px-3 md:w-1/2 md:basis-1/2 lg:flex-col lg:items-end lg:justify-between">
           <ul className="flex space-x-3" role="list">
             {socials.map(function ({ href, text, icon }) {
               return (
@@ -552,22 +558,7 @@ export function Footer() {
   );
 }
 
-export const homeCards: (
-  | {
-      localeKey: string;
-      href: `/${string}`;
-      src: `/${string}`;
-      badge?: "important";
-      disabled?: undefined;
-    }
-  | {
-      localeKey: string;
-      href?: undefined;
-      src: `/${string}`;
-      badge?: "important";
-      disabled: true;
-    }
-)[] = [
+export const homeCards = [
   {
     localeKey: "about",
     href: "/about",
@@ -615,7 +606,22 @@ export const homeCards: (
     src: "/assets/svg/clock.svg",
     disabled: true,
   },
-];
+] as const satisfies (
+  | {
+      localeKey: string;
+      href: `/${string}`;
+      src: `/${string}`;
+      badge?: "important";
+      disabled?: undefined;
+    }
+  | {
+      localeKey: string;
+      href?: undefined;
+      src: `/${string}`;
+      badge?: "important";
+      disabled: true;
+    }
+)[];
 
 export function PageHeader({
   title,
@@ -647,11 +653,11 @@ export function PageHeader({
   );
 }
 
-export const topicOptions: Readonly<[string, ...string[]]> = [
+export const topicOptions = [
   "mentorship",
   "sponsorship",
   "taxCredit",
   "programs",
   "innovationCenter",
   "other",
-];
+] as const;
