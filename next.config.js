@@ -10,6 +10,25 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/awards",
+        destination: "/about/awards",
+        permanent: true,
+      },
+      {
+        source: "/innovation-center",
+        destination: "/about/innovation-center",
+        permanent: true,
+      },
+      {
+        source: "/sponsors-and-partners",
+        destination: "/sponsors",
+        permanent: true,
+      },
+    ];
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
