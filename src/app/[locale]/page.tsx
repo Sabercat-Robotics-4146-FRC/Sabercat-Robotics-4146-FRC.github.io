@@ -121,8 +121,8 @@ export default async function HomePage({
 
   // Sorted by earliest to latest, format: [competition]: [startDate, endDate]
   const competitions = [
-    [new Date(2025, 3, 13), new Date(2025, 3, 15)],
-    [new Date(2025, 3, 19), new Date(2025, 3, 22)],
+    [new Date(2025, 2, 13), new Date(2025, 2, 15)],
+    [new Date(2025, 2, 19), new Date(2025, 2, 22)],
   ] as const satisfies [Date, Date][];
 
   return (
