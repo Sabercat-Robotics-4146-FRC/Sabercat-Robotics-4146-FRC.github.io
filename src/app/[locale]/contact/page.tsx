@@ -160,7 +160,11 @@ export default async function ContactPage({
           </CardHeader>
           <CardContent>
             <Button className="gap-1 p-0" variant="link" asChild>
-              <Link href={t("email")} target="_blank" rel="noopener noreferrer">
+              <Link
+                href={`mailto:${t("email")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <MailIcon className="size-5" role="presentation" />
                 {t("email")}
               </Link>
