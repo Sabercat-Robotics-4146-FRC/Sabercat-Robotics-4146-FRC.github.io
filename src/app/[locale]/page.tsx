@@ -1,11 +1,14 @@
+import { pick } from "lodash";
 import { ClockIcon, MapPinIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { NextIntlClientProvider, useTranslations } from "next-intl";
 import {
   getFormatter,
+  getMessages,
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
 import Image from "next/image";
+import { OngoingCompetition } from "~/components/client";
 import { homeCards } from "~/components/global";
 import { SabercatRobotics } from "~/components/logos";
 import { AspectRatio } from "~/components/ui/aspect-ratio";
@@ -115,9 +118,10 @@ export default async function HomePage({
 
   setRequestLocale(locale);
 
-  const t = await getTranslations("home");
-  const noNamespaceT = await getTranslations();
-  const formatter = await getFormatter();
+  const t = await getTranslations({ namespace: "home", locale });
+  const noNamespaceT = await getTranslations({ locale });
+  const formatter = await getFormatter({ locale });
+  const messages = await getMessages({ locale });
 
   // Sorted by earliest to latest, format: [competition]: [startDate, endDate]
   const competitions = [
@@ -222,6 +226,14 @@ export default async function HomePage({
                       day: "numeric",
                     })}
                   </CardDescription>
+                  <NextIntlClientProvider
+                    messages={pick(messages, "home.competitions.ongoing")}
+                  >
+                    <OngoingCompetition
+                      startDate={startDate}
+                      endDate={endDate}
+                    />
+                  </NextIntlClientProvider>
                 </CardContent>
               </Card>
             );
