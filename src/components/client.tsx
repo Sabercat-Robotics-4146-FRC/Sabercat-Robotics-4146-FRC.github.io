@@ -58,6 +58,9 @@ export function ConsentBanner() {
       posthog.set_config({ persistence: "memory" });
       if (consent === false) {
         localStorage.setItem("consent", "false");
+        bannerRef.current?.addEventListener("animationend", () => {
+          bannerRef.current?.remove();
+        });
       }
     }
     setIsLoading(false);
