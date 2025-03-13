@@ -2,10 +2,13 @@ import "~/styles/globals.css";
 import { notFound } from "next/navigation";
 import { Arvo, Open_Sans } from "next/font/google";
 import { routing } from "~/i18n/routing";
-import { setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { cn } from "~/lib/utils";
 import { Header, Footer } from "~/components/global";
 import metadata from "~/components/metadata";
+import { ConsentBanner, Providers } from "~/components/client";
+import { NextIntlClientProvider } from "next-intl";
+import { pick } from "lodash";
 
 export async function generateMetadata({
   params,
@@ -46,6 +49,8 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
+  const messages = await getMessages({ locale });
+
   return (
     <html lang={locale} className="bg-slate-50">
       <body
@@ -56,8 +61,19 @@ export default async function LocaleLayout({
         )}
       >
         <Header />
-        {children}
+        <Providers>{children}</Providers>
         <Footer />
+        <NextIntlClientProvider
+          messages={pick(
+            messages,
+            "cookies.title",
+            "cookies.description",
+            "cookies.accept",
+            "cookies.decline",
+          )}
+        >
+          <ConsentBanner />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -90,7 +90,7 @@ export function Header() {
   const t = useTranslations();
 
   return (
-    <header className="sticky top-0 z-40 flex items-center justify-center space-x-2 border-b border-slate-200 bg-slate-50 p-4 shadow-[0_-8px_16px] shadow-black md:justify-between">
+    <header className="sticky top-0 z-40 flex items-center justify-center space-x-2 border-b border-slate-200 bg-slate-50 p-4 shadow-[0_-8px_16px] shadow-slate-950 md:justify-between">
       <Link href="/" className="flex items-center justify-center space-x-4">
         <SabercatRobotics
           role="presentation"
@@ -284,7 +284,7 @@ const socials = [
     ),
   },
   {
-    href: "https://x.com/SabercatRobotics4146/",
+    href: "https://x.com/Sabercats4146/",
     text: "X",
     icon: (
       <X
@@ -381,7 +381,7 @@ export function Footer() {
   }[];
 
   return (
-    <footer className="mt-auto flex flex-col items-center space-y-2 bg-slate-50 p-4 shadow-[0_8px_16px] shadow-black">
+    <footer className="mt-auto flex flex-col items-center space-y-2 bg-slate-50 p-4 shadow-[0_8px_16px] shadow-slate-950">
       <nav
         className="flex w-full max-w-(--breakpoint-2xl) flex-wrap space-y-2"
         role="navigation"

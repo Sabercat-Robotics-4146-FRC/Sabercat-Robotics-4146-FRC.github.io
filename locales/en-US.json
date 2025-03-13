@@ -380,7 +380,10 @@
     "title": "Privacy Policy"
   },
   "cookies": {
-    "title": "Cookies"
+    "title": "Cookies",
+    "description": "We use analytic cookies to improve your experience on our website by understanding how you use it. Please consent to the use of cookies to help us improve our website.",
+    "accept": "Accept Cookies",
+    "decline": "Decline Cookies"
   },
   "copyright": "© {year} Saguaro Math and Science Academy"
 }
