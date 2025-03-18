@@ -10,4 +10,4 @@ export const storage = new Storage({
 
 export const bucket = storage.bucket("static.sabercatrobotics.com");
 
-export const storageRoot = "https://bucket-test.ryderhorne.com/" as const;
+export const storageRoot = "https://static.sabercatrobotics.com/" as const;
