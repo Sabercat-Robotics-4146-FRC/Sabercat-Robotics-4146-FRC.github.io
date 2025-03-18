@@ -21,6 +21,7 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
+import { Video } from "~/components/video";
 import { Link } from "~/i18n/routing";
 import { cn } from "~/lib/utils";
 
@@ -62,8 +63,8 @@ function HomeCard(
             />
           </AspectRatio>
         </CardHeader>
-        <CardContent className="flex flex-col space-y-2">
-          <main className="flex flex-wrap space-x-2">
+        <CardContent className="flex flex-col gap-2">
+          <main className="flex flex-wrap gap-2">
             <CardTitle>{title}</CardTitle>
             {badge && (
               <Badge variant="default">{t(`home.mission.${badge}`)}</Badge>
@@ -85,7 +86,7 @@ function HomeCard(
   }
 
   return (
-    <Link href={href as string}>
+    <Link href={href!}>
       <Card className="h-full transition-[box-shadow,scale] duration-300 hover:scale-105 hover:shadow-lg">
         <CardHeader className="p-4">
           <Image
@@ -97,8 +98,8 @@ function HomeCard(
             height={1213}
           />
         </CardHeader>
-        <CardContent className="flex flex-col space-y-2">
-          <header className="flex flex-wrap space-x-2">
+        <CardContent className="flex flex-col gap-2">
+          <header className="flex flex-wrap gap-2">
             <CardTitle>{title}</CardTitle>
             {badge && (
               <Badge variant="default">{t(`home.mission.${badge}`)}</Badge>
@@ -125,14 +126,14 @@ export default async function HomePage({
 
   // Sorted by earliest to latest, format: [competition]: [startDate, endDate]
   const competitions = [
-    [new Date(2025, 2, 13), new Date(2025, 2, 15)],
-    [new Date(2025, 2, 19), new Date(2025, 2, 22)],
+    [new Date(2025, 2, 13, 8), new Date(2025, 2, 15, 18)],
+    [new Date(2025, 2, 19, 8), new Date(2025, 2, 22, 18)],
   ] as const satisfies [Date, Date][];
 
   return (
-    <main className="flex flex-col space-y-2" role="main">
-      <header className="bg-brand from-brand to-brand/85 flex min-h-[calc(100vh-17.5625rem)] flex-col items-center space-y-4 bg-linear-to-br p-4 sm:p-6 md:flex-row md:justify-between md:space-x-8 md:p-8 lg:p-12">
-        <main className="flex flex-col space-y-2 md:max-w-[50%] md:basis-1/2">
+    <main className="flex flex-col gap-2" role="main">
+      <header className="bg-brand from-brand to-brand/85 flex min-h-[calc(100vh-17.5625rem)] flex-col items-center gap-4 bg-linear-to-br p-4 sm:p-6 md:flex-row md:justify-between md:gap-8 md:p-8 lg:p-12">
+        <main className="flex size-auto flex-col gap-2 md:max-w-[50%] md:basis-1/2">
           <header className="flex flex-wrap items-center">
             <SabercatRobotics className="mr-4 h-auto w-40 fill-slate-50 drop-shadow-xs" />
             <main className="flex flex-col">
@@ -147,7 +148,7 @@ export default async function HomePage({
           <main className="text-slate-50">
             <p className="text-2xl">{t("hero.mission")}</p>
           </main>
-          <footer className="flex items-center space-x-2">
+          <footer className="flex items-center gap-2">
             <Button
               variant="default"
               className="bg-slate-100 text-slate-900 hover:bg-slate-100/90"
@@ -157,28 +158,21 @@ export default async function HomePage({
             </Button>
           </footer>
         </main>
-        <video
+        <Video
+          src="robot.mp4"
+          className="relative md:max-w-[50%] md:basis-1/2"
+          autoPlay
+          playsInline
+          loop
+          controls={false}
           width={852}
           height={480}
-          className="h-auto rounded-lg shadow-sm md:max-w-[50%] md:basis-1/2"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          {t("noVideoSupport")}
-          <source
-            src="https://j45q6n96a7.ufs.sh/f/nsUZWhaMhq5X9fx7do6Xj7nHtJeLs6fiM0wcWudK8ryo2Thq"
-            type="video/webm"
-          />
-          <source
-            src="https://j45q6n96a7.ufs.sh/f/nsUZWhaMhq5XmTNzPF06c3IpGS5btWVJjqNLQvU9ghoEM2yZ"
-            type="video/mp4"
-          />
-        </video>
+          imagePriority
+          imageSizes="(max-width: 768px) 80vw, 40vw"
+        />
       </header>
-      <main className="flex flex-col justify-center space-y-4 px-6 py-12 pb-0 text-slate-900">
-        <header className="flex flex-col space-y-2 px-4">
+      <main className="flex flex-col justify-center gap-4 px-6 py-12 pb-0 text-slate-900">
+        <header className="flex flex-col gap-2 px-4">
           <h2 className="font-heading text-3xl font-bold text-slate-950">
             {t("mission.title")}
           </h2>
@@ -190,8 +184,8 @@ export default async function HomePage({
           })}
         </main>
       </main>
-      <footer className="flex flex-col justify-center space-y-4 px-6 py-12 text-slate-900">
-        <header className="flex flex-col space-y-2 px-4">
+      <footer className="flex flex-col justify-center gap-4 px-6 py-12 text-slate-900">
+        <header className="flex flex-col gap-2 px-4">
           <h2 className="font-heading text-3xl font-bold text-slate-950">
             {t("competitions.title")}
           </h2>
@@ -224,6 +218,7 @@ export default async function HomePage({
                       year: "numeric",
                       month: "long",
                       day: "numeric",
+                      hour: "numeric",
                     })}
                   </CardDescription>
                   <NextIntlClientProvider

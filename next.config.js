@@ -35,6 +35,12 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  images: {
+    remotePatterns: [
+      { hostname: "static.sabercatrobotics.com" },
+      { hostname: "bucket-test.ryderhorne.com" },
+    ],
+  },
 };
 
 export default withNextIntl(nextConfig);

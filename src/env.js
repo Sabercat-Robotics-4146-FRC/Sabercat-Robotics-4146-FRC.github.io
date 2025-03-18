@@ -11,6 +11,7 @@ export const env = createEnv({
     GMAIL_CLIENT_SECRET: z.string(),
     GMAIL_REFRESH_TOKEN: z.string(),
     GMAIL_ACCESS_TOKEN: z.string(),
+    GC_STORAGE: z.string().base64(),
     NODE_ENV: z.enum(["development", "test", "production"]),
   },
 
@@ -42,6 +43,7 @@ export const env = createEnv({
     GMAIL_ACCESS_TOKEN: process.env.GMAIL_ACCESS_TOKEN,
     NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
     NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+    GC_STORAGE: process.env.GC_STORAGE,
     NODE_ENV: process.env.NODE_ENV,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },

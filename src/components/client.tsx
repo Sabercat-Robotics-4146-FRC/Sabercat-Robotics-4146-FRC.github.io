@@ -12,9 +12,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
-import { CircleHelpIcon } from "lucide-react";
+import { CircleHelpIcon, PlayIcon } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { Button } from "./ui/button";
+import HLS from "hls.js";
+import { cn } from "~/lib/utils";
+import Image from "next/image";
 
 export function PostHogProvider({
   children,
@@ -64,7 +67,7 @@ export function ConsentBanner() {
       }
     }
     setIsLoading(false);
-  }, [consent, bannerRef]);
+  }, [consent, bannerRef, posthog]);
 
   if (!isLoading && (consent === undefined || bannerRef.current !== null)) {
     return (
@@ -127,4 +130,102 @@ export function OngoingCompetition({
       </p>
     );
   }
+}
+
+export interface HLSVideoProps
+  extends React.VideoHTMLAttributes<HTMLVideoElement> {
+  src: string;
+  poster: string;
+  playButtonClassname?: string;
+  width: number;
+  height: number;
+  imagePriority?: boolean;
+  imageSizes: string;
+}
+export function HLSVideo({
+  src,
+  poster,
+  playButtonClassname,
+  width,
+  height,
+  imagePriority = false,
+  imageSizes,
+  autoPlay,
+  className,
+  ...props
+}: HLSVideoProps) {
+  const t = useTranslations("video");
+
+  const ref = useRef<HTMLVideoElement>(null);
+
+  const [canPlay, setCanPlay] = useState<boolean>(true);
+
+  useEffect(() => {
+    const { current: video } = ref;
+
+    if (video) {
+      if (video.canPlayType("application/vnd.apple.mpegurl")) {
+        video.src = src;
+      } else if (HLS.isSupported()) {
+        const hls = new HLS();
+        hls.loadSource(src);
+        hls.attachMedia(video);
+      }
+      if (autoPlay ?? canPlay) {
+        video.play().catch(function (err) {
+          setCanPlay(false);
+          console.warn(err);
+        });
+      }
+    }
+  }, [ref, canPlay]);
+
+  if (!canPlay) {
+    return (
+      <div className={cn("relative overflow-clip", className)}>
+        <Button
+          className={cn(
+            "absolute top-1/2 left-1/2 z-10 -translate-1/2",
+            playButtonClassname,
+          )}
+          onClick={() => setCanPlay(true)}
+          size="icon"
+        >
+          <span className="sr-only">{t("play")}</span>
+          <PlayIcon
+            aria-label={t("play")}
+            role="presentation"
+            aria-hidden
+            fill="currentColor"
+          />
+        </Button>
+        <Image
+          src={poster}
+          width={width}
+          height={height}
+          alt=""
+          className="size-full"
+          priority={imagePriority}
+          sizes={imageSizes}
+        />
+        <div
+          className="absolute top-0 right-0 bottom-0 left-0 z-5 size-full bg-slate-950/50"
+          aria-hidden
+          role="presentation"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className={className}>
+      <video
+        ref={ref}
+        poster={poster}
+        width={width}
+        height={height}
+        {...props}
+      />
+    </div>
+  );
 }

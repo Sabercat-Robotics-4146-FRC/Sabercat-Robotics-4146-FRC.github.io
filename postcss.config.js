@@ -2,16 +2,5 @@
 export default {
   plugins: {
     "@tailwindcss/postcss": {},
-    pixrem: {},
-    "postcss-will-change": {},
-    "postcss-vmin": {},
-    "postcss-pseudoelements": {},
-    "postcss-opacity": {},
-    "postcss-color-rgba-fallback": {},
-    "postcss-preset-env": {
-      preserve: false,
-      stage: 4,
-      enableClientSidePolyfills: true,
-    },
   },
 };

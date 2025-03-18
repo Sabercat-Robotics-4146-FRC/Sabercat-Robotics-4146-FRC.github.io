@@ -1,5 +1,9 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import {
+  NextIntlClientProvider,
+  useMessages,
+  useTranslations,
+} from "next-intl";
 import { Link, type routing } from "~/i18n/routing";
 import {
   DropdownMenu,
@@ -660,4 +664,4 @@ export const topicOptions = [
   "programs",
   "innovationCenter",
   "other",
-] as const;
+] as const satisfies string[];

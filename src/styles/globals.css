@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-heading: var(--font-heading);
-  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif,
+  --font-sans:
+    var(--font-open-sans), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --color-brand: #f4b912;
@@ -29,5 +29,12 @@
     to {
       height: 0;
     }
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    --tw-font-family: var(--font-heading);
+    font-family: var(--tw-font-family);
   }
 }

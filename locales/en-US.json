@@ -40,8 +40,7 @@
         "location": "Tempe, AZ, USA"
       },
       "ongoing": "Ongoing Competition"
-    },
-    "noVideoSupport": "Your browser does not support videos."
+    }
   },
   "about": {
     "title": "About Us",
@@ -384,6 +383,10 @@
     "description": "We use analytic cookies to improve your experience on our website by understanding how you use it. Please consent to the use of cookies to help us improve our website.",
     "accept": "Accept Cookies",
     "decline": "Decline Cookies"
+  },
+  "video": {
+    "noSupport": "Your browser does not support videos.",
+    "play": "Play Video"
   },
   "copyright": "© {year} Saguaro Math and Science Academy"
 }
