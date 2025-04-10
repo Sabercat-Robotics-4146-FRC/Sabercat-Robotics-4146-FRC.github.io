@@ -2,7 +2,7 @@ import { MailIcon } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { contactFormAction } from "~/components/actions";
 import { Form, FormField, FormSelect } from "~/components/form";
-import { PageHeader, topicOptions } from "~/components/global";
+import { PageHeader, topicOptions, Link } from "~/components/global";
 import metadata from "~/components/metadata";
 import { Button } from "~/components/ui/button";
 import {
@@ -20,7 +20,6 @@ import {
   SelectValue,
 } from "~/components/ui/select";
 import { Textarea } from "~/components/ui/textarea";
-import { Link } from "~/i18n/routing";
 
 export async function generateMetadata({
   params,

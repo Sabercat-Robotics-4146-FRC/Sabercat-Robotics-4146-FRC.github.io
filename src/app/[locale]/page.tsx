@@ -9,7 +9,7 @@ import {
 } from "next-intl/server";
 import Image from "next/image";
 import { OngoingCompetition } from "~/components/client";
-import { homeCards } from "~/components/global";
+import { homeCards, Link } from "~/components/global";
 import { SabercatRobotics } from "~/components/logos";
 import { AspectRatio } from "~/components/ui/aspect-ratio";
 import { Badge } from "~/components/ui/badge";
@@ -22,7 +22,6 @@ import {
   CardTitle,
 } from "~/components/ui/card";
 import { Video } from "~/components/video";
-import { Link } from "~/i18n/routing";
 import { cn } from "~/lib/utils";
 
 function HomeCard(

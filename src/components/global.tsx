@@ -1,10 +1,6 @@
 import Image from "next/image";
-import {
-  NextIntlClientProvider,
-  useMessages,
-  useTranslations,
-} from "next-intl";
-import { Link, type routing } from "~/i18n/routing";
+import { NextIntlClientProvider, useTranslations } from "next-intl";
+import { Link as NextIntlLink, type routing } from "~/i18n/routing";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -665,3 +661,11 @@ export const topicOptions = [
   "innovationCenter",
   "other",
 ] as const satisfies string[];
+
+export function Link(props: React.ComponentProps<typeof NextIntlLink>) {
+  return (
+    <NextIntlClientProvider>
+      <NextIntlLink {...props} />
+    </NextIntlClientProvider>
+  );
+}

@@ -1,7 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { PageHeader } from "~/components/global";
+import { PageHeader, Link } from "~/components/global";
 import metadata from "~/components/metadata";
-import { Link } from "~/i18n/routing";
 
 export async function generateMetadata({
   params,
@@ -34,7 +33,7 @@ export default async function TaxCreditPage({
           <h2 className="font-heading text-2xl font-bold">
             {t.rich("you.title", {
               underline: (chunks) => (
-                <u className="underline decoration-brand underline-offset-4">
+                <u className="decoration-brand underline underline-offset-4">
                   {chunks}
                 </u>
               ),
@@ -46,7 +45,7 @@ export default async function TaxCreditPage({
           <h2 className="font-heading text-2xl font-bold">
             {t.rich("us.title", {
               underline: (chunks) => (
-                <u className="underline decoration-brand underline-offset-4">
+                <u className="decoration-brand underline underline-offset-4">
                   {chunks}
                 </u>
               ),

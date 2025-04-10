@@ -3,7 +3,7 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
-import { PageHeader } from "~/components/global";
+import { PageHeader, Link } from "~/components/global";
 import metadata from "~/components/metadata";
 import { Button } from "~/components/ui/button";
 import {
@@ -13,7 +13,6 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
-import { Link } from "~/i18n/routing";
 
 export async function generateMetadata({
   params,

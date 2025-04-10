@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
+import { Link } from "~/components/global";
 import metadata from "~/components/metadata";
 import { Button } from "~/components/ui/button";
-import { Link } from "~/i18n/routing";
 
 export async function generateMetadata({
   params,
