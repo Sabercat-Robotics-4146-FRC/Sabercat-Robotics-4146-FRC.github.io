@@ -204,7 +204,7 @@ export function HLSVideo({
           width={width}
           height={height}
           alt=""
-          className="size-full"
+          className="h-auto max-w-full"
           priority={imagePriority}
           sizes={imageSizes}
         />
