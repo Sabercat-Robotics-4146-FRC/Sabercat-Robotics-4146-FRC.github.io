@@ -36,7 +36,10 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    remotePatterns: [{ hostname: "static.sabercatrobotics.com" }],
+    remotePatterns: [
+      { hostname: "sabercatrobotics.com" },
+      { hostname: "static.sabercatrobotics.com" },
+    ],
   },
 };
 

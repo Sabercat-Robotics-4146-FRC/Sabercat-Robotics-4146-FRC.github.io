@@ -17,7 +17,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { Button } from "./ui/button";
 import HLS from "hls.js";
 import { cn } from "~/lib/utils";
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 
 export function PostHogProvider({
   children,
@@ -146,7 +146,7 @@ export interface HLSVideoProps
 }
 export function HLSVideo({
   src,
-  poster,
+  poster: originalPoster,
   playButtonClassname,
   width,
   height,
@@ -161,6 +161,14 @@ export function HLSVideo({
   const ref = useRef<HTMLVideoElement>(null);
 
   const [canPlay, setCanPlay] = useState<boolean>(true);
+
+  const poster = getImageProps({
+    src: originalPoster,
+    width,
+    height,
+    sizes: imageSizes,
+    alt: "",
+  }).props.src;
 
   useEffect(() => {
     const { current: video } = ref;
@@ -202,7 +210,7 @@ export function HLSVideo({
           />
         </Button>
         <Image
-          src={poster}
+          src={originalPoster}
           width={width}
           height={height}
           alt=""

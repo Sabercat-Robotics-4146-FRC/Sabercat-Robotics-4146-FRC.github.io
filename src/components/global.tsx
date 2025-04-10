@@ -364,8 +364,8 @@ export function Footer() {
           text: t("contact.title"),
         },
         {
-          href: `mailto:${t("contact.email")}`,
-          text: t("contact.email"),
+          href: "mailto:team@sabercatrobotics.com",
+          text: "team@sabercatrobotics.com",
           icon: <MailIcon className="size-4" stroke="currentColor" />,
         },
         {

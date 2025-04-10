@@ -1,7 +1,7 @@
 {
   "title": "Sabercat Robotics",
   "description": "Sabercat Robotics: Inspiring high schoolers through robots. A 501c charity Robotics team shaping future innovators.",
-  "alt": "",
+  "alt": "Head of a sabercat; the mascot of Sabercat Robotics",
   "language": "Language",
   "menu": {
     "title": "Menu",
@@ -362,7 +362,13 @@
       "title": "Other Ways to Contact Us",
       "description": "Don't like our form? Contact us in any of the following ways instead."
     },
-    "email": "team@sabercatrobotics.com"
+    "email": {
+      "subject": "Thank you for contacting us!",
+      "preview": "If we don't respond within 5 business days, please let us know.",
+      "body": "Thank you {name} for reaching out to Sabercat Robotics. Whether your message was an inquiry, request, or suggestion, we appreciate your feedback and will do our best to respond to you as soon as possible. We look forward to hearing from you!",
+      "info": "Provided information:",
+      "input": "{field}: {value}"
+    }
   },
   "notFound": {
     "title": "Not Found",

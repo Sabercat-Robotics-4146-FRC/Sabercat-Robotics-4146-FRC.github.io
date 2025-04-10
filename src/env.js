@@ -7,10 +7,7 @@ export const env = createEnv({
    * isn't built with invalid env vars.
    */
   server: {
-    GMAIL_CLIENT_ID: z.string(),
-    GMAIL_CLIENT_SECRET: z.string(),
-    GMAIL_REFRESH_TOKEN: z.string(),
-    GMAIL_ACCESS_TOKEN: z.string(),
+    RESEND_API_KEY: z.string().startsWith("re_"),
     GC_STORAGE: z.string().base64(),
     NODE_ENV: z.enum(["development", "test", "production"]),
   },
@@ -37,10 +34,7 @@ export const env = createEnv({
    * middlewares) or client-side so we need to destruct manually.
    */
   runtimeEnv: {
-    GMAIL_CLIENT_ID: process.env.GMAIL_CLIENT_ID,
-    GMAIL_CLIENT_SECRET: process.env.GMAIL_CLIENT_SECRET,
-    GMAIL_REFRESH_TOKEN: process.env.GMAIL_REFRESH_TOKEN,
-    GMAIL_ACCESS_TOKEN: process.env.GMAIL_ACCESS_TOKEN,
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
     NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
     NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST,
     GC_STORAGE: process.env.GC_STORAGE,

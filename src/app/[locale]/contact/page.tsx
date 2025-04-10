@@ -51,8 +51,7 @@ export default async function ContactPage({
             <CardDescription>{t("form.description")}</CardDescription>
           </CardHeader>
           <CardContent>
-            {t("form.unavailable")}
-            {/* <Form
+            <Form
               className="flex flex-col space-y-4"
               action={contactFormAction}
               submitButton={
@@ -123,7 +122,7 @@ export default async function ContactPage({
                         defaultValue={topicOptions[0]}
                       >
                         {topicOptions.map(function (topicOption, i) {
-                          const key = `form.topic.${topicOption}`;
+                          const key = `form.topic.${topicOption}` as const;
 
                           return (
                             <SelectItem
@@ -150,7 +149,7 @@ export default async function ContactPage({
                   />
                 }
               />
-            </Form> */}
+            </Form>
           </CardContent>
         </Card>
         <Card>
@@ -161,12 +160,12 @@ export default async function ContactPage({
           <CardContent>
             <Button className="gap-1 p-0" variant="link" asChild>
               <Link
-                href={`mailto:${t("email")}`}
+                href={"mailto:team@sabercatrobotics.com"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <MailIcon className="size-5" role="presentation" />
-                {t("email")}
+                team@sabercatrobotics.com
               </Link>
             </Button>
           </CardContent>
