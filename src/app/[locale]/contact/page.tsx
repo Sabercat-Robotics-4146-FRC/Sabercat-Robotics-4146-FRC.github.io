@@ -1,4 +1,5 @@
 import { MailIcon } from "lucide-react";
+import { type Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { contactFormAction } from "~/components/actions";
 import { Form, FormField, FormSelect } from "~/components/form";
@@ -23,13 +24,13 @@ import { Textarea } from "~/components/ui/textarea";
 
 export async function generateMetadata({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   return await metadata({ params, namespace: "contact", path: "/contact" });
 }
 
 export default async function ContactPage({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   const { locale } = await params;
 
   setRequestLocale(locale);

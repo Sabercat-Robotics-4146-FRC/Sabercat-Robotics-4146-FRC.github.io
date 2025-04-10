@@ -1,6 +1,10 @@
 import { pick } from "lodash";
 import { ClockIcon, MapPinIcon } from "lucide-react";
-import { NextIntlClientProvider, useTranslations } from "next-intl";
+import {
+  type Locale,
+  NextIntlClientProvider,
+  useTranslations,
+} from "next-intl";
 import {
   getFormatter,
   getMessages,
@@ -24,26 +28,18 @@ import {
 import { Video } from "~/components/video";
 import { cn } from "~/lib/utils";
 
-function HomeCard(
-  props: Omit<
-    (typeof homeCards)[number],
-    "href" | "src" | "badge" | "disabled"
-  > & {
-    href?: string;
-    src?: string;
-    badge?: "important";
-    disabled?: true;
-  },
-) {
-  const { localeKey, src, badge } = props;
+function HomeCard(props: (typeof homeCards)[number]) {
+  const { localeKey, src } = props;
 
   const t = useTranslations();
 
-  if (props.disabled !== undefined) {
+  if ("disabled" in props && props.disabled !== undefined) {
     const { disabled } = props;
 
-    const title = t("home.mission." + localeKey + ".title");
-    const description = t("home.mission." + localeKey + ".description");
+    const title = t(`home.mission.${localeKey as "comingSoon"}.title`);
+    const description = t(
+      `home.mission.${localeKey as "comingSoon"}.description`,
+    );
 
     return (
       <Card
@@ -63,29 +59,22 @@ function HomeCard(
           </AspectRatio>
         </CardHeader>
         <CardContent className="flex flex-col gap-2">
-          <main className="flex flex-wrap gap-2">
-            <CardTitle>{title}</CardTitle>
-            {badge && (
-              <Badge variant="default">{t(`home.mission.${badge}`)}</Badge>
-            )}
-          </main>
+          <CardTitle>{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
         </CardContent>
       </Card>
     );
   }
 
-  const title = t(localeKey + ".title");
-  const description = t(localeKey + ".description");
+  const title = t(`${localeKey as "about"}.title`);
+  const description = t(`${localeKey as "about"}.description`);
 
-  const { href } = props;
-
-  if (!src) {
-    throw new Error("src is required");
+  if (!src || !("href" in props) || typeof props.href !== "string") {
+    throw new Error("Missing props");
   }
 
   return (
-    <Link href={href!}>
+    <Link href={props.href}>
       <Card className="h-full transition-[box-shadow,scale] duration-300 hover:scale-105 hover:shadow-lg">
         <CardHeader className="p-4">
           <Image
@@ -100,8 +89,10 @@ function HomeCard(
         <CardContent className="flex flex-col gap-2">
           <header className="flex flex-wrap gap-2">
             <CardTitle>{title}</CardTitle>
-            {badge && (
-              <Badge variant="default">{t(`home.mission.${badge}`)}</Badge>
+            {"badge" in props && (
+              <Badge variant="default">
+                {t(`home.mission.${props.badge}`)}
+              </Badge>
             )}
           </header>
           <CardDescription>{description}</CardDescription>
@@ -113,7 +104,7 @@ function HomeCard(
 
 export default async function HomePage({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   const { locale } = await params;
 
   setRequestLocale(locale);
@@ -192,7 +183,9 @@ export default async function HomePage({
         </header>
         <main className="grid gap-6 *:h-full md:grid-cols-2">
           {competitions.map(function ([startDate, endDate], index) {
+            // @ts-expect-error
             const title = t(`competitions.competition${index + 1}.title`);
+            // @ts-expect-error
             const location = t(`competitions.competition${index + 1}.location`);
 
             return (

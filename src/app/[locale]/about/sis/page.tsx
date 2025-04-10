@@ -1,3 +1,4 @@
+import { type Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHeader, Link } from "~/components/global";
 import metadata from "~/components/metadata";
@@ -6,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 
 export async function generateMetadata({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   return await metadata({
     params,
     namespace: "sistersInStem",
@@ -16,7 +17,7 @@ export async function generateMetadata({
 
 export default async function SistersInSTEMPage({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   const { locale } = await params;
 
   setRequestLocale(locale);

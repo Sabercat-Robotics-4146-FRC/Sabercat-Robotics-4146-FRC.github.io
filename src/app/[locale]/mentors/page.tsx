@@ -1,3 +1,4 @@
+import { type Locale } from "next-intl";
 import {
   getFormatter,
   getTranslations,
@@ -16,13 +17,13 @@ import {
 
 export async function generateMetadata({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   return await metadata({ params, namespace: "mentors", path: "/mentors" });
 }
 
 export default async function MentorsPage({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   const { locale } = await params;
 
   setRequestLocale(locale);
@@ -61,11 +62,16 @@ export default async function MentorsPage({
               return (
                 <Card key={mentor}>
                   <CardHeader>
-                    <CardTitle>{t(`who.${mentor}.title`)}</CardTitle>
+                    <CardTitle>
+                      {t(`who.${mentor as keyof typeof mentors}.title`)}
+                    </CardTitle>
                     <CardDescription>
                       {formatter.list(
                         Array.from({ length: amountOfTitles }).map((_, i) =>
-                          t(`who.${mentor}.title${i + 1}`),
+                          t(
+                            // @ts-expect-error
+                            `who.${mentor as keyof typeof mentors}.title${i + 1}`,
+                          ),
                         ),
                         { type: "conjunction" },
                       )}
@@ -74,9 +80,11 @@ export default async function MentorsPage({
                   {hasEmail && (
                     <CardContent>
                       {t.rich("who.email", {
-                        mentor: t(`who.${mentor}.title`),
+                        mentor: t(
+                          `who.${mentor as keyof typeof mentors}.title`,
+                        ),
                         emailLink(chunks) {
-                          const email = t(`who.${mentor}.email`);
+                          const email = t(`who.${mentor as "lindberg"}.email`);
                           return (
                             <Button
                               className="text-brand h-max p-0 text-base font-normal"
@@ -93,7 +101,7 @@ export default async function MentorsPage({
                             </Button>
                           );
                         },
-                        email: t(`who.${mentor}.email`),
+                        email: t(`who.${mentor as "lindberg"}.email`),
                       })}
                     </CardContent>
                   )}

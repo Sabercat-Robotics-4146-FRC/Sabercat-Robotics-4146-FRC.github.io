@@ -1,3 +1,4 @@
+import { type Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHeader } from "~/components/global";
 import metadata from "~/components/metadata";
@@ -5,13 +6,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 
 export async function generateMetadata({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   return await metadata({ params, namespace: "about", path: "/about" });
 }
 
 export default async function AboutPage({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   const { locale } = await params;
 
   setRequestLocale(locale);
@@ -40,6 +41,7 @@ export default async function AboutPage({
           </CardHeader>
           <CardContent className="flex flex-col space-y-4">
             {Array.from({ length: amountOfHistory }).map((_, i) => (
+              // @ts-expect-error
               <p key={i}>{t(`history.content${i + 1}`)}</p>
             ))}
           </CardContent>

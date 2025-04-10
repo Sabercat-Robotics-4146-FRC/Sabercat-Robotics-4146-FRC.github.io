@@ -1,11 +1,11 @@
-import { useTranslations } from "next-intl";
+import { type Locale, useTranslations } from "next-intl";
 import { Link } from "~/components/global";
 import metadata from "~/components/metadata";
 import { Button } from "~/components/ui/button";
 
 export async function generateMetadata({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   return await metadata({
     params,
     namespace: "notFound",

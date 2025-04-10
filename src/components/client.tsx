@@ -81,6 +81,7 @@ export function ConsentBanner() {
           <Dialog>
             <DialogTrigger className="mt-1 cursor-pointer sm:hidden">
               <CircleHelpIcon className="size-5" />
+              <span className="sr-only">{t("title")}</span>
             </DialogTrigger>
             <DialogContent className="gap-2">
               <DialogHeader>
@@ -94,6 +95,7 @@ export function ConsentBanner() {
           <Tooltip>
             <TooltipTrigger className="mt-1 hidden cursor-help sm:block">
               <CircleHelpIcon className="size-5" />
+              <span className="sr-only">{t("title")}</span>
             </TooltipTrigger>
             <TooltipContent className="flex w-72 flex-col gap-2 p-4">
               <span className="text-3xl font-bold">{t("title")}</span>

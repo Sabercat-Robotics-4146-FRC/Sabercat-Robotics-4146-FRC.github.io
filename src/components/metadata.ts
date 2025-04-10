@@ -1,4 +1,5 @@
 import { type Metadata } from "next";
+import { Locale, Messages, NamespaceKeys, NestedKeyOf } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { routing } from "~/i18n/routing";
 
@@ -9,10 +10,10 @@ export default async function metadata({
   namespace,
   path,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
   isRootLayout?: boolean;
   index?: boolean;
-  namespace?: string;
+  namespace?: NamespaceKeys<Messages, NestedKeyOf<Messages>>;
   path: string;
 }) {
   const url = "https://sabercatrobotics.com";

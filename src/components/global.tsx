@@ -1,6 +1,10 @@
 import Image from "next/image";
-import { NextIntlClientProvider, useTranslations } from "next-intl";
-import { Link as NextIntlLink, type routing } from "~/i18n/routing";
+import {
+  type Locale,
+  NextIntlClientProvider,
+  useTranslations,
+} from "next-intl";
+import { Link as NextIntlLink } from "~/i18n/routing";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -41,7 +45,7 @@ const localeInfo = [
   //   lang: "日本語 (日本)",
   // },
 ] as const satisfies {
-  locale: typeof routing.defaultLocale;
+  locale: Locale;
   lang: string;
 }[];
 const links = [
@@ -388,7 +392,7 @@ export function Footer() {
       >
         {footerLinks.map(function ({ text, links }) {
           return (
-            <ul
+            <div
               className="flex basis-1/2 list-none flex-col px-3 md:w-1/2 md:basis-1/2 lg:w-1/6 lg:basis-1/6"
               role="list"
               key={text}
@@ -399,39 +403,41 @@ export function Footer() {
               >
                 {text}
               </h2>
-              {links.map(function ({
-                href,
-                text: linkText,
-                icon,
-              }: (typeof links)[number] & { icon?: React.ReactNode }) {
-                const props: React.ComponentPropsWithoutRef<typeof Link> =
-                  href.startsWith("/")
-                    ? { href }
-                    : { href, target: "_blank", rel: "noopener noreferrer" };
+              <ul className="flex flex-col">
+                {links.map(function ({
+                  href,
+                  text: linkText,
+                  icon,
+                }: (typeof links)[number] & { icon?: React.ReactNode }) {
+                  const props: React.ComponentPropsWithoutRef<typeof Link> =
+                    href.startsWith("/")
+                      ? { href }
+                      : { href, target: "_blank", rel: "noopener noreferrer" };
 
-                return (
-                  <li
-                    className="flex items-center space-x-2"
-                    key={linkText}
-                    role="listitem"
-                  >
-                    <Button
-                      variant="link"
-                      className="inline-flex h-auto justify-start gap-x-1 p-0 text-base font-normal whitespace-break-spaces text-slate-700"
-                      asChild
+                  return (
+                    <li
+                      className="flex items-center space-x-2"
+                      key={linkText}
+                      role="listitem"
                     >
-                      <Link {...props}>
-                        {icon}
-                        <span className="inline">{linkText}</span>
-                      </Link>
-                    </Button>
-                  </li>
-                );
-              })}
-            </ul>
+                      <Button
+                        variant="link"
+                        className="inline-flex h-auto justify-start gap-x-1 p-0 text-base font-normal whitespace-break-spaces text-slate-700"
+                        asChild
+                      >
+                        <Link {...props}>
+                          {icon}
+                          <span className="inline">{linkText}</span>
+                        </Link>
+                      </Button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           );
         })}
-        <ul className="flex basis-full list-none px-3 md:w-1/2 md:basis-1/2 lg:flex-col lg:items-end lg:justify-between">
+        <footer className="flex basis-full list-none px-3 md:w-1/2 md:basis-1/2 lg:flex-col lg:items-end lg:justify-between">
           <ul className="flex space-x-3" role="list">
             {socials.map(function ({ href, text, icon }) {
               return (
@@ -460,7 +466,7 @@ export function Footer() {
               {t("footer.subscribe")}
             </button>
           </li> */}
-        </ul>
+        </footer>
       </nav>
       <footer className="flex w-full max-w-(--breakpoint-2xl) flex-col-reverse px-2 md:flex-row md:items-center md:justify-between">
         <nav className="flex flex-wrap items-center">

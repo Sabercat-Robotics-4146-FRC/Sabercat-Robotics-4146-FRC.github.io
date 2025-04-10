@@ -7,12 +7,12 @@ import { cn } from "~/lib/utils";
 import { Header, Footer } from "~/components/global";
 import metadata from "~/components/metadata";
 import { ConsentBanner, Providers } from "~/components/client";
-import { NextIntlClientProvider } from "next-intl";
+import { type Locale, NextIntlClientProvider } from "next-intl";
 import { pick } from "lodash";
 
 export async function generateMetadata({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   return await metadata({ params, path: "/", isRootLayout: true });
 }
 
@@ -39,7 +39,7 @@ export default async function LocaleLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }>) {
   const { locale } = await params;
 

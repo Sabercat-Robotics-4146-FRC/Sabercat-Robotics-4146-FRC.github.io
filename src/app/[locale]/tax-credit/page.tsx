@@ -1,10 +1,11 @@
+import { type Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHeader, Link } from "~/components/global";
 import metadata from "~/components/metadata";
 
 export async function generateMetadata({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   return await metadata({
     params,
     namespace: "taxCredit",
@@ -14,7 +15,7 @@ export async function generateMetadata({
 
 export default async function TaxCreditPage({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   const { locale } = await params;
 
   setRequestLocale(locale);
@@ -63,6 +64,7 @@ export default async function TaxCreditPage({
             <ul className="list-inside list-decimal px-2">
               {Array.from({ length: 8 }).map((_, index) => (
                 <li key={index} className="text-lg">
+                  {/* @ts-expect-error */}
                   {t.rich(`how.digital.steps.step${index + 1}`, {
                     susdTCLink: (chunks) => (
                       <Link
@@ -96,6 +98,7 @@ export default async function TaxCreditPage({
             <ul className="list-inside list-decimal px-2">
               {Array.from({ length: 6 }).map((_, index) => (
                 <li key={index} className="text-lg">
+                  {/* @ts-expect-error */}
                   {t.rich(`how.physical.steps.step${index + 1}`, {
                     susdTCLink: (chunks) => (
                       <Link

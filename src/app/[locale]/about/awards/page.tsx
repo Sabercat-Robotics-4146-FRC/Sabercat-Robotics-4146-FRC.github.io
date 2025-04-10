@@ -1,3 +1,4 @@
+import { type Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { PageHeader } from "~/components/global";
@@ -5,7 +6,7 @@ import metadata from "~/components/metadata";
 
 export async function generateMetadata({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   return await metadata({ params, namespace: "awards", path: "/about/awards" });
 }
 
@@ -52,7 +53,7 @@ function BannerAward({
 
 export default async function AwardsPage({
   params,
-}: Readonly<{ params: Promise<{ locale: string }> }>) {
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
   const { locale } = await params;
 
   setRequestLocale(locale);
@@ -140,11 +141,11 @@ export default async function AwardsPage({
           </header>
           <main className="flex flex-wrap text-slate-100 [&>*:not(:last-child)]:mr-6">
             {banners.map(function (key, i) {
-              const baseKey = `banners.${key}`;
+              const baseKey = `banners.${key}` as const satisfies string;
               return (
                 <BannerAward
-                  title={t(baseKey + ".title")}
-                  description={t(baseKey + ".description")}
+                  title={t(`${baseKey}.title`)}
+                  description={t(`${baseKey}.description`)}
                   key={`${key}_${i.toString()}`}
                 />
               );
@@ -162,7 +163,8 @@ export default async function AwardsPage({
             {yearly
               .map(function (values, i) {
                 const year = 2012 + i;
-                const baseKey = `yearly.${year.toString()}`;
+                const baseKey =
+                  `yearly.${year.toString()}` as const satisfies string;
                 return (
                   <section
                     className="flex flex-col space-y-2"
@@ -176,13 +178,15 @@ export default async function AwardsPage({
                     <main className="marker:text-slate-900">
                       {Object.keys(values).map(function (key, i) {
                         const awards = values[key as keyof typeof values];
-                        key = `${baseKey}.${key}`;
+                        key =
+                          `${baseKey}.${key as keyof typeof values}` as const;
                         return (
                           <ul
                             className="list-disc"
                             key={`${key}_${i.toString()}`}
                           >
                             <p className="list-none font-semibold">
+                              {/* @ts-expect-error */}
                               {t(`${key}.title`)}
                             </p>
                             {Array.from({ length: awards }).map((_, i) => (
@@ -190,6 +194,7 @@ export default async function AwardsPage({
                                 className="mx-8 text-slate-900"
                                 key={`award${(i + 1).toString()}`}
                               >
+                                {/* @ts-expect-error */}
                                 {t(`${key}.award${i + 1}`)}
                               </li>
                             ))}
